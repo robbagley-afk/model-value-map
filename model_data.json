@@ -772,7 +772,7 @@
   },
   "speed": "about 10 tokens per second per request with 4 requests in parallel",
   "script": "gemma_eval/run_eval.py in the GitHub repo",
-  "caveat": "the own 44-item test, written 2026-10-08. Not comparable to Artificial Analysis or vendor scores."
+  "caveat": "A 44-item test, written 2026-10-08. Not comparable to Artificial Analysis or vendor scores."
  },
  "gemma_vendor_card": {
   "src": "https://huggingface.co/google/gemma-4-26b-a4b-it",
