@@ -1,0 +1,265 @@
+{
+ "threshold": "An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.",
+ "tasks": [
+  {
+   "id": "mechanical",
+   "task": "Mechanical text work",
+   "examples": "Classify, extract, reformat, dedupe, parse",
+   "bench": "index",
+   "best": "Gemma on a local LM Studio server ($0 cloud). In the cloud, Haiku 5.5 low ($0.02, index 29)",
+   "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%)",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Haiku 5.5 low ($0.02, 29)",
+     "upgrade": "Haiku 5.5 medium ($0.05, 34) if low misses"
+    },
+    "OpenAI": {
+     "pick": "GPT-6 Luna max ($0.07, 38), best when the step calls tools (AutomationBench 53%)",
+     "upgrade": "GPT-6.1 Sol low ($0.13, 42)"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash low (index 33, cost per task not published)",
+     "upgrade": "Medium ($0.93, 40)"
+    },
+    "Local": {
+     "pick": "Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs",
+     "upgrade": "Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions"
+    }
+   }
+  },
+  {
+   "id": "relay",
+   "task": "Scripted relays and tool workflows",
+   "examples": "Fixed-step handoffs, connector runs, queue imports",
+   "bench": "ab",
+   "best": "GPT-6 Luna max ($0.07, AutomationBench 53%), which matches Opus 5.5 low at 13% of the cost",
+   "avoid": "Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Sonnet 5.5 low ($0.35, 49%). Opus 5.5 low ($0.55, 53%) when the run touches names or facts",
+     "upgrade": "Opus 5.5 medium ($1.34, 61%) when the workflow branches"
+    },
+    "OpenAI": {
+     "pick": "GPT-6 Luna max ($0.07, 53%)",
+     "upgrade": "GPT-6.1 Sol medium ($0.21, 63%)"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium ($0.93, 61%)",
+     "upgrade": "None. High scores 60%"
+    },
+    "Local": {
+     "pick": "Light use only. Tool calls 3/4 in-house, AutomationBench 2% (AA estimate). Validate every call",
+     "upgrade": "Sonnet 5.5 low"
+    }
+   }
+  },
+  {
+   "id": "knowledge",
+   "task": "Documents from supplied facts",
+   "examples": "Drafts, summaries, slides, spreadsheets, reports",
+   "bench": "gdp",
+   "best": "Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish",
+   "avoid": "Opus 5.5 high (1707) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Haiku 5.5 xhigh (pilot): 1511 at $0.12, vendor chart $0.27, near Sonnet 5.5 high at less than half the cost",
+     "upgrade": "Haiku 5.5 max (1620, $0.21) for final polish"
+    },
+    "OpenAI": {
+     "pick": "GPT-6 Luna max (1432, $0.07)",
+     "upgrade": "GPT-6.1 Sol max (1575, $0.72)"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium (1426, $0.93)",
+     "upgrade": "High adds 10 Elo, not worth it"
+    },
+    "Local": {
+     "pick": "Reformatting only. GDPval 569 (AA estimate)",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "facts",
+   "task": "People, messages, money, records",
+   "examples": "Customer and community messages, payments, exact names",
+   "bench": "omni",
+   "best": "GPT-6.1 Sol low ($0.13, AA-Omniscience 38)",
+   "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Opus 5.5 low ($0.55, 39)",
+     "upgrade": "Rarely. Opus 5.5 max adds 7 points for 11x the cost"
+    },
+    "OpenAI": {
+     "pick": "GPT-6.1 Sol low ($0.13, 38)",
+     "upgrade": "Rarely. Sol max adds 4 points"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium ($0.93, 29), below Opus 5.5 low and Sol low",
+     "upgrade": "n/a"
+    },
+    "Local": {
+     "pick": "Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "computer",
+   "task": "Computer use and browser work",
+   "examples": "Clicking through web apps, forms, portals",
+   "bench": "osworld",
+   "best": "Haiku 5.5 xhigh (OSWorld 67.5% at $0.30 per attempt). Only Anthropic and Luna are on this chart",
+   "avoid": "Sonnet 5.5 max (+2.9 points for 2.5x). Haiku for steps that type names, accounts, or payments",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Haiku 5.5 xhigh (pilot, 67.5%, $0.30)",
+     "upgrade": "Haiku 5.5 max (72.4%, $0.62) ties Sonnet 5.5 high (73%, $1.50). Sonnet 5.5 xhigh (81%, $2.30) for must-succeed runs"
+    },
+    "OpenAI": {
+     "pick": "GPT-6 Luna max (49%, $0.22). Sol and Astra not yet evaluated on this chart",
+     "upgrade": "n/a"
+    },
+    "Google": {
+     "pick": "Not yet evaluated",
+     "upgrade": "n/a"
+    },
+    "Local": {
+     "pick": "Not yet evaluated",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "coding",
+   "task": "Agentic coding",
+   "examples": "Multi-file changes, debugging, repo work",
+   "bench": "tb",
+   "best": "GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost",
+   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($7.60)",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Opus 5.5 medium ($1.34, 53%)",
+     "upgrade": "Opus 5.5 high ($1.82, 57%) for hard bugs"
+    },
+    "OpenAI": {
+     "pick": "GPT-6.1 Sol medium ($0.21, 48%)",
+     "upgrade": "GPT-6.1 Sol high ($0.32, 52%)"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium ($0.93, 20%), weak for coding",
+     "upgrade": "High also scores 20%"
+    },
+    "Local": {
+     "pick": "Not yet evaluated on Terminal-Bench",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "smallcode",
+   "task": "Small, clear coding fixes",
+   "examples": "Clear-repro bug fixes, UI polish, building to a spec",
+   "bench": "tb",
+   "best": "GPT-6.1 Sol low ($0.13, Terminal-Bench 31%). Haiku 5.5 max ($0.21, 33%) in Claude",
+   "avoid": "Opus 5.5 low for this work, since Haiku 5.5 max scores higher for 38% of the cost",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Haiku 5.5 max (pilot, $0.21, 33%), ahead of Opus 5.5 low (31%, $0.55)",
+     "upgrade": "Opus 5.5 medium if the fix stalls"
+    },
+    "OpenAI": {
+     "pick": "GPT-6.1 Sol low ($0.13, 31%)",
+     "upgrade": "GPT-6.1 Sol medium ($0.21, 48%)"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium ($0.93, 20%)",
+     "upgrade": "n/a"
+    },
+    "Local": {
+     "pick": "Not yet evaluated",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "reasoning",
+   "task": "Research and reasoning",
+   "examples": "Analysis, tradeoffs, hard questions",
+   "bench": "hle",
+   "best": "GPT-6.1 Sol medium (HLE 50%, $0.21)",
+   "avoid": "Opus 5.5 xhigh and max: 2 to 3 points per cost doubling",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Opus 5.5 low ($0.55, 48%). Vendor chart shows Sonnet 5.5 high at 48% for $0.08 per question",
+     "upgrade": "Opus 5.5 high ($1.82, 56%)"
+    },
+    "OpenAI": {
+     "pick": "GPT-6.1 Sol medium ($0.21, 50%)",
+     "upgrade": "GPT-6 Astra max ($3.26, 55%), rarely worth it"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash high ($1.24, 48%)",
+     "upgrade": "n/a"
+    },
+    "Local": {
+     "pick": "Not suitable. HLE 8.7% (Google card), money math 4/6 in-house",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "judgment",
+   "task": "General agentic judgment",
+   "examples": "Open-ended multistep tasks, planning",
+   "bench": "index",
+   "best": "GPT-6.1 Sol medium (index 48, $0.21)",
+   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $1.08) trails Opus 5.5 medium on every test",
+   "vendors": {
+    "Anthropic": {
+     "pick": "Opus 5.5 medium ($1.34, 51)",
+     "upgrade": "Opus 5.5 high ($1.82, 54)"
+    },
+    "OpenAI": {
+     "pick": "GPT-6.1 Sol medium ($0.21, 48)",
+     "upgrade": "GPT-6.1 Sol high ($0.32, 50)"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium ($0.93, 40)",
+     "upgrade": "High adds 1 point, not worth it"
+    },
+    "Local": {
+     "pick": "Not suitable (index 17)",
+     "upgrade": "n/a"
+    }
+   }
+  },
+  {
+   "id": "antigravity",
+   "task": "Antigravity (Gemini)",
+   "examples": "Antigravity agent loops",
+   "bench": "index",
+   "best": "Gemini 3.8 Flash medium ($0.93 list, index 40) for loops, refactors, and hard bugs",
+   "avoid": "High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more",
+   "vendors": {
+    "Anthropic": {
+     "pick": "n/a",
+     "upgrade": "n/a"
+    },
+    "OpenAI": {
+     "pick": "n/a",
+     "upgrade": "n/a"
+    },
+    "Google": {
+     "pick": "Gemini 3.8 Flash medium for loops, refactors, and hard bugs. Low (33) for deterministic scripts",
+     "upgrade": "High only for reasoning-heavy work (HLE 48% vs 42%)"
+    },
+    "Local": {
+     "pick": "n/a",
+     "upgrade": "n/a"
+    }
+   }
+  }
+ ]
+}

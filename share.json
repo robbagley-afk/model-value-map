@@ -1,0 +1,10 @@
+{
+ "site": "https://robbagley-afk.github.io/model-value-map/",
+ "instruction_line": "Before you recommend a model or effort level, read https://robbagley-afk.github.io/model-value-map/guidance.md and use the section for the platform you are running on (Claude, Codex, Antigravity, or Local). Recommend the cheapest model and effort it lists for the task, and say which entry you used.",
+ "task_prompt": "Every two weeks, update my AI model guidance.\n\nStep one. Fetch https://robbagley-afk.github.io/model-value-map/guidance.md. If the fetch fails, stop and tell me.\nStep two. Read the Updated date at the top. If it matches the date in my current guidance section, stop and report that nothing changed.\nStep three. Find my instructions file for this tool: ~/.claude/CLAUDE.md for Claude Code, ~/.codex/AGENTS.md for Codex, or the file I name here: ____.\nStep four. Back up that file next to itself with the suffix .bak-YYYYMMDD.\nStep five. Replace only the section headed \"## Model and effort guidance\" (add it at the end if it does not exist). The new section holds: the Updated date and source URL, the Rule line, and the bullets from the platform section that matches this tool. Do not change any other part of the file.\nStep six. Show me the diff and a three-line summary of what changed.\n\nNever put passwords, keys, or student data into the file.",
+ "how_to": [
+  ["Claude Code or Claude Desktop", "Open Scheduled tasks, choose New task, paste the prompt, set Repeat to every 2 weeks, and run it on this computer."],
+  ["Codex", "Open Automations, choose New automation, paste the prompt, and set it to run every 2 weeks."],
+  ["Any other agent", "Paste the prompt into its scheduler or a calendar reminder that opens a new chat every two weeks."]
+ ]
+}
