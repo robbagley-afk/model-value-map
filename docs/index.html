@@ -9,7 +9,7 @@
 :root{
   --bg:#f5f4ef; --card:#fbfaf6; --ink:#141413; --ink-2:#5d5c56; --ink-3:#6c6b63; --rule:#dedcd2; --grid:#e8e6dd;
   --accent:#c4633f; --chip:#ecebe4; --chip-on:#141413; --chip-on-ink:#fbfaf6;
-  --v-anthropic:#eb6834; --v-openai:#138359; --v-google:#2a78d6; --v-local:#6b6a65;
+  --v-anthropic:#eb6834; --v-openai:#138359; --v-google:#2a78d6; --v-local:#c026d3;
   --m1:#2a78d6; --m2:#eb6834; --m3:#138359; --m4:#8a8880;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --sans:"Hanken Grotesk",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -18,12 +18,12 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#1a1a18; --card:#22221f; --ink:#f3f2ec; --ink-2:#c3c2b7; --ink-3:#8f8e85; --rule:#3a3934; --grid:#2f2e2a;
   --accent:#e08a66; --chip:#2e2d29; --chip-on:#f3f2ec; --chip-on-ink:#1a1a18;
-  --v-anthropic:#d95926; --v-openai:#199e70; --v-google:#3987e5; --v-local:#a3a299;
+  --v-anthropic:#d95926; --v-openai:#199e70; --v-google:#3987e5; --v-local:#e879f9;
   --m1:#3987e5; --m2:#d95926; --m3:#199e70; --m4:#a3a299; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1a1a18; --card:#22221f; --ink:#f3f2ec; --ink-2:#c3c2b7; --ink-3:#8f8e85; --rule:#3a3934; --grid:#2f2e2a;
   --accent:#e08a66; --chip:#2e2d29; --chip-on:#f3f2ec; --chip-on-ink:#1a1a18;
-  --v-anthropic:#d95926; --v-openai:#199e70; --v-google:#3987e5; --v-local:#a3a299;
+  --v-anthropic:#d95926; --v-openai:#199e70; --v-google:#3987e5; --v-local:#e879f9;
   --m1:#3987e5; --m2:#d95926; --m3:#199e70; --m4:#a3a299; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
@@ -243,7 +243,7 @@ function points(){
   const vc=DATA.vendor_charts[b.key||st.bench];
   return vc.points.map(a=>({vendor:a[0],model:a[1],effort:a[2],cost:a[3],score:a[4],src:vc.src}));
 }
-function colorFor(p,single){return css(single?MODEL_SLOT[p.model]:VCOL[p.vendor])}
+function colorFor(p,single){return css(p.vendor==="Local"?VCOL.Local:single?MODEL_SLOT[p.model]:VCOL[p.vendor])}
 function shape(g,t,x,y,r,fill,ring){
   const ns="http://www.w3.org/2000/svg";let el;
   if(t==="flag"){el=document.createElementNS(ns,"path");el.setAttribute("d",`M${x} ${y-r-1.5}L${x+r+1.5} ${y}L${x} ${y+r+1.5}L${x-r-1.5} ${y}Z`)}
@@ -264,6 +264,7 @@ function fmt$(c){return c==null?"n/a":c===0?"$0":c<0.01?"$"+c.toFixed(3):c<1?"$"
 function draw(){
   Ladder.close();const b=BENCH[st.bench];const every=points().filter(p=>p.cost!=null);const raw=points().filter(p=>st.vendors.has(p.vendor));const all=raw.filter(p=>p.cost!=null);const nocost=raw.filter(p=>p.cost==null);const ghosts=every.filter(p=>!st.vendors.has(p.vendor));
   const single=st.vendors.size===1;
+  const missing=b.src==="aa"?DATA.aa.filter(p=>st.vendors.has(p.vendor)&&p[st.bench]==null):[];
   $("ctitle").textContent=`${b.task}: ${b.name}`;
   $("cmeta").textContent=b.src==="aa"?"Artificial Analysis \u00b7 cost per Index task":"Vendor chart, read from image \u00b7 cost per attempt";
   const svg=$("chart");svg.innerHTML="";const W=Math.max(240,$("chartbox").clientWidth),H=Math.round(Math.min(520,Math.max(320,W*0.55)));
@@ -302,7 +303,7 @@ function draw(){
       // One group per point. The invisible hit area and the marker both sit inside it, so the tooltip stays open while the pointer moves over either.
       const pt=addIn(g,"g",{tabindex:0,role:"img","aria-label":`${p.model} ${p.effort}: ${p.score}${b.unit} at ${fmt$(p.cost)}`});
 
-      shape(pt,TIER[p.model]||"mid",x,y,5,col,css("--card"));
+      shape(pt,p.vendor==="Local"?"mid":TIER[p.model]||"mid",x,y,p.vendor==="Local"?9:5,col,css("--card"));
       if(sp&&sp===p)addIn(pt,"circle",{cx:x,cy:y,r:10,fill:"none",stroke:css("--ink"),"stroke-width":1.5,"pointer-events":"none"});
       Ladder.bind(pt,p,ladderContext());
       const el=p.effort==="medium"?"med":p.effort;
@@ -325,11 +326,11 @@ function draw(){
   svg.onpointerleave=()=>{if(!document.activeElement?.hasAttribute('data-ladder-model'))Ladder.hide()};
   // legend
   const lg=$("legend");lg.innerHTML="";
-  if(single)models.forEach(mo=>lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${css(MODEL_SLOT[mo])}"></i>${mo}</span>`));
+  if(single)models.forEach(mo=>lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${colorFor(all.find(p=>p.model===mo),true)}"></i>${mo}</span>`));
   else [...new Set(all.map(p=>p.vendor))].forEach(v=>lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${css(VCOL[v])}"></i>${v}</span>`));
   if(ghosts.length)lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${css('--grid')};border:1px solid ${css('--ink-3')}"></i>Other vendors (filtered out)</span>`);
-  lg.insertAdjacentHTML("beforeend",`<span>&#9670; flagship &middot; &#9679; mid &middot; &#9650; small</span><span>&#9711; ring = sweet spot</span><span>- - best score at each price</span>`);
-  $("cnote").textContent=(sp?`Sweet spot on this view: ${sp.model} ${sp.effort}, ${sp.score}${b.unit} at ${fmt$(sp.cost)}. Moving to a pricier point on the dashed line adds less than ${b.unit===" Elo"?"75 Elo":"5 points"} per doubling of cost.`:"")+(b.src==="vendor"?" Vendor charts are read from images, so values are approximate.":"")+(!all.length?` None of the selected vendors has a scored point on this test. Gray markers show the others.`:"")+(nocost.length?` Not plotted, no published cost: ${nocost.map(p=>p.model+" "+p.effort+" ("+p.score+b.unit+")").join(", ")}.`:"");
+  lg.insertAdjacentHTML("beforeend",`<span>&#9670; flagship &middot; &#9679; mid &middot; &#9650; small</span><span>&#9711; ring = sweet spot</span><span>- - best score at each price</span><span><i class="sw" style="background:${css(VCOL.Local)}"></i>large dot = local Gemma</span>`);
+  $("cnote").textContent=(sp?`Sweet spot on this view: ${sp.model} ${sp.effort}, ${sp.score}${b.unit} at ${fmt$(sp.cost)}. Moving to a pricier point on the dashed line adds less than ${b.unit===" Elo"?"75 Elo":"5 points"} per doubling of cost.`:"")+(b.src==="vendor"?" Vendor charts are read from images, so values are approximate.":"")+(!all.length?` None of the selected vendors has a scored point on this test. Gray markers show the others.`:"")+(missing.length?` Not plotted: ${[...new Set(missing.map(p=>p.model))].join(", ")} has no published ${b.name} score.`:"")+(nocost.length?` Not plotted, no published cost: ${nocost.map(p=>p.model+" "+p.effort+" ("+p.score+b.unit+")").join(", ")}.`:"");
   table();spots();
 }
 function table(){
