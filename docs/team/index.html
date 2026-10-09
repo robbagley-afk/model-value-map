@@ -242,6 +242,7 @@ function chart(){
     const near=e=>{const r=svg.getBoundingClientRect(),v=svg.viewBox.baseVal,k=r.width/v.width;let best=null,bd=24;svg.querySelectorAll('.pt').forEach(el=>{const d=Math.hypot(e.clientX-r.left-Number(el.dataset.x)*k,e.clientY-r.top-Number(el.dataset.y)*k);if(d<bd){best=el;bd=d}});if(!best)svg.querySelectorAll('[data-sol-line]').forEach(el=>{const x1=Number(el.getAttribute('x1'))*k,x2=Number(el.getAttribute('x2'))*k,y=Number(el.getAttribute('y1'))*k,mx=e.clientX-r.left,my=e.clientY-r.top;if(mx>=Math.min(x1,x2)&&mx<=Math.max(x1,x2)&&Math.abs(my-y)<=8)best=el});return best};
     svg.onpointermove=e=>{if(e.pointerType==='touch')return;const el=near(e);if(el)Ladder.show(el,SRC[el.dataset.team],ctx(el.dataset.bench));else Ladder.hide()};
     svg.onclick=e=>{const el=near(e);if(el){e.stopPropagation();Ladder.show(el,SRC[el.dataset.team],ctx(el.dataset.bench),null,true)}};
+    svg.onpointerleave=()=>{if(!document.activeElement?.hasAttribute('data-ladder-model'))Ladder.hide()};
   });
 }
 function gemma(){
