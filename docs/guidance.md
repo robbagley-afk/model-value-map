@@ -1,10 +1,15 @@
 # Model and Effort Guidance
 Updated: 2026-10-09. Source: https://robbagley-afk.github.io/model-value-map/
+Revision: cc86b1e1f6588f4437681aba0d22e130f54738ec4e20a248e0e54c866ddba557
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
 Move to the listed upgrade only when the pick fails a check or the task is harder than the examples.
-Scores and costs come from the sources at the end of this file.
+Scores and costs come from the sources at the end of this file. Refresh installed instructions by
+comparing Revision, not the Updated date. Revision hashes this guidance content, so same-day changes
+are detected. These public guides are read-only sources for consumers. Changes reach this website
+only after its maintainer builds, validates, commits and pushes the source repository. Editing a
+separate note does not publish here.
 
 ## Rule
 An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.
@@ -78,8 +83,8 @@ An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each do
 - https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-vs-claude-opus-5-5-low
 - https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-low-vs-claude-sonnet-5-5-low
 - https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol
-- turn23view0
-- turn23view2
+- https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra
+- https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-low-vs-gemini-3-8-flash-medium
 - https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium
 - https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low
 
