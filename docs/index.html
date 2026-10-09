@@ -210,6 +210,7 @@ function draw(){
   const free=(x,y,w,h)=>{if(boxes.some(b=>x<b.x+b.w&&x+w>b.x&&y<b.y+b.h&&y+h>b.y))return false;boxes.push({x,y,w,h});return true};
   const add=(tag,at,txt)=>{const e=document.createElementNS(ns,tag);for(const k in at)e.setAttribute(k,at[k]);if(txt!=null)e.textContent=txt;g.appendChild(e);return e};
   const addIn=(parent,tag,at)=>{const e=document.createElementNS(ns,tag);for(const k in at)e.setAttribute(k,at[k]);parent.appendChild(e);return e};
+  const tipPts=[];
   for(let v=y0;v<=y1+1e-9;v+=step){add("line",{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),stroke:css("--grid"),"stroke-width":1});add("text",{x:m.l-8,y:Y(v)+4,"text-anchor":"end",class:"tick"},v)}
   const ticks=[0.001,0.002,0.005,0.01,0.02,0.05,0.1,0.2,0.5,1,2,5,10,20].filter(t=>Math.log10(t)>=lx0-1e-9&&Math.log10(t)<=lx1+1e-9);
   ticks.forEach((t,i)=>{if((narrow&&i%2)||X(t)<m.l+lane+12)return;add("text",{x:X(t),y:H-m.b+18,"text-anchor":"middle",class:"tick"},t<1?String(t).replace(/^0/,""):t)});
@@ -235,11 +236,16 @@ function draw(){
       const show=ev=>{const t=$("tip"),r=$("chartbox").getBoundingClientRect(),sx=r.width/W;t.hidden=false;
         t.innerHTML=`<b>${p.model} &middot; ${p.effort}</b><br>${b.name}: ${p.score}${b.unit}<br>Cost: ${fmt$(p.cost)}${p.note?"<br>"+p.note:""}`;
         let lx=x*sx+14,ly=y*sx-10;if(lx+250>r.width)lx=x*sx-254;t.style.left=Math.max(0,lx)+"px";t.style.top=Math.max(0,ly)+"px"};
-      pt.addEventListener("mouseenter",show);pt.addEventListener("focus",show);pt.addEventListener("click",show);
-      pt.addEventListener("mouseleave",()=>$("tip").hidden=true);pt.addEventListener("blur",()=>$("tip").hidden=true);
+      tipPts.push({x,y,show});pt.addEventListener("focus",show);pt.addEventListener("blur",()=>$("tip").hidden=true);
     });
     const last=ps[ps.length-1];if(!narrow){const lx=Math.min((last.cost>0?X(last.cost):m.l+lane/2)+10,W-m.r+8),w=mo.length*7;let ly=Y(last.score)+4;for(const d of [0,14,-14,28,-28]){if(free(lx,ly+d-11,w,14)){add("text",{x:lx,y:ly+d,class:"mdl"},mo);break}}}
   });
+  // Nearest-point hover: the tooltip opens for the closest dot within 40px of the pointer, so you do not have to land on a dot.
+  const ring=addIn(g,"circle",{r:9,fill:"none",stroke:css("--ink"),"stroke-width":2,"pointer-events":"none"});ring.style.display="none";
+  const hideTip=()=>{$("tip").hidden=true;ring.style.display="none";svg.style.cursor=""};
+  const near=ev=>{const r=svg.getBoundingClientRect(),k=W/r.width,mx=(ev.clientX-r.left)*k,my=(ev.clientY-r.top)*k;let best=null,bd=1e9;for(const q of tipPts){const d=Math.hypot(q.x-mx,q.y-my);if(d<bd){bd=d;best=q}}
+    if(best&&bd<=40){best.show();ring.setAttribute("cx",best.x);ring.setAttribute("cy",best.y);ring.style.display="";svg.style.cursor="pointer"}else hideTip()};
+  svg.onpointermove=near;svg.onpointerdown=near;svg.onpointerleave=hideTip;
   // legend
   const lg=$("legend");lg.innerHTML="";
   if(single)models.forEach(mo=>lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${css(MODEL_SLOT[mo])}"></i>${mo}</span>`));
