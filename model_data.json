@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-10-09",
  "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD). Benchmarks: index (AA Intelligence Index), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1 Elo), omni (AA-Omniscience, higher = fewer hallucinations), sci (SciCode %), hle (Humanity's Last Exam no tools %). null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark.",
  "aa": [
   {
@@ -14,7 +14,8 @@
    "omni": 39,
    "sci": 59,
    "hle": 48,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-low-vs-claude-opus-5-5-low"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -24,11 +25,12 @@
    "index": 51,
    "tb": 53,
    "ab": 61,
-   "gdp": 1576,
+   "gdp": 1586,
    "omni": 40,
-   "sci": null,
-   "hle": null,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium"
+   "sci": 59,
+   "hle": 55,
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -38,11 +40,12 @@
    "index": 54,
    "tb": 57,
    "ab": 63,
-   "gdp": 1707,
+   "gdp": 1705,
    "omni": 41,
    "sci": 60,
    "hle": 56,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -56,7 +59,8 @@
    "omni": 43,
    "sci": 65,
    "hle": 58,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -66,11 +70,12 @@
    "index": 58,
    "tb": 60,
    "ab": 70,
-   "gdp": null,
+   "gdp": 1866,
    "omni": 46,
    "sci": 67,
    "hle": 61,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -84,35 +89,38 @@
    "omni": 19,
    "sci": 49,
    "hle": 36,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-low-vs-claude-opus-5-5-low"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
    "model": "Sonnet 5.5",
    "effort": "medium",
-   "cost": 0.59,
+   "cost": 0.48,
    "index": 41,
    "tb": 30,
-   "ab": 53,
-   "gdp": 1292,
+   "ab": 55,
+   "gdp": 1324,
    "omni": 20,
    "sci": 53,
    "hle": 40,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
    "model": "Sonnet 5.5",
    "effort": "high",
-   "cost": 1.08,
+   "cost": 0.88,
    "index": 47,
    "tb": 44,
    "ab": 59,
-   "gdp": 1517,
+   "gdp": 1550,
    "omni": 21,
-   "sci": null,
-   "hle": null,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium"
+   "sci": 54,
+   "hle": 46,
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -122,25 +130,27 @@
    "index": 52,
    "tb": 57,
    "ab": 66,
-   "gdp": 1731,
+   "gdp": 1730,
    "omni": 24,
    "sci": 57,
    "hle": 50,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-xhigh-vs-claude-haiku-5-5-high"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-high-vs-claude-sonnet-5-5-xhigh",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
    "model": "Sonnet 5.5",
    "effort": "max",
-   "cost": 7.6,
+   "cost": 5.46,
    "index": 56,
    "tb": 64,
-   "ab": 71,
-   "gdp": null,
+   "ab": 72,
+   "gdp": 1839,
    "omni": 32,
    "sci": 61,
    "hle": 55,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -154,7 +164,8 @@
    "omni": 3,
    "sci": null,
    "hle": null,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-low-vs-claude-4-5-haiku"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-low-vs-claude-4-5-haiku",
+   "checked": "2026-10-08"
   },
   {
    "vendor": "Anthropic",
@@ -164,11 +175,12 @@
    "index": 34,
    "tb": 15,
    "ab": 29,
-   "gdp": 1277,
+   "gdp": 1274,
    "omni": 4,
    "sci": 49,
    "hle": 34,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -178,11 +190,12 @@
    "index": 38,
    "tb": 22,
    "ab": 34,
-   "gdp": 1420,
+   "gdp": 1418,
    "omni": 6,
    "sci": 49,
    "hle": 37,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-xhigh-vs-claude-haiku-5-5-high"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-high-vs-claude-sonnet-5-5-xhigh",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -194,9 +207,10 @@
    "ab": 36,
    "gdp": 1511,
    "omni": 6,
-   "sci": null,
-   "hle": null,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low"
+   "sci": 52,
+   "hle": 43,
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Anthropic",
@@ -206,11 +220,12 @@
    "index": 43,
    "tb": 33,
    "ab": 35,
-   "gdp": 1620,
+   "gdp": 1618,
    "omni": 11,
    "sci": 55,
    "hle": 44,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-vs-claude-opus-5-5-low"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-vs-claude-opus-5-5-low",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "OpenAI",
@@ -222,9 +237,10 @@
    "ab": 53,
    "gdp": 1297,
    "omni": 38,
-   "sci": null,
-   "hle": null,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-low-vs-gpt-6-1-sol-low"
+   "sci": 53,
+   "hle": 47,
+   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-low-vs-claude-sonnet-5-5-low",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "OpenAI",
@@ -238,7 +254,8 @@
    "omni": 40,
    "sci": 53,
    "hle": 50,
-   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium"
+   "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "OpenAI",
@@ -252,7 +269,8 @@
    "omni": 41,
    "sci": 56,
    "hle": 51,
-   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol"
+   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "OpenAI",
@@ -266,7 +284,8 @@
    "omni": 42,
    "sci": 54,
    "hle": 53,
-   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol"
+   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "OpenAI",
@@ -280,7 +299,8 @@
    "omni": 1,
    "sci": 55,
    "hle": 39,
-   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-gpt-6-luna"
+   "src": "turn23view0",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "OpenAI",
@@ -294,7 +314,8 @@
    "omni": 43,
    "sci": 56,
    "hle": 55,
-   "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-gpt-6-luna"
+   "src": "turn23view0",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Google",
@@ -308,7 +329,8 @@
    "omni": 21,
    "sci": 55,
    "hle": 37,
-   "src": "https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low"
+   "src": "turn23view2",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Google",
@@ -322,7 +344,8 @@
    "omni": 29,
    "sci": 55,
    "hle": 42,
-   "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium"
+   "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Google",
@@ -336,7 +359,8 @@
    "omni": 30,
    "sci": 57,
    "hle": 48,
-   "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium"
+   "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium",
+   "checked": "2026-10-09"
   },
   {
    "vendor": "Local",
@@ -351,7 +375,8 @@
    "sci": 40,
    "hle": 19,
    "src": "https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low",
-   "note": "AA estimate for the reasoning variant at full precision. The test machine runs the QAT 4-bit build with thinking off. See the in-house test below for scores on that exact setup."
+   "note": "AA estimate for the reasoning variant at full precision. The test machine runs the QAT 4-bit build with thinking off. See the in-house test below for scores on that exact setup.",
+   "checked": "2026-10-08"
   }
  ],
  "vendor_charts": {
@@ -752,27 +777,27 @@
   }
  },
  "local_tests": {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "instance": "gemma4-26b-qat (Gemma 4 26B-A4B QAT 4-bit, thinking off, local server LM Studio)",
   "runs": 3,
   "items": 44,
   "totals": [
    "39/44",
    "40/44",
-   "39/44"
+   "40/44"
   ],
   "by_category": {
    "Classification (short customer messages)": "6/6 every run",
    "Reformatting (dates, phones, dedupe)": "8/8 every run",
    "Instruction following": "6/6 every run",
    "Declining made-up facts (UNKNOWN)": "8/8 every run",
-   "Extraction to JSON": "4 to 5 of 6 (leaves values unquoted)",
+   "Extraction to JSON": "4 to 5/6 (JSON syntax failures)",
    "Tool calls": "3/4 (phone not in E.164)",
    "Multi-step money math": "4/6 (same two misses each run)"
   },
-  "speed": "about 10 tokens per second per request with 4 requests in parallel",
+  "speed": "about 17 tokens per second per request with 2 requests in parallel",
   "script": "gemma_eval/run_eval.py in the GitHub repo",
-  "caveat": "A 44-item test, written 2026-10-08. Not comparable to Artificial Analysis or vendor scores."
+  "caveat": "Synthetic 44-item test, 3 runs. No student records. Separate from Artificial Analysis and vendor benchmarks. The listed AA Gemma scores describe the reasoning variant, not this non-thinking 4-bit instance."
  },
  "gemma_vendor_card": {
   "src": "https://huggingface.co/google/gemma-4-26b-a4b-it",
@@ -791,5 +816,14 @@
    "MMMU Pro (vision)": "73.8%",
    "MRCR v2 128k long context": "44.1%"
   }
+ },
+ "review": {
+  "checked": "2026-10-09",
+  "verified_points": 23,
+  "pending_points": [
+   "Haiku 5.5 low",
+   "Gemma 4 26B-A4B reasoning"
+  ],
+  "note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."
  }
 }

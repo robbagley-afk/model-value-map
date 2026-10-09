@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/model-value-map/favicon.ico">
+<title>Career Services Model Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: full-width page on the Ensign Career Coach system. Policy note, pick table, chart by type of work, Gemma test, sources. Light theme only. */
+:root{
+  color-scheme:light;
+  --surface-sunken:#f8fafc; --surface:#ffffff; --ink:#0f172a; --ink-muted:#475569;
+  --border:#cbd5e1; --border-strong:#94a3b8; --brand:#006645; --brand-tint:#e6f2ed; --grid:#e2e8f0;
+  --warn-bg:#fff7e6; --warn-border:#b45309; --warn-text:#7c2d12;
+  --font:"Montserrat",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --gutter:clamp(24px,3vw,56px); --radius-md:10px; --radius-lg:14px; --radius-pill:999px;
+  --shadow-card:0 1px 2px rgba(15,23,42,.06),0 2px 8px rgba(15,23,42,.05);
+}
+@media (max-width:640px){:root{--gutter:16px}}
+@media (max-width:375px){:root{--gutter:12px}}
+*{box-sizing:border-box}
+body{background:var(--surface-sunken);color:var(--ink);font-family:var(--font);font-size:19px;line-height:1.6}
+.page{max-width:100vw;padding-inline:var(--gutter);padding-block:32px 72px;display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:10px}
+.mark{display:inline-flex;gap:10px;align-items:center;font-weight:600;font-size:17px;color:var(--ink-muted)}
+.mark i{width:6px;height:22px;background:#FDB515;border-radius:2px;display:inline-block}
+h1{font-size:clamp(30px,3.4vw,40px);line-height:1.2;margin:0;font-weight:700;text-wrap:balance}
+h2{font-size:26px;line-height:1.3;margin:0;font-weight:700;text-wrap:balance}
+p{margin:0}
+.muted{color:var(--ink-muted)}
+.lede{max-width:70ch}
+.policy{display:flex;gap:14px;align-items:flex-start;background:var(--warn-bg);border:2px solid var(--warn-border);border-radius:var(--radius-lg);padding:16px 18px;color:var(--warn-text)}
+.policy .pill{flex:none;font-weight:700;font-size:17px;border:2px solid var(--warn-border);border-radius:var(--radius-pill);padding:2px 12px;background:var(--surface)}
+section{display:flex;flex-direction:column;gap:16px;min-width:0}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg)}
+table{border-collapse:collapse;width:100%;font-size:17px;font-variant-numeric:tabular-nums}
+th,td{padding:12px 14px;border-bottom:1px solid var(--grid);vertical-align:top;text-align:left}
+thead th{font-weight:600;color:var(--ink-muted);background:var(--surface);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.task{min-width:220px}
+td.task b{display:block;font-weight:600}
+td.task span{color:var(--ink-muted)}
+td.pick{min-width:240px}
+td.pick b{display:block;color:var(--ink)}
+td.pick span{color:var(--ink-muted)}
+td.sc{text-align:right;white-space:nowrap}
+td.sc.na{color:var(--ink-muted)}
+td.sc.best{background:var(--brand-tint);font-weight:700}
+td.sc.best::after{content:"Recommended";display:block;width:max-content;margin-left:auto;margin-top:4px;font-size:17px;font-weight:600;color:var(--brand);border:2px solid var(--brand);border-radius:var(--radius-pill);padding:0 10px;background:var(--surface)}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.controls .lab{font-weight:600;color:var(--ink-muted);font-size:17px;margin-right:4px}
+button.chip{font:500 17px var(--font);min-height:44px;padding:8px 16px;border-radius:var(--radius-md);border:2px solid var(--border-strong);background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+button.chip:hover{border-color:var(--brand)}
+button.chip:active{transform:translateY(1px)}
+button.chip[aria-pressed="true"]{border-color:var(--brand);background:var(--brand-tint)}
+button.chip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+button.chip svg{flex:none}
+.chartcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:20px;display:flex;flex-direction:column;gap:8px;min-width:0;position:relative}
+.row{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:16px;align-items:center;padding-block:10px;border-bottom:1px solid var(--grid)}
+.row:last-child{border-bottom:0}
+.row .rt b{display:block;font-weight:600;font-size:19px}
+.row .rt span{color:var(--ink-muted);font-size:17px}
+.row svg{display:block;width:100%;height:auto;overflow:visible}
+.tick{font:400 17px var(--font);fill:var(--ink-muted)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:17px;padding:10px 12px;border-radius:var(--radius-md);max-width:300px;z-index:3;line-height:1.45}
+.gem{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.panel h3{margin:0;font-size:20px;font-weight:600}
+.panel dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 14px;font-size:17px}
+.panel dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+footer{font-size:17px;color:var(--ink-muted);display:flex;flex-direction:column;gap:8px}
+footer a,.panel a{color:var(--brand)}
+footer a:focus-visible,.panel a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+@media (max-width:900px){.row{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (forced-colors:active){button.chip{border-color:ButtonText}button.chip:focus-visible{outline-color:Highlight}}
+
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--surface-sunken:#141b24;--surface:#1e293b;--ink:#f1f5f9;--ink-muted:#cbd5e1;--border:#475569;--border-strong:#64748b;--brand:#7ee3bb;--brand-tint:#183c32;--grid:#334155;--warn-bg:#382a18;--warn-text:#fbd49e}}
+.effort-ladder{position:fixed;z-index:1000;width:max-content;max-width:calc(100vw - 32px);max-height:calc(100vh - 16px);overflow:auto;background:var(--card,var(--surface));color:var(--ink);border:1px solid var(--rule,var(--border));border-radius:10px;padding:12px;box-shadow:0 6px 28px #0004;font-size:13px;line-height:1.5}
+.effort-ladder[hidden]{display:none}
+.effort-ladder table{font-size:12px;width:100%;margin:8px 0}
+.effort-ladder th,.effort-ladder td{padding:5px 6px;white-space:normal;min-width:0;border-bottom:1px solid var(--grid);text-align:left}
+.effort-ladder .current{background:var(--chip,var(--brand-tint));font-weight:700}
+.effort-ladder small{display:block;max-width:32ch}
+[data-ladder-model]{cursor:pointer}
+[data-ladder-model]:focus-visible{outline:2px solid var(--accent,var(--brand));outline-offset:3px}
+body{margin:0}
+.page,.wrap{min-width:0}
+footer a{overflow-wrap:anywhere}
+.site-nav{display:flex;gap:20px;flex-wrap:wrap;font-size:15px}
+.site-nav a{color:var(--ink)}
+@media(max-width:640px){.wrap,.page{padding-inline:16px}.card,.chartcard{padding:12px}.chartbox svg{min-width:0}.policy{flex-wrap:wrap}.tbl{max-width:100%}.spot dl{grid-template-columns:minmax(0,1fr)}.effort-ladder{font-size:12px}.effort-ladder th,.effort-ladder td{padding:4px}}
+
+.ladder-button{font:inherit;color:inherit;background:none;border:0;padding:0;text-align:left;text-decoration:underline;cursor:pointer}
+
+@media(max-width:640px){.tbl{overflow-x:visible}.tbl table,.tbl tbody,.tbl tr{display:block}.tbl thead{display:none}.tbl tr{padding:12px;border-bottom:2px solid var(--grid)}.tbl td{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px;min-width:0!important;white-space:normal!important;text-align:left!important;padding:8px 0;overflow-wrap:anywhere}.tbl td::before{content:attr(data-label);font-weight:600;color:var(--ink-2,var(--ink-muted))}.tbl td.sc.best::after{grid-column:2;margin:0;font-size:12px}.tbl td.task,.tbl td.pick{display:block}.tbl td.task::before,.tbl td.pick::before{display:block;margin-bottom:4px}}
+
+</style>
+</head><body>
+
+<div class="page">
+<header>
+<nav class="site-nav" aria-label="Guides"><a href="/model-value-map/">Model Value Map</a><a href="/model-value-map/team/">Career Services</a><a href="/model-value-map/guidance.md">AI tool guidance</a></nav>
+  <span class="mark"><i aria-hidden="true"></i>Ensign College Career Services</span>
+  <h1>Career Services Model Guide</h1>
+  <p class="lede muted">Which AI model to use for each kind of Career Services work, comparing OpenAI's ChatGPT models with the local Gemma model on our LM Studio server. Start with the cheapest setting that does the job well. Updated <span id="upd"></span>.</p>
+</header>
+
+<div class="policy" role="note"><span class="pill">Student data</span><p id="policy"></p></div>
+
+<section>
+  <h2>Pick by type of work</h2>
+  <p class="muted lede">Scores are from Artificial Analysis, an independent testing lab, unless the cell says "our test." Cost is dollars per test task. The shaded cell marked Recommended is the pick. GDPval scores are Elo ratings: graders compare two models' work side by side, and a 100-point lead means winning about 64% of those comparisons. GPT-6 Astra is left out because Career Services does not have access to it.</p>
+  <div class="tbl"><table id="picks"></table></div>
+</section>
+
+<section>
+  <h2>How the models compare on each task</h2>
+  <div class="controls" id="filters"><span class="lab">Show</span></div>
+  <div class="chartcard" id="chart" role="figure" aria-label="Scores for each model by type of work"><div class="tip" id="tip" role="status" hidden></div></div>
+  <p class="muted lede">Each row uses its own scale. Further right is better. Hover or tab to a marker to see its score and cost. Gemma has no published score for coding.</p>
+</section>
+
+<section>
+  <h2>Local Gemma test results</h2>
+  <p class="muted lede" id="gnote"></p>
+  <div class="gem"><div class="panel" id="gtest"></div><div class="panel" id="gcard"></div></div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<script>
+const DATA={"updated": "2026-10-09", "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD). Benchmarks: index (AA Intelligence Index), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1 Elo), omni (AA-Omniscience, higher = fewer hallucinations), sci (SciCode %), hle (Humanity's Last Exam no tools %). null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark.", "aa": [{"vendor": "Anthropic", "model": "Opus 5.5", "effort": "low", "cost": 0.55, "index": 42, "tb": 31, "ab": 53, "gdp": 1235, "omni": 39, "sci": 59, "hle": 48, "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Opus 5.5", "effort": "medium", "cost": 1.34, "index": 51, "tb": 53, "ab": 61, "gdp": 1586, "omni": 40, "sci": 59, "hle": 55, "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Opus 5.5", "effort": "high", "cost": 1.82, "index": 54, "tb": 57, "ab": 63, "gdp": 1705, "omni": 41, "sci": 60, "hle": 56, "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Opus 5.5", "effort": "xhigh", "cost": 3.46, "index": 56, "tb": 60, "ab": 65, "gdp": 1837, "omni": 43, "sci": 65, "hle": 58, "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Opus 5.5", "effort": "max", "cost": 5.98, "index": 58, "tb": 60, "ab": 70, "gdp": 1866, "omni": 46, "sci": 67, "hle": 61, "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Sonnet 5.5", "effort": "low", "cost": 0.35, "index": 36, "tb": 21, "ab": 49, "gdp": 1179, "omni": 19, "sci": 49, "hle": 36, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Sonnet 5.5", "effort": "medium", "cost": 0.48, "index": 41, "tb": 30, "ab": 55, "gdp": 1324, "omni": 20, "sci": 53, "hle": 40, "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Sonnet 5.5", "effort": "high", "cost": 0.88, "index": 47, "tb": 44, "ab": 59, "gdp": 1550, "omni": 21, "sci": 54, "hle": 46, "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Sonnet 5.5", "effort": "xhigh", "cost": 2.01, "index": 52, "tb": 57, "ab": 66, "gdp": 1730, "omni": 24, "sci": 57, "hle": 50, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-high-vs-claude-sonnet-5-5-xhigh", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Sonnet 5.5", "effort": "max", "cost": 5.46, "index": 56, "tb": 64, "ab": 72, "gdp": 1839, "omni": 32, "sci": 61, "hle": 55, "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Haiku 5.5", "effort": "low", "cost": 0.02, "index": 29, "tb": 13, "ab": 23, "gdp": 1125, "omni": 3, "sci": null, "hle": null, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-low-vs-claude-4-5-haiku", "checked": "2026-10-08"}, {"vendor": "Anthropic", "model": "Haiku 5.5", "effort": "medium", "cost": 0.05, "index": 34, "tb": 15, "ab": 29, "gdp": 1274, "omni": 4, "sci": 49, "hle": 34, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Haiku 5.5", "effort": "high", "cost": 0.08, "index": 38, "tb": 22, "ab": 34, "gdp": 1418, "omni": 6, "sci": 49, "hle": 37, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-high-vs-claude-sonnet-5-5-xhigh", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Haiku 5.5", "effort": "xhigh", "cost": 0.12, "index": 41, "tb": 29, "ab": 36, "gdp": 1511, "omni": 6, "sci": 52, "hle": 43, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low", "checked": "2026-10-09"}, {"vendor": "Anthropic", "model": "Haiku 5.5", "effort": "max", "cost": 0.21, "index": 43, "tb": 33, "ab": 35, "gdp": 1618, "omni": 11, "sci": 55, "hle": 44, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-vs-claude-opus-5-5-low", "checked": "2026-10-09"}, {"vendor": "OpenAI", "model": "GPT-6.1 Sol", "effort": "low", "cost": 0.13, "index": 42, "tb": 31, "ab": 53, "gdp": 1297, "omni": 38, "sci": 53, "hle": 47, "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-low-vs-claude-sonnet-5-5-low", "checked": "2026-10-09"}, {"vendor": "OpenAI", "model": "GPT-6.1 Sol", "effort": "medium", "cost": 0.21, "index": 48, "tb": 48, "ab": 63, "gdp": 1433, "omni": 40, "sci": 53, "hle": 50, "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium", "checked": "2026-10-09"}, {"vendor": "OpenAI", "model": "GPT-6.1 Sol", "effort": "high", "cost": 0.32, "index": 50, "tb": 52, "ab": 64, "gdp": 1486, "omni": 41, "sci": 56, "hle": 51, "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol", "checked": "2026-10-09"}, {"vendor": "OpenAI", "model": "GPT-6.1 Sol", "effort": "max", "cost": 0.72, "index": 52, "tb": 56, "ab": 65, "gdp": 1575, "omni": 42, "sci": 54, "hle": 53, "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol", "checked": "2026-10-09"}, {"vendor": "OpenAI", "model": "GPT-6 Luna", "effort": "max", "cost": 0.07, "index": 38, "tb": 13, "ab": 53, "gdp": 1432, "omni": 1, "sci": 55, "hle": 39, "src": "turn23view0", "checked": "2026-10-09"}, {"vendor": "OpenAI", "model": "GPT-6 Astra", "effort": "max", "cost": 3.26, "index": 53, "tb": 59, "ab": 68, "gdp": 1542, "omni": 43, "sci": 56, "hle": 55, "src": "turn23view0", "checked": "2026-10-09"}, {"vendor": "Google", "model": "Gemini 3.8 Flash", "effort": "low", "cost": null, "index": 33, "tb": 10, "ab": 37, "gdp": 1310, "omni": 21, "sci": 55, "hle": 37, "src": "turn23view2", "checked": "2026-10-09"}, {"vendor": "Google", "model": "Gemini 3.8 Flash", "effort": "medium", "cost": 0.93, "index": 40, "tb": 20, "ab": 61, "gdp": 1426, "omni": 29, "sci": 55, "hle": 42, "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium", "checked": "2026-10-09"}, {"vendor": "Google", "model": "Gemini 3.8 Flash", "effort": "high", "cost": 1.24, "index": 41, "tb": 20, "ab": 60, "gdp": 1436, "omni": 30, "sci": 57, "hle": 48, "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium", "checked": "2026-10-09"}, {"vendor": "Local", "model": "Gemma 4 26B-A4B", "effort": "reasoning", "cost": 0, "index": 17, "tb": null, "ab": 2, "gdp": 569, "omni": -51, "sci": 40, "hle": 19, "src": "https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low", "note": "AA estimate for the reasoning variant at full precision. The test machine runs the QAT 4-bit build with thinking off. See the in-house test below for scores on that exact setup.", "checked": "2026-10-08"}], "vendor_charts": {"osworld": {"label": "OSWorld 2.1 offline, computer use (%)", "src": "https://www.anthropic.com/claude-haiku-5-5", "points": [["Anthropic", "Haiku 5.5", "low", 0.07, 42], ["Anthropic", "Haiku 5.5", "medium", 0.13, 53.5], ["Anthropic", "Haiku 5.5", "high", 0.2, 61.5], ["Anthropic", "Haiku 5.5", "xhigh", 0.3, 67.5], ["Anthropic", "Haiku 5.5", "max", 0.62, 72.4], ["Anthropic", "Sonnet 5.5", "low", 0.7, 58], ["Anthropic", "Sonnet 5.5", "medium", 0.95, 66], ["Anthropic", "Sonnet 5.5", "high", 1.5, 73], ["Anthropic", "Sonnet 5.5", "xhigh", 2.3, 81], ["Anthropic", "Sonnet 5.5", "max", 5.8, 83.9], ["OpenAI", "GPT-6 Luna", "low", 0.04, 19], ["OpenAI", "GPT-6 Luna", "medium", 0.13, 37], ["OpenAI", "GPT-6 Luna", "high", 0.15, 42], ["OpenAI", "GPT-6 Luna", "xhigh", 0.18, 45], ["OpenAI", "GPT-6 Luna", "max", 0.22, 49], ["Anthropic", "Haiku 4.5", "none", 1.45, 15.7]]}, "gdpval": {"label": "GDPval-AA v2.1, knowledge work (Elo)", "src": "https://www.anthropic.com/claude-haiku-5-5", "points": [["Anthropic", "Haiku 5.5", "low", 0.012, 1125], ["Anthropic", "Haiku 5.5", "medium", 0.03, 1277], ["Anthropic", "Haiku 5.5", "high", 0.09, 1420], ["Anthropic", "Haiku 5.5", "xhigh", 0.27, 1511], ["Anthropic", "Haiku 5.5", "max", 0.85, 1620], ["Anthropic", "Sonnet 5.5", "low", 0.23, 1179], ["Anthropic", "Sonnet 5.5", "medium", 0.27, 1324], ["Anthropic", "Sonnet 5.5", "high", 0.62, 1550], ["Anthropic", "Sonnet 5.5", "xhigh", 1.9, 1731], ["Anthropic", "Sonnet 5.5", "max", 6.5, 1840], ["OpenAI", "GPT-6 Luna", "low", 0.004, 1035], ["OpenAI", "GPT-6 Luna", "medium", 0.02, 1265], ["OpenAI", "GPT-6 Luna", "high", 0.03, 1345], ["OpenAI", "GPT-6 Luna", "xhigh", 0.05, 1365], ["OpenAI", "GPT-6 Luna", "max", 0.09, 1432], ["Anthropic", "Haiku 4.5", "none", 0.24, 735]]}, "hle": {"label": "Humanity's Last Exam, no tools (%)", "src": "https://www.anthropic.com/claude-haiku-5-5", "points": [["Anthropic", "Haiku 5.5", "low", 0.004, 31], ["Anthropic", "Haiku 5.5", "medium", 0.007, 35.5], ["Anthropic", "Haiku 5.5", "high", 0.02, 40], ["Anthropic", "Haiku 5.5", "xhigh", 0.065, 44], ["Anthropic", "Haiku 5.5", "max", 0.22, 45.9], ["Anthropic", "Sonnet 5.5", "low", 0.028, 41], ["Anthropic", "Sonnet 5.5", "medium", 0.033, 43], ["Anthropic", "Sonnet 5.5", "high", 0.08, 48], ["Anthropic", "Sonnet 5.5", "xhigh", 0.2, 53], ["Anthropic", "Sonnet 5.5", "max", 0.9, 56.9], ["Anthropic", "Haiku 4.5", "none", 0.095, 10.2]]}, "terminal": {"label": "Terminal-Bench 4.0, agentic coding (%)", "src": "https://www.anthropic.com/claude-sonnet-5-5", "points": [["Anthropic", "Sonnet 5.5", "low", 0.72, 20], ["Anthropic", "Sonnet 5.5", "medium", 0.8, 29], ["Anthropic", "Sonnet 5.5", "high", 1.95, 43], ["Anthropic", "Sonnet 5.5", "xhigh", 5.3, 61.5], ["Anthropic", "Sonnet 5.5", "max", 13, 70.6], ["Anthropic", "Opus 5.5", "low", 1.3, 38.5], ["Anthropic", "Opus 5.5", "medium", 3.0, 57.5], ["Anthropic", "Opus 5.5", "high", 4.0, 64], ["Anthropic", "Opus 5.5", "xhigh", 7.5, 66.4], ["Anthropic", "Opus 5.5", "max", 11.5, 65]]}}, "local_tests": {"date": "2026-10-09", "instance": "gemma4-26b-qat (Gemma 4 26B-A4B QAT 4-bit, thinking off, local server LM Studio)", "runs": 3, "items": 44, "totals": ["39/44", "40/44", "40/44"], "by_category": {"Classification (short customer messages)": "6/6 every run", "Reformatting (dates, phones, dedupe)": "8/8 every run", "Instruction following": "6/6 every run", "Declining made-up facts (UNKNOWN)": "8/8 every run", "Extraction to JSON": "4 to 5/6 (JSON syntax failures)", "Tool calls": "3/4 (phone not in E.164)", "Multi-step money math": "4/6 (same two misses each run)"}, "speed": "about 17 tokens per second per request with 2 requests in parallel", "script": "gemma_eval/run_eval.py in the GitHub repo", "caveat": "Synthetic 44-item test, 3 runs. No student records. Separate from Artificial Analysis and vendor benchmarks. The listed AA Gemma scores describe the reasoning variant, not this non-thinking 4-bit instance."}, "gemma_vendor_card": {"src": "https://huggingface.co/google/gemma-4-26b-a4b-it", "note": "Google model card, instruction-tuned, full precision, mode not stated", "scores": {"MMLU-Pro": "82.6%", "GPQA Diamond": "82.3%", "AIME 2026 no tools": "88.3%", "LiveCodeBench v6": "77.1%", "Codeforces Elo": "1718", "Tau2 tool use": "68.2%", "HLE no tools": "8.7%", "HLE with search": "17.2%", "BigBench Extra Hard": "64.8%", "MMMLU": "86.3%", "MMMU Pro (vision)": "73.8%", "MRCR v2 128k long context": "44.1%"}}, "review": {"checked": "2026-10-09", "verified_points": 23, "pending_points": ["Haiku 5.5 low", "Gemma 4 26B-A4B reasoning"], "note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."}}, TEAM={"title": "Career Services Model Guide", "policy": "Student and alumni records are approved only in Ensign's ChatGPT CES edition and in local Gemma on the team LM Studio server. Claude models are not approved for student data. Microsoft 365 Copilot is under review. Never put student data in a personal account of any AI tool.", "models": [{"key": "gemma", "label": "Gemma 4 26B-A4B reasoning ($0)", "short": "Gemma", "shape": "tri", "color": "#0f172a"}, {"key": "luna", "label": "GPT-6 Luna max ($0.07)", "short": "Luna", "shape": "sq", "color": "#1baf7a"}, {"key": "sol_low", "label": "GPT-6.1 Sol low ($0.13)", "short": "Sol low", "shape": "circ", "color": "#2a78d6"}, {"key": "sol_medium", "label": "GPT-6.1 Sol medium ($0.21)", "short": "Sol med", "shape": "circ", "color": "#2a78d6"}, {"key": "sol_high", "label": "GPT-6.1 Sol high ($0.32)", "short": "Sol high", "shape": "circ", "color": "#2a78d6"}, {"key": "sol_max", "label": "GPT-6.1 Sol max ($0.72)", "short": "Sol max", "shape": "circ", "color": "#2a78d6"}], "chart_rows": [{"bench": "ab", "task": "Connector and tool workflows", "test": "AutomationBench", "unit": "%"}, {"bench": "gdp", "task": "Writing from facts you provide", "test": "GDPval", "unit": " Elo"}, {"bench": "omni", "task": "Names, dates, and facts that must be right", "test": "AA-Omniscience (higher means fewer made-up facts)", "unit": ""}, {"bench": "tb", "task": "Coding", "test": "Terminal-Bench 4.0", "unit": "%"}, {"bench": "hle", "task": "Research and analysis", "test": "Humanity's Last Exam", "unit": "%"}, {"bench": "index", "task": "General multistep work", "test": "Intelligence Index", "unit": ""}], "tasks": [{"task": "Student and alumni records", "examples": "Anything with names, IDs, grades, or contact details of students or alumni", "pick": "ChatGPT CES or local Gemma", "why": "Policy, not price. These are the only approved tools. In ChatGPT CES, pick the model for the step using the rows below. Use Gemma for the sorting, cleanup, and extraction steps it does well.", "key": "gemma", "bench": null}, {"task": "Sorting and tagging", "examples": "Coding survey answers, labeling emails, sorting job postings", "pick": "Local Gemma", "why": "6 of 6 on every run of our test, at no cost. GPT-6 Luna max if you need it in ChatGPT.", "key": "gemma", "bench": null, "local": "Classification (short customer messages)"}, {"task": "Cleanup and reformatting", "examples": "Contact lists, dates, phone numbers, removing duplicates", "pick": "Local Gemma", "why": "8 of 8 on every run of our test.", "key": "gemma", "bench": null, "local": "Reformatting (dates, phones, dedupe)"}, {"task": "Pulling fields into a spreadsheet", "examples": "Resume fields, form answers, event sign-ups", "pick": "Local Gemma, then check the output", "why": "4 to 5 of 6 in our test. It sometimes breaks the JSON format, so run a format check and retry. GPT-6 Luna max if it keeps failing.", "key": "gemma", "bench": null, "local": "Extraction to JSON"}, {"task": "Connector and tool workflows", "examples": "Multi-step runs through Handshake, Workday, Outlook, or Teams connectors", "pick": "GPT-6 Luna max", "why": "53% at $0.07 per task. Move to GPT-6.1 Sol medium (63%, $0.21) when steps branch. Gemma scores 2%.", "key": "luna", "bench": "ab"}, {"task": "Writing from facts you provide", "examples": "Employer emails, newsletters, job summaries, event blurbs", "pick": "GPT-6 Luna max", "why": "1432 at $0.07, the same as GPT-6.1 Sol medium (1433) for a third of the cost. GPT-6.1 Sol max (1575) for final polish. Check every name and date: Luna often makes facts up.", "key": "luna", "bench": "gdp"}, {"task": "Names, dates, and facts that must be right", "examples": "Employer names, event details, statistics, policy answers", "pick": "GPT-6.1 Sol high", "why": "AA-Omniscience 41 at $0.32 per task, compared with Sol low 38 at $0.13. Use low for a cheaper first pass and verify names, dates, and figures.", "key": "sol_high", "bench": "omni"}, {"task": "Math on numbers", "examples": "Budgets, report statistics, percentages", "pick": "GPT-6.1 Sol low, or a spreadsheet formula", "why": "Gemma missed 2 of 6 money problems on every run of our test. For anything that goes in a report, let the spreadsheet do the math.", "key": "sol_low", "bench": null, "local": "Multi-step money math"}, {"task": "Coding", "examples": "Career Services apps, scripts, spreadsheet automation", "pick": "GPT-6.1 Sol medium", "why": "48% at $0.21. Sol high (52%, $0.32) for hard bugs. Luna scores 13%. Gemma is not yet evaluated here.", "key": "sol_medium", "bench": "tb"}, {"task": "Research and analysis", "examples": "Labor market questions, comparing programs, weighing options", "pick": "GPT-6.1 Sol medium", "why": "50% at $0.21. Higher effort adds 1 to 3 points for 1.5 to 3 times the cost.", "key": "sol_medium", "bench": "hle"}, {"task": "General multistep work", "examples": "Planning a project, multi-part requests", "pick": "GPT-6.1 Sol medium", "why": "48 at $0.21. Sol high adds 2 points for 1.5 times the cost, and Sol max adds 4 for 3.4 times.", "key": "sol_medium", "bench": "index"}], "note_models": "GPT-6 Astra is left out because Career Services does not have access to it.", "updated": "2026-10-09"};
+const $=id=>document.getElementById(id);
+const pick=(model,effort)=>DATA.aa.find(p=>p.model===model&&p.effort===effort);
+const SRC={gemma:DATA.aa.find(p=>p.vendor==="Local"),luna:pick("GPT-6 Luna","max"),sol_low:pick("GPT-6.1 Sol","low"),sol_medium:pick("GPT-6.1 Sol","medium"),sol_high:pick("GPT-6.1 Sol","high"),sol_max:pick("GPT-6.1 Sol","max"),astra:pick("GPT-6 Astra","max")};
+const shown=new Set(TEAM.models.map(m=>m.key));
+try{const s=JSON.parse(localStorage.getItem("csmg")||"null");if(Array.isArray(s)&&s.length){shown.clear();s.forEach(k=>shown.add(k))}}catch(e){}
+const save=()=>{try{localStorage.setItem("csmg",JSON.stringify([...shown]))}catch(e){}};
+function mark(shape,x,y,r,fill){
+  if(shape==="tri")return `<path d="M${x} ${y-r-1}L${x+r+1} ${y+r}L${x-r-1} ${y+r}Z" fill="${fill}" stroke="#fff" stroke-width="2"/>`;
+  if(shape==="sq")return `<rect x="${x-r}" y="${y-r}" width="${2*r}" height="${2*r}" fill="${fill}" stroke="#fff" stroke-width="2"/>`;
+  if(shape==="dia")return `<path d="M${x} ${y-r-2}L${x+r+2} ${y}L${x} ${y+r+2}L${x-r-2} ${y}Z" fill="${fill}" stroke="#fff" stroke-width="2"/>`;
+  return `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="#fff" stroke-width="2"/>`;
+}
+const icon=m=>`<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">${mark(m.shape,10,10,6,m.color)}</svg>`;
+function score(key,bench){const p=SRC[key];return p?p[bench]:null}
+// Shared effort ladder, built into both standalone pages.
+const Ladder=(()=>{
+  const order=['none','reasoning','low','medium','high','xhigh','max','ultra'];
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const money=c=>c==null?'cost not published':c===0?'$0':'$'+c.toFixed(c<.01?3:2);
+  const tip=document.createElement('div');tip.id='effort-ladder';tip.className='effort-ladder';tip.setAttribute('role','tooltip');tip.hidden=true;document.body.append(tip);
+  let owner=null,pinned=false,current=null;
+  function close(){if(owner)owner.removeAttribute('aria-describedby');owner=null;pinned=false;tip.hidden=true}
+  function rows(p,ctx){
+    const aa=DATA.aa.filter(q=>q.model===p.model&&q.vendor===p.vendor);
+    if(ctx.src!=='vendor'){const efforts=[...new Set([...aa.map(q=>q.effort),...Object.values(DATA.vendor_charts).flatMap(v=>v.points.filter(a=>a[1]===p.model&&a[0]===p.vendor).map(a=>a[2]))])];return efforts.map(e=>{const q=aa.find(q=>q.effort===e);return q?{...q,score:q[ctx.key]}:{effort:e,cost:null,score:null}}).sort((a,b)=>order.indexOf(a.effort)-order.indexOf(b.effort))}
+    const vc=DATA.vendor_charts[ctx.key];const pts=(vc?.points||[]).filter(a=>a[1]===p.model&&a[0]===p.vendor).map(a=>({vendor:a[0],model:a[1],effort:a[2],cost:a[3],score:a[4]}));
+    const efforts=[...new Set([...aa,...pts].map(q=>q.effort))];
+    return efforts.map(e=>pts.find(q=>q.effort===e)||{effort:e,cost:null,score:null}).sort((a,b)=>order.indexOf(a.effort)-order.indexOf(b.effort));
+  }
+  function show(el,p,ctx,anchor,pin=false){
+    if(pinned&&!pin)return;
+    if(owner&&owner!==el)owner.removeAttribute('aria-describedby');owner=el;pinned=pin;current={p,ctx};el.setAttribute('aria-describedby',tip.id);
+    const rr=rows(p,ctx),costs=rr.filter(q=>q.cost!=null&&q.cost>=0).map(q=>q.cost),base=costs.length?Math.min(...costs):null;
+    tip.innerHTML=`<b>${esc(p.model)}</b><div>${esc(ctx.name)}${ctx.src==='vendor'?' · approximate vendor chart':''}</div><table><thead><tr><th>Effort</th><th>Cost/task</th><th>Score</th><th>Multiple</th></tr></thead><tbody>${rr.map(q=>`<tr data-effort="${esc(q.effort)}"${q.effort===p.effort?' class="current" aria-current="true"':''}><td>${esc(q.effort)}</td><td>${money(q.cost)}</td><td>${q.score==null?'not published':esc(q.score)+esc(ctx.unit||'')}</td><td>${q.cost==null||base==null?'—':base===0?(q.cost===0?'1×':'—'):(q.cost/base).toFixed(2)+'×'}</td></tr>`).join('')}</tbody></table><small>Relative to the cheapest published effort. Escape or tap elsewhere to close.</small>`;
+    tip.hidden=false;const r=anchor||el.getBoundingClientRect();const w=tip.offsetWidth,h=tip.offsetHeight;
+    tip.style.left=Math.max(16,Math.min(innerWidth-w-16,r.left))+'px';
+    tip.style.top=Math.max(8,Math.min(innerHeight-h-8,r.bottom+8))+'px';
+  }
+  function bind(el,p,ctx){
+    el.setAttribute('data-ladder-model',p.model);el.setAttribute('data-ladder-effort',p.effort);
+    el.addEventListener('mouseenter',()=>show(el,p,ctx));el.addEventListener('mouseleave',()=>{if(!pinned&&owner===el)close()});
+    el.addEventListener('focus',()=>show(el,p,ctx));el.addEventListener('blur',()=>{if(!pinned)close()});
+    el.addEventListener('click',e=>{e.stopPropagation();show(el,p,ctx,null,true)});
+  }
+  function textPick(text){
+    const models=[...new Set(DATA.aa.map(q=>q.model))].sort((a,b)=>b.length-a.length);
+    let model=models.find(m=>text.includes(m));if(!model&&/Gemma/.test(text))model=DATA.aa.find(q=>q.vendor==='Local')?.model;
+    if(!model)return null;const ps=DATA.aa.filter(q=>q.model===model);const rest=text.slice(text.indexOf(model)+model.length);const effort=rest.match(/\b(low|medium|high|xhigh|max|none|reasoning)\b/)?.[1];return ps.find(q=>q.effort===effort)||ps[0];
+  }
+  function buttons(container,selector,ctx){container.querySelectorAll(selector).forEach(el=>{const p=textPick(el.textContent);if(p){el.tabIndex=0;el.setAttribute('role','button');bind(el,p,ctx)}})}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){close();e.stopPropagation()}if((e.key==='Enter'||e.key===' ')&&e.target.hasAttribute('data-ladder-model')){e.preventDefault();e.target.click()}});
+  document.addEventListener('pointerdown',e=>{if(!e.target.closest('[data-ladder-model]')&&!e.target.closest('.effort-ladder'))close()});
+  addEventListener('scroll',()=>{if(owner===document.activeElement&&current)show(owner,current.p,current.ctx,null,pinned);else close()},true);addEventListener('resize',close);
+  return {show,close,hide:()=>{if(!pinned)close()},bind,buttons,rows,esc,money};
+})();
+
+const ctx=b=>({src:"aa",key:b||"index",name:TEAM.chart_rows.find(r=>r.bench===b)?.test||"Intelligence Index",unit:TEAM.chart_rows.find(r=>r.bench===b)?.unit||""});
+function picksTable(){
+  const L=DATA.local_tests||{by_category:{}};
+  const cols=TEAM.models;
+  let h=`<thead><tr><th scope="col">Type of work</th><th scope="col">Pick and why</th>${cols.map(m=>`<th scope="col">${m.label}</th>`).join("")}</tr></thead><tbody>`;
+  TEAM.tasks.forEach(t=>{
+    const unit=t.bench?(TEAM.chart_rows.find(r=>r.bench===t.bench)||{}).unit||"":"";
+    h+=`<tr><td data-label="Type of work" class="task"><b>${t.task}</b><span>${t.examples}</span></td><td data-label="Pick and why" class="pick"><b>${t.pick}</b><span>${t.why}</span></td>`;
+    cols.forEach(m=>{
+      let v=null,txt;
+      if(t.bench){v=score(m.key,t.bench);txt=v==null?"not evaluated":v+unit}
+      else if(m.key==="gemma"&&t.local){txt=(L.by_category[t.local]||"").split(" (")[0]+" our test";v=1}
+      else if(!t.bench&&!t.local&&t.task.startsWith("Student")){txt="approved in CES";v=1;if(m.key==="gemma")txt="approved"}
+      else if(m.key==="gemma"&&!t.local){txt="approved";v=1}
+      else txt="not tested";
+      h+=`<td data-label="${m.label}" tabindex="0" role="button" data-team="${m.key}" data-bench="${t.bench||"index"}" class="sc${v==null||txt==="not tested"?" na":""}${m.key===t.key?" best":""}">${txt}</td>`;
+    });
+    h+=`</tr>`;
+  });
+  $("picks").innerHTML=h+"</tbody>";
+  $("picks").querySelectorAll("[data-team]").forEach(el=>Ladder.bind(el,SRC[el.dataset.team],ctx(el.dataset.bench)));
+}
+function filters(){
+  const f=$("filters");f.querySelectorAll("button").forEach(b=>b.remove());
+  TEAM.models.forEach(m=>{const b=document.createElement("button");b.className="chip";b.type="button";b.innerHTML=icon(m)+m.short;b.setAttribute("aria-pressed",shown.has(m.key));
+    b.onclick=()=>{shown.has(m.key)?shown.delete(m.key):shown.add(m.key);if(!shown.size)shown.add(m.key);save();filters();chart()};f.appendChild(b)});
+}
+function chart(){
+  Ladder.close();const box=$("chart");box.querySelectorAll(".row").forEach(r=>r.remove());
+  const W=Math.max(240,(box.clientWidth||900)-(innerWidth>900?340:40)),H=96,ml=14,mr=24;
+  TEAM.chart_rows.forEach(r=>{
+    const all=TEAM.models.map(m=>({m,v:score(m.key,r.bench)})).filter(o=>o.v!=null);
+    const pts=all.filter(o=>shown.has(o.m.key));
+    const vals=all.map(o=>o.v);let lo=Math.min(...vals),hi=Math.max(...vals);const step=r.unit===" Elo"?200:hi-lo>60?20:10;
+    lo=Math.floor((lo-1)/step)*step;hi=Math.ceil((hi+1)/step)*step;
+    const X=v=>ml+(v-lo)/(hi-lo)*(W-ml-mr);
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${r.task}">`;
+    const n=Math.round((hi-lo)/step),every=Math.ceil(n/(W<560?3:6));
+    for(let i=0,v=lo;v<=hi+1e-9;v+=step,i++){s+=`<line x1="${X(v)}" x2="${X(v)}" y1="18" y2="58" stroke="var(--grid)" stroke-width="1"/>`;if(i%every===0)s+=`<text class="tick" x="${X(v)}" y="86" text-anchor="middle">${v}</text>`}
+    s+=`<line x1="${ml}" x2="${W-mr}" y1="38" y2="38" stroke="var(--border-strong)" stroke-width="2"/>`;
+    const sol=pts.filter(o=>o.m.key.startsWith("sol_")).sort((a,b)=>a.v-b.v);
+    if(sol.length>1)s+=`<line x1="${X(sol[0].v)}" x2="${X(sol[sol.length-1].v)}" y1="38" y2="38" data-sol-line="${r.bench}" stroke="#2a78d6" stroke-width="4" stroke-linecap="round"/>`;
+    const seen={};
+    pts.forEach(o=>{const x=X(o.v),k=Math.round(x/10);const dy=(seen[k]=(seen[k]||0)+1)>1?(seen[k]%2?-12:12):0;
+      s+=`<g class="pt" tabindex="0" data-team="${o.m.key}" data-bench="${r.bench}" data-x="${x}" data-y="${38+dy}">${mark(o.m.shape,x,38+dy,8,o.m.color)}</g>`});
+    if(!SRC.gemma[r.bench]&&shown.has("gemma"))s+=`<text class="tick" x="${ml}" y="12">Gemma: not evaluated</text>`;
+    s+=`</svg>`;
+    const row=document.createElement("div");row.className="row";row.innerHTML=`<div class="rt"><b>${r.task}</b><span>${r.test}</span></div><div style="min-width:0">${s}</div>`;box.appendChild(row);
+  });
+  box.querySelectorAll('.pt').forEach(el=>{const p=SRC[el.dataset.team];el.setAttribute('aria-label',`${p.model} ${p.effort}`);Ladder.bind(el,p,ctx(el.dataset.bench))});
+  box.querySelectorAll('[data-sol-line]').forEach(el=>{Ladder.bind(el,SRC.sol_medium,ctx(el.dataset.solLine))});
+  box.querySelectorAll('svg').forEach(svg=>{
+    const near=e=>{const r=svg.getBoundingClientRect(),v=svg.viewBox.baseVal,k=r.width/v.width;let best=null,bd=24;svg.querySelectorAll('.pt').forEach(el=>{const d=Math.hypot(e.clientX-r.left-Number(el.dataset.x)*k,e.clientY-r.top-Number(el.dataset.y)*k);if(d<bd){best=el;bd=d}});return best};
+    svg.onpointermove=e=>{if(e.pointerType==='touch')return;const el=near(e);if(el)Ladder.show(el,SRC[el.dataset.team],ctx(el.dataset.bench));else Ladder.hide()};
+    svg.onclick=e=>{const el=near(e);if(el){e.stopPropagation();Ladder.show(el,SRC[el.dataset.team],ctx(el.dataset.bench),null,true)}};
+  });
+}
+function gemma(){
+  const L=DATA.local_tests,G=DATA.gemma_vendor_card;
+  $("gnote").textContent=`Our own 44-item test of the exact Gemma setup on the team server (4-bit, thinking off), run ${L.runs} times on ${L.date}: ${L.totals.join(", ")}. Speed ${L.speed}. These scores come from our test, not from Artificial Analysis, so they don't compare directly with the table above.`;
+  const lab={"Classification (short customer messages)":"Sorting and tagging messages"};
+  $("gtest").innerHTML=`<h3>Our test</h3><dl>${Object.entries(L.by_category).map(([k,v])=>`<dt>${lab[k]||k}</dt><dd>${v}</dd>`).join("")}</dl>`;
+  $("gcard").innerHTML=`<h3>Google's published scores</h3><p class="muted" style="font-size:17px">Full-precision model, from <a href="${G.src}" target="_blank" rel="noopener">Google's model card</a>.</p><dl>${Object.entries(G.scores).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>`;
+}
+function foot(){
+  const urls=[...new Set(Object.values(SRC).map(p=>p.src))];
+  $("foot").innerHTML=`<p>Sources checked ${DATA.updated}: ${urls.map(u=>`<a href="${u}" target="_blank" rel="noopener">${u.replace("https://artificialanalysis.ai/models/comparisons/","Artificial Analysis: ")}</a>`).join(" · ")}.</p><p>Cost is Artificial Analysis cost per Intelligence Index task at API prices. ChatGPT Edu use draws on your plan, not per-task billing, so treat cost as a guide to how much work each setting does. Maintained by Rob Bagley and refreshed on the 1st and 15th of each month.</p>`;
+  if(DATA.review){const n=document.createElement('p');n.textContent=DATA.review.note+' Pending source refresh: '+DATA.review.pending_points.join(', ');$("foot").append(n);}
+}
+$("upd").textContent=DATA.updated;$("policy").textContent=TEAM.policy;
+picksTable();filters();gemma();foot();chart();
+let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(chart,150)});
+</script>
+
+</body></html>

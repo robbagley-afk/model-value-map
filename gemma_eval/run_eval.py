@@ -88,11 +88,11 @@ def run(i):
     return dict(i=i,cat=cat,ok=ok,out=out[:160],dt=round(dt,2),tok=u.get("completion_tokens",0))
 if __name__=="__main__":
     assert loaded(), f"{INST} not loaded; refusing to load models"
-    with cf.ThreadPoolExecutor(4) as ex: R=list(ex.map(run,range(len(T))))
+    with cf.ThreadPoolExecutor(2) as ex: R=list(ex.map(run,range(len(T))))
     cats={}
     for r in R: c=cats.setdefault(r["cat"],[0,0]); c[0]+=r["ok"]; c[1]+=1
     tot=sum(r["ok"] for r in R); tps=[r["tok"]/r["dt"] for r in R if r["dt"]>0 and r["tok"]>5]
-    summ={"date":datetime.date.today().isoformat(),"instance":INST,"total":f"{tot}/{len(R)}","pct":round(100*tot/len(R)),"by_category":{k:f"{v[0]}/{v[1]}" for k,v in cats.items()},"median_tokens_per_s_per_request_at_4_parallel":round(sorted(tps)[len(tps)//2],1) if tps else None}
+    summ={"date":datetime.date.today().isoformat(),"instance":INST,"total":f"{tot}/{len(R)}","pct":round(100*tot/len(R)),"by_category":{k:f"{v[0]}/{v[1]}" for k,v in cats.items()},"median_tokens_per_s_per_request_at_2_parallel":round(sorted(tps)[len(tps)//2],1) if tps else None}
     print(json.dumps(summ,indent=1))
     for r in R:
         if not r["ok"]: print("FAIL",r["cat"],r["i"],r.get("err") or r.get("out"))

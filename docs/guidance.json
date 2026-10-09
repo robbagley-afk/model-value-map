@@ -1,5 +1,14 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-10-09",
+ "review": {
+  "checked": "2026-10-09",
+  "verified_points": 23,
+  "pending_points": [
+   "Haiku 5.5 low",
+   "Gemma 4 26B-A4B reasoning"
+  ],
+  "note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."
+ },
  "source": "https://robbagley-afk.github.io/model-value-map/",
  "rule": "An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.",
  "platforms": {
@@ -17,7 +26,7 @@
    {
     "task": "Documents from supplied facts",
     "pick": "Haiku 5.5 xhigh (pilot): 1511 at $0.12, vendor chart $0.27, near Sonnet 5.5 high at less than half the cost",
-    "upgrade": "Haiku 5.5 max (1620, $0.21) for final polish"
+    "upgrade": "Haiku 5.5 max (1618, $0.21) for final polish"
    },
    {
     "task": "People, messages, money, records",
@@ -68,8 +77,8 @@
    },
    {
     "task": "People, messages, money, records",
-    "pick": "GPT-6.1 Sol low ($0.13, 38)",
-    "upgrade": "Rarely. Sol max adds 4 points"
+    "pick": "GPT-6.1 Sol high ($0.32, 41), verify names and figures",
+    "upgrade": "Rarely. Sol max ($0.72, 42) adds 1 point"
    },
    {
     "task": "Computer use and browser work",
@@ -199,11 +208,11 @@
   {
    "task": "Documents from supplied facts",
    "best": "Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish",
-   "avoid": "Opus 5.5 high (1707) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers"
+   "avoid": "Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers"
   },
   {
    "task": "People, messages, money, records",
-   "best": "GPT-6.1 Sol low ($0.13, AA-Omniscience 38)",
+   "best": "GPT-6.1 Sol high ($0.32, AA-Omniscience 41). Sol low ($0.13, 38) for a cheaper first pass with verification",
    "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort"
   },
   {
@@ -214,7 +223,7 @@
   {
    "task": "Agentic coding",
    "best": "GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost",
-   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($7.60)"
+   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46)"
   },
   {
    "task": "Small, clear coding fixes",
@@ -229,7 +238,7 @@
   {
    "task": "General agentic judgment",
    "best": "GPT-6.1 Sol medium (index 48, $0.21)",
-   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $1.08) trails Opus 5.5 medium on every test"
+   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test"
   },
   {
    "task": "Antigravity (Gemini)",

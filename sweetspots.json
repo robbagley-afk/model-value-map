@@ -59,11 +59,11 @@
    "examples": "Drafts, summaries, slides, spreadsheets, reports",
    "bench": "gdp",
    "best": "Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish",
-   "avoid": "Opus 5.5 high (1707) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers",
+   "avoid": "Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers",
    "vendors": {
     "Anthropic": {
      "pick": "Haiku 5.5 xhigh (pilot): 1511 at $0.12, vendor chart $0.27, near Sonnet 5.5 high at less than half the cost",
-     "upgrade": "Haiku 5.5 max (1620, $0.21) for final polish"
+     "upgrade": "Haiku 5.5 max (1618, $0.21) for final polish"
     },
     "OpenAI": {
      "pick": "GPT-6 Luna max (1432, $0.07)",
@@ -84,7 +84,7 @@
    "task": "People, messages, money, records",
    "examples": "Customer and community messages, payments, exact names",
    "bench": "omni",
-   "best": "GPT-6.1 Sol low ($0.13, AA-Omniscience 38)",
+   "best": "GPT-6.1 Sol high ($0.32, AA-Omniscience 41). Sol low ($0.13, 38) for a cheaper first pass with verification",
    "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort",
    "vendors": {
     "Anthropic": {
@@ -92,8 +92,8 @@
      "upgrade": "Rarely. Opus 5.5 max adds 7 points for 11x the cost"
     },
     "OpenAI": {
-     "pick": "GPT-6.1 Sol low ($0.13, 38)",
-     "upgrade": "Rarely. Sol max adds 4 points"
+     "pick": "GPT-6.1 Sol high ($0.32, 41), verify names and figures",
+     "upgrade": "Rarely. Sol max ($0.72, 42) adds 1 point"
     },
     "Google": {
      "pick": "Gemini 3.8 Flash medium ($0.93, 29), below Opus 5.5 low and Sol low",
@@ -137,7 +137,7 @@
    "examples": "Multi-file changes, debugging, repo work",
    "bench": "tb",
    "best": "GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost",
-   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($7.60)",
+   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46)",
    "vendors": {
     "Anthropic": {
      "pick": "Opus 5.5 medium ($1.34, 53%)",
@@ -215,7 +215,7 @@
    "examples": "Open-ended multistep tasks, planning",
    "bench": "index",
    "best": "GPT-6.1 Sol medium (index 48, $0.21)",
-   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $1.08) trails Opus 5.5 medium on every test",
+   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test",
    "vendors": {
     "Anthropic": {
      "pick": "Opus 5.5 medium ($1.34, 51)",
@@ -261,5 +261,7 @@
     }
    }
   }
- ]
+ ],
+ "updated": "2026-10-09",
+ "review_note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."
 }
