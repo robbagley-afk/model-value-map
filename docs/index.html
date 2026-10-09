@@ -83,9 +83,14 @@ footer a{color:var(--ink-2)}
 
 <div class="wrap">
 <header>
-  <div class="eyebrow">Model guide · updated <span id="upd"></span></div>
+  <div class="eyebrow">Cost-aware AI model guide · updated <span id="upd"></span></div>
   <h1>Model Value Map</h1>
-  <p class="lede">Score against cost per task for every model and effort level we track from Anthropic, OpenAI, Google, and the local Gemma model. Lines connect one model's effort levels, low to max. The dashed line is the best score money buys at each price. Use it to find the cheapest setting that does the job.</p>
+  <p class="lede">Stop paying top price for work a cheaper AI model does just as well. The map plots independent test scores against what each model costs per task, so you can see where spending more stops buying better results, and pick the cheapest model and effort level that gets your job done.</p>
+  <div class="gem">
+    <div class="spot"><h4>When to use it</h4><p class="ex" style="color:var(--ink-2)">Before you choose a model for a new task, set up a scheduled run, or write instructions for an AI tool. Also when your usage limit or bill climbs and you need to know what to downgrade.</p></div>
+    <div class="spot"><h4>Why it pays</h4><p class="ex" style="color:var(--ink-2)">Scores climb slowly while cost climbs fast. The top setting can cost hundreds of times more than a small model for about twice the score, and some cheaper models match pricier ones outright.</p></div>
+    <div class="spot"><h4>How to use it</h4><p class="ex" style="color:var(--ink-2)">Find your kind of work under Sweet spots below and take the listed pick. Move up to the upgrade only if the pick fails. To explore, choose a test, filter by vendor, and hover a dot for its cost. The ringed dot is the best value on that view. Then copy the instruction text near the bottom into Claude, ChatGPT, or Codex so they choose this way by default.</p></div>
+  </div>
 </header>
 
 <div class="controls">
