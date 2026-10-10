@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD). Benchmarks: index (AA Intelligence Index), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1 Elo), omni (AA-Omniscience, higher = fewer hallucinations), sci (SciCode %), hle (Humanity's Last Exam no tools %). null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark.",
  "aa": [
   {
@@ -345,7 +345,11 @@
    "sci": 55,
    "hle": 42,
    "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium",
-   "checked": "2026-10-09"
+   "checked": "2026-10-09",
+   "promotion_id": "google-gemini38-intro-2026",
+   "reported_cost_multiplier": 0.5,
+   "pricing_checked": "2026-10-10",
+   "pricing_source": "https://artificialanalysis.ai/models/gemini-3-8-flash-medium"
   },
   {
    "vendor": "Google",
@@ -360,7 +364,11 @@
    "sci": 57,
    "hle": 48,
    "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium",
-   "checked": "2026-10-09"
+   "checked": "2026-10-09",
+   "promotion_id": "google-gemini38-intro-2026",
+   "reported_cost_multiplier": 0.5,
+   "pricing_checked": "2026-10-10",
+   "pricing_source": "https://artificialanalysis.ai/models/gemini-3-8-flash"
   },
   {
    "vendor": "Local",
@@ -825,5 +833,33 @@
    "Gemma 4 26B-A4B reasoning"
   ],
   "note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."
- }
+ },
+ "promotions": [
+  {
+   "id": "google-gemini38-intro-2026",
+   "vendor": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scope": "Google AI Studio / Gemini Developer API paid Standard tier; not a subscription-plan discount",
+   "starts_at": null,
+   "ends_at": "2027-01-01T00:00:00Z",
+   "boundary_note": "Conservative UTC cutoff: vendor lists dates but does not specify a timezone. Use January 1 at 00:00 UTC as a conservative display cutoff; billing follows vendor terms.",
+   "promotional_multiplier": 0.5,
+   "promotional_rates": {
+    "input": 0.75,
+    "output": 3.75,
+    "cached_input": 0.075
+   },
+   "standard_rates": {
+    "input": 1.5,
+    "output": 7.5,
+    "cached_input": 0.15
+   },
+   "source": "https://ai.google.dev/gemini-api/docs/pricing",
+   "checked": "2026-10-10",
+   "task_estimate_note": "AA reported medium/high costs already use introductory input/output/cache rates. Standard task estimates assume identical token usage; not a fresh benchmark run.",
+   "discount_label": "50% introductory API pricing",
+   "last_discounted_date": "2026-12-31",
+   "standard_from": "2027-01-01"
+  }
+ ]
 }

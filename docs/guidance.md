@@ -1,6 +1,6 @@
 # Model and Effort Guidance
-Updated: 2026-10-09. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: cc86b1e1f6588f4437681aba0d22e130f54738ec4e20a248e0e54c866ddba557
+Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
+Revision: f430beea6dcb7b06d31fc04bfac7f7d8541eb8ee315a61d9708615f0736fc221
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -69,7 +69,15 @@ An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each do
 - **Small, clear coding fixes**: GPT-6.1 Sol low ($0.13, Terminal-Bench 31%). Haiku 5.5 max ($0.21, 33%) in Claude. Not worth it: Opus 5.5 low for this work, since Haiku 5.5 max scores higher for 38% of the cost.
 - **Research and reasoning**: GPT-6.1 Sol medium (HLE 50%, $0.21). Not worth it: Opus 5.5 xhigh and max: 2 to 3 points per cost doubling.
 - **General agentic judgment**: GPT-6.1 Sol medium (index 48, $0.21). Not worth it: Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test.
-- **Antigravity (Gemini)**: Gemini 3.8 Flash medium ($0.93 list, index 40) for loops, refactors, and hard bugs. Not worth it: High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more.
+- **Antigravity (Gemini)**: Gemini 3.8 Flash medium ($0.93 introductory API cost, index 40; expires 2026-12-31) for loops, refactors, and hard bugs. Not worth it: High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more.
+
+## Promotional pricing and expiry
+Prices are date-dependent. Read the promotion end time before using a copied price. The live maps recheck the clock every 30 seconds and when a tab becomes visible. Static guidance is a dated snapshot; after a boundary, use the standard estimates below until the maintainer reviews recommendations. No subscription allowance or account-specific credits are assumed.
+- **Gemini 3.8 Flash**: 50% introductory API pricing through 2026-12-31; expires 2027-01-01T00:00:00Z. Scope: Google AI Studio / Gemini Developer API paid Standard tier; not a subscription-plan discount. Checked 2026-10-10.
+  USD per million input/output/cached-input tokens: 0.75 / 3.75 / 0.075; standard from 2027-01-01: 1.5 / 7.5 / 0.15.
+  Conservative UTC cutoff: vendor lists dates but does not specify a timezone. Use January 1 at 00:00 UTC as a conservative display cutoff; billing follows vendor terms. AA reported medium/high costs already use introductory input/output/cache rates. Standard task estimates assume identical token usage; not a fresh benchmark run. Source: https://ai.google.dev/gemini-api/docs/pricing
+  medium: reported introductory cost $0.93/task; estimated standard cost $1.86/task. Do not halve the reported cost again.
+  high: reported introductory cost $1.24/task; estimated standard cost $2.48/task. Do not halve the reported cost again.
 
 ## Sources
 - https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low

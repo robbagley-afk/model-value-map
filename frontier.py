@@ -1,3 +1,4 @@
+from promotions import effective_cost
 import json,math,sys
 d=json.load(open(sys.argv[1]))
 def front(pts):
@@ -8,7 +9,7 @@ def front(pts):
     return f
 B={'index':'Intelligence Index','tb':'Terminal-Bench (coding)','ab':'AutomationBench (tool workflows)','gdp':'GDPval (knowledge work)','omni':'AA-Omniscience (fact reliability)','hle':'HLE (reasoning)'}
 for k,n in B.items():
-    pts=[(p['vendor'],p['model'],p['effort'],p['cost'],p[k]) for p in d['aa']]
+    pts=[(p['vendor'],p['model'],p['effort'],effective_cost(p,d.get('promotions',[])),p[k]) for p in d['aa']]
     print('\n##',n,'(AA, cost per Index task)')
     f=front(pts);prev=None
     for p in f:

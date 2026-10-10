@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09",
- "revision": "cc86b1e1f6588f4437681aba0d22e130f54738ec4e20a248e0e54c866ddba557",
+ "updated": "2026-10-10",
+ "revision": "f430beea6dcb7b06d31fc04bfac7f7d8541eb8ee315a61d9708615f0736fc221",
  "review": {
   "checked": "2026-10-09",
   "verified_points": 23,
@@ -10,6 +10,34 @@
   ],
   "note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."
  },
+ "promotions": [
+  {
+   "id": "google-gemini38-intro-2026",
+   "vendor": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scope": "Google AI Studio / Gemini Developer API paid Standard tier; not a subscription-plan discount",
+   "starts_at": null,
+   "ends_at": "2027-01-01T00:00:00Z",
+   "boundary_note": "Conservative UTC cutoff: vendor lists dates but does not specify a timezone. Use January 1 at 00:00 UTC as a conservative display cutoff; billing follows vendor terms.",
+   "promotional_multiplier": 0.5,
+   "promotional_rates": {
+    "input": 0.75,
+    "output": 3.75,
+    "cached_input": 0.075
+   },
+   "standard_rates": {
+    "input": 1.5,
+    "output": 7.5,
+    "cached_input": 0.15
+   },
+   "source": "https://ai.google.dev/gemini-api/docs/pricing",
+   "checked": "2026-10-10",
+   "task_estimate_note": "AA reported medium/high costs already use introductory input/output/cache rates. Standard task estimates assume identical token usage; not a fresh benchmark run.",
+   "discount_label": "50% introductory API pricing",
+   "last_discounted_date": "2026-12-31",
+   "standard_from": "2027-01-01"
+  }
+ ],
  "source": "https://robbagley-afk.github.io/model-value-map/",
  "rule": "An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.",
  "platforms": {
@@ -243,7 +271,7 @@
   },
   {
    "task": "Antigravity (Gemini)",
-   "best": "Gemini 3.8 Flash medium ($0.93 list, index 40) for loops, refactors, and hard bugs",
+   "best": "Gemini 3.8 Flash medium ($0.93 introductory API cost, index 40; expires 2026-12-31) for loops, refactors, and hard bugs",
    "avoid": "High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more"
   }
  ]

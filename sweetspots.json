@@ -240,7 +240,7 @@
    "task": "Antigravity (Gemini)",
    "examples": "Antigravity agent loops",
    "bench": "index",
-   "best": "Gemini 3.8 Flash medium ($0.93 list, index 40) for loops, refactors, and hard bugs",
+   "best": "Gemini 3.8 Flash medium ($0.93 introductory API cost, index 40; expires 2026-12-31) for loops, refactors, and hard bugs",
    "avoid": "High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more",
    "vendors": {
     "Anthropic": {
