@@ -4,6 +4,7 @@
 <title>Model Value Map</title>
 <link rel="preload" href="/model-value-map/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/model-value-map/assets/rob-personal.css">
+<style>p,h1,h2,h3,h4{margin:revert} /* keep this page's browser-default spacing under the shared reset */</style>
 <style>
 /* Layout: one wide column. Header, filter row, chart, sweet-spot list, data table, sources. Anthropic-style ivory chart card. */
 :root{
@@ -124,9 +125,9 @@ footer a{overflow-wrap:anywhere}
   /* chart slots in the guide's fixed order; ink outline keeps the light hues findable */
   --v-anthropic:#2a78d6;--v-openai:#eb6834;--v-google:#1baf7a;--v-local:#eda100;--m1:#2a78d6;--m2:#eb6834;--m3:#1baf7a;--m4:#7d7979;--mark-ring:#201e1d;--lnk:#174a94}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171615;--card:#171615;--ink:#f3f2f2;--ink-2:#d7d3d3;--ink-3:#b8b4b4;--rule:#f3f2f2;--grid:#3a3837;
-  --accent:#2a64c4;--chip:#171615;--chip-on:#f3f2f2;--chip-on-ink:#171615;--v-anthropic:#3987e5;--v-openai:#d95926;--v-google:#199e70;--v-local:#c98500;--m1:#3987e5;--m2:#d95926;--m3:#199e70;--m4:#a3a299;--mark-ring:#f3f2f2;--lnk:#7fa8ec}}
+  --accent:#2a64c4;--chip:#171615;--chip-on:#f3f2f2;--chip-on-ink:#171615;--v-anthropic:#3987e5;--v-openai:#d95926;--v-google:#199e70;--v-local:#c98500;--m1:#3987e5;--m2:#d95926;--m3:#199e70;--m4:#a3a299;--mark-ring:#f3f2f2;--lnk:#7fa8ec;--rp-accent-deep:#a9c3f2}}
 :root[data-theme="dark"]{--bg:#171615;--card:#171615;--ink:#f3f2f2;--ink-2:#d7d3d3;--ink-3:#b8b4b4;--rule:#f3f2f2;--grid:#3a3837;
-  --accent:#2a64c4;--chip:#171615;--chip-on:#f3f2f2;--chip-on-ink:#171615;--v-anthropic:#3987e5;--v-openai:#d95926;--v-google:#199e70;--v-local:#c98500;--m1:#3987e5;--m2:#d95926;--m3:#199e70;--m4:#a3a299;--mark-ring:#f3f2f2;--lnk:#7fa8ec}
+  --accent:#2a64c4;--chip:#171615;--chip-on:#f3f2f2;--chip-on-ink:#171615;--v-anthropic:#3987e5;--v-openai:#d95926;--v-google:#199e70;--v-local:#c98500;--m1:#3987e5;--m2:#d95926;--m3:#199e70;--m4:#a3a299;--mark-ring:#f3f2f2;--lnk:#7fa8ec;--rp-accent-deep:#a9c3f2}
 *,*::before,*::after{border-radius:0!important}
 .sw{border-radius:50%!important}
 a{color:var(--lnk)}
