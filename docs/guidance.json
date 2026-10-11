@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-10",
- "revision": "f430beea6dcb7b06d31fc04bfac7f7d8541eb8ee315a61d9708615f0736fc221",
+ "revision": "b62286f1282b62c7523a00010e5ed66f51516cdb5251404537cacebfbea83a64",
  "review": {
   "checked": "2026-10-09",
   "verified_points": 23,
@@ -9,6 +9,14 @@
    "Gemma 4 26B-A4B reasoning"
   ],
   "note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08."
+ },
+ "overall_value_leader": {
+  "model": "GPT-6.1 Sol",
+  "effort": "medium",
+  "reviewed": "2026-10-10",
+  "basis": "Balanced capability and cost for everyday, multistep work. Use the task-specific picks below when your work needs something different.",
+  "source": "https://artificialanalysis.ai/models/gpt-6-1-sol-medium",
+  "task_id": "judgment"
  },
  "promotions": [
   {

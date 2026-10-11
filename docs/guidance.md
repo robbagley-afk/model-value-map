@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: f430beea6dcb7b06d31fc04bfac7f7d8541eb8ee315a61d9708615f0736fc221
+Revision: b62286f1282b62c7523a00010e5ed66f51516cdb5251404537cacebfbea83a64
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -13,6 +13,9 @@ separate note does not publish here.
 
 ## Rule
 An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.
+
+## Overall general purpose recommendation
+GPT-6.1 Sol at medium effort. Reviewed 2026-10-10. Balanced capability and cost for everyday, multistep work. Use the task-specific picks below when your work needs something different. This is the maintained general-purpose pick, not a universal benchmark winner. A review is due after seven days. Source: https://artificialanalysis.ai/models/gpt-6-1-sol-medium
 
 ## Claude (Anthropic) - for Claude Code and Claude apps
 - **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Haiku 5.5 low ($0.02, 29). Upgrade: Haiku 5.5 medium ($0.05, 34) if low misses.
@@ -72,7 +75,7 @@ An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each do
 - **Antigravity (Gemini)**: Gemini 3.8 Flash medium ($0.93 introductory API cost, index 40; expires 2026-12-31) for loops, refactors, and hard bugs. Not worth it: High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more.
 
 ## Promotional pricing and expiry
-Prices are date-dependent. Read the promotion end time before using a copied price. The live maps recheck the clock every 30 seconds and when a tab becomes visible. Static guidance is a dated snapshot; after a boundary, use the standard estimates below until the maintainer reviews recommendations. No subscription allowance or account-specific credits are assumed.
+Prices are date-dependent. Read the promotion end time before using a copied price. The live maps recheck the clock on load, once daily, and when a tab becomes visible. Static guidance is a dated snapshot; after a boundary, use the standard estimates below until the maintainer reviews recommendations. No subscription allowance or account-specific credits are assumed.
 - **Gemini 3.8 Flash**: 50% introductory API pricing through 2026-12-31; expires 2027-01-01T00:00:00Z. Scope: Google AI Studio / Gemini Developer API paid Standard tier; not a subscription-plan discount. Checked 2026-10-10.
   USD per million input/output/cached-input tokens: 0.75 / 3.75 / 0.075; standard from 2027-01-01: 1.5 / 7.5 / 0.15.
   Conservative UTC cutoff: vendor lists dates but does not specify a timezone. Use January 1 at 00:00 UTC as a conservative display cutoff; billing follows vendor terms. AA reported medium/high costs already use introductory input/output/cache rates. Standard task estimates assume identical token usage; not a fresh benchmark run. Source: https://ai.google.dev/gemini-api/docs/pricing
