@@ -2,8 +2,9 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/model-value-map/favicon.ico">
 <title>Model Value Map</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/model-value-map/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/model-value-map/assets/rob-personal.css">
+<style>p,h1,h2,h3,h4{margin:revert} /* keep this page's browser-default spacing under the shared reset */</style>
 <style>
 /* Layout: one wide column. Header, filter row, chart, sweet-spot list, data table, sources. Anthropic-style ivory chart card. */
 :root{
@@ -116,7 +117,31 @@ footer a{overflow-wrap:anywhere}
 @media(max-width:640px){.tbl{overflow-x:visible}.tbl table,.tbl tbody,.tbl tr{display:block}.tbl thead{display:none}.tbl tr{padding:12px;border-bottom:2px solid var(--grid)}.tbl td{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px;min-width:0!important;white-space:normal!important;text-align:left!important;padding:8px 0;overflow-wrap:anywhere}.tbl td::before{content:attr(data-label);font-weight:600;color:var(--ink-2,var(--ink-muted))}.tbl td.sc.best::after{grid-column:2;margin:0;font-size:12px}.tbl td.task,.tbl td.pick{display:block}.tbl td.task::before,.tbl td.pick::before{display:block;margin-bottom:4px}}
 
 </style>
-</head><body>
+<style>
+/* Style Guide for Rob's Personal Projects (ai-expert-toolkit/style-guide): this layer maps the
+   page's own variables onto the shared tokens, so the chart code stays untouched. */
+:root{--bg:var(--rp-bg);--card:var(--rp-bg);--ink:var(--rp-ink);--ink-2:#3d3b3a;--ink-3:var(--rp-muted);--rule:var(--rp-ink);--grid:#d7d3d3;
+  --accent:var(--rp-accent);--chip:var(--rp-bg);--chip-on:var(--rp-ink);--chip-on-ink:var(--rp-bg);--serif:var(--rp-font);--sans:var(--rp-font);--mono:var(--rp-font);
+  /* chart slots in the guide's fixed order; ink outline keeps the light hues findable */
+  --v-anthropic:#2a78d6;--v-openai:#eb6834;--v-google:#1baf7a;--v-local:#eda100;--m1:#2a78d6;--m2:#eb6834;--m3:#1baf7a;--m4:#7d7979;--mark-ring:#201e1d;--lnk:#174a94}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171615;--card:#171615;--ink:#f3f2f2;--ink-2:#d7d3d3;--ink-3:#b8b4b4;--rule:#f3f2f2;--grid:#3a3837;
+  --accent:#2a64c4;--chip:#171615;--chip-on:#f3f2f2;--chip-on-ink:#171615;--v-anthropic:#3987e5;--v-openai:#d95926;--v-google:#199e70;--v-local:#c98500;--m1:#3987e5;--m2:#d95926;--m3:#199e70;--m4:#a3a299;--mark-ring:#f3f2f2;--lnk:#7fa8ec;--rp-accent-deep:#a9c3f2}}
+:root[data-theme="dark"]{--bg:#171615;--card:#171615;--ink:#f3f2f2;--ink-2:#d7d3d3;--ink-3:#b8b4b4;--rule:#f3f2f2;--grid:#3a3837;
+  --accent:#2a64c4;--chip:#171615;--chip-on:#f3f2f2;--chip-on-ink:#171615;--v-anthropic:#3987e5;--v-openai:#d95926;--v-google:#199e70;--v-local:#c98500;--m1:#3987e5;--m2:#d95926;--m3:#199e70;--m4:#a3a299;--mark-ring:#f3f2f2;--lnk:#7fa8ec;--rp-accent-deep:#a9c3f2}
+*,*::before,*::after{border-radius:0!important}
+.sw{border-radius:50%!important}
+a{color:var(--lnk)}
+h1{font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.03em}
+h2{font-weight:800;letter-spacing:-.02em}
+.eyebrow{color:var(--lnk);font-weight:600}
+.card{border-width:2px}
+.tabs{border-bottom-width:2px}
+button.chip{border-width:2px;font-weight:600}
+.value-leader{border:2px solid var(--rule);border-top:8px solid var(--rp-accent)}
+.site-nav a{font-weight:600}
+.tick,pre.copy{font-variant-numeric:tabular-nums}
+</style>
+</head><body><div class="rp-backlink"><a href="https://robs-ai-expert-toolkit.airy-emu-9499.chatgpt.site/">← AI Quick Start</a></div>
 
 <div class="wrap">
 <header>
@@ -313,7 +338,7 @@ function shape(g,t,x,y,r,fill,ring){
   if(t==="flag"){el=document.createElementNS(ns,"path");el.setAttribute("d",`M${x} ${y-r-1.5}L${x+r+1.5} ${y}L${x} ${y+r+1.5}L${x-r-1.5} ${y}Z`)}
   else if(t==="small"){el=document.createElementNS(ns,"path");el.setAttribute("d",`M${x} ${y-r-1}L${x+r+1} ${y+r-0.5}L${x-r-1} ${y+r-0.5}Z`)}
   else{el=document.createElementNS(ns,"circle");el.setAttribute("cx",x);el.setAttribute("cy",y);el.setAttribute("r",r)}
-  el.setAttribute("fill",fill);el.setAttribute("stroke",ring);el.setAttribute("stroke-width",2);g.appendChild(el);return el;
+  el.setAttribute("fill",fill);el.setAttribute("stroke",ring);el.setAttribute("stroke-width",1.25);g.appendChild(el);return el;
 }
 function frontier(ps){
   const s=ps.filter(p=>p.cost>0).sort((a,b)=>a.cost-b.cost||b.score-a.score);const f=[];let best=-1e9;
@@ -367,7 +392,7 @@ function draw(){
       // One group per point. The invisible hit area and the marker both sit inside it, so the tooltip stays open while the pointer moves over either.
       const pt=addIn(g,"g",{tabindex:0,role:"img","aria-label":`${p.model} ${p.effort}: ${p.score}${b.unit} at ${fmt$(p.cost)}`});
 
-      shape(pt,p.vendor==="Local"?"mid":TIER[p.model]||"mid",x,y,p.vendor==="Local"?9:5,col,css("--card"));
+      shape(pt,p.vendor==="Local"?"mid":TIER[p.model]||"mid",x,y,p.vendor==="Local"?9:5,col,css("--mark-ring"));
       if(sp&&sp===p)addIn(pt,"circle",{cx:x,cy:y,r:10,fill:"none",stroke:css("--ink"),"stroke-width":1.5,"pointer-events":"none"});
       Ladder.bind(pt,p,ladderContext());
       const el=p.effort==="medium"?"med":p.effort;
