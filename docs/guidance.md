@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: c6a100b1992d09c94df0668207f2dcf39d0367edf8e32e750a09e4a034c0926c
+Revision: 1ab34f60aabd5f9f1cc1f08652bd280cf164c08945461e8183638a72cc1b3c1a
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -74,15 +74,15 @@ GPT-6.1 Sol at medium effort. Reviewed 2026-10-10. Balanced capability and cost 
 - **General agentic judgment** (Open-ended multistep tasks, planning): Not suitable (index 17).
 
 ## Best value across all vendors
-- **Mechanical text work**: Gemma on a local LM Studio server ($0 cloud). In the cloud, Haiku 5.5 low ($0.02, index 29). Not worth it: Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%).
-- **Scripted relays and tool workflows**: GPT-6 Luna max ($0.07, AutomationBench 53%), which matches Opus 5.5 low at 13% of the cost. Not worth it: Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling.
-- **Documents from supplied facts**: Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish. Not worth it: Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers.
-- **People, messages, money, records**: GPT-6.1 Sol high ($0.32, AA-Omniscience 41). Sol low ($0.13, 38) for a cheaper first pass with verification. Not worth it: Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort.
+- **Mechanical text work**: Gemma on a local LM Studio server ($0 cloud). In the cloud, Haiku 5.5 low ($0.02, index 29). Not worth it: Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points.
+- **Scripted relays and tool workflows**: GPT-6 Luna max ($0.07, AutomationBench 53%), which matches Opus 5.5 low at 13% of the cost. Grok 4.6 high ($1.48, 67%) is the top score under $3 when accuracy matters more than cost. Not worth it: Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling.
+- **Documents from supplied facts**: Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish. Not worth it: Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers. Grok 4.6 medium (1613, $1.14) roughly ties Haiku 5.5 max (1618, $0.21) at 5x the cost.
+- **People, messages, money, records**: GPT-6.1 Sol high ($0.32, AA-Omniscience 41). Sol low ($0.13, 38) for a cheaper first pass with verification. Not worth it: Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort. Grok at any effort (26 to 32) trails GPT-6.1 Sol low (38, $0.13).
 - **Computer use and browser work**: Haiku 5.5 xhigh (OSWorld 67.5% at $0.30 per attempt). Only Anthropic and Luna are on this chart. Not worth it: Sonnet 5.5 max (+2.9 points for 2.5x). Haiku for steps that type names, accounts, or payments.
-- **Agentic coding**: GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost. Not worth it: Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46).
-- **Small, clear coding fixes**: GPT-6.1 Sol low ($0.13, Terminal-Bench 31%). Haiku 5.5 max ($0.21, 33%) in Claude. Not worth it: Opus 5.5 low for this work, since Haiku 5.5 max scores higher for 38% of the cost.
-- **Research and reasoning**: GPT-6.1 Sol medium (HLE 50%, $0.21). Not worth it: Opus 5.5 xhigh and max: 2 to 3 points per cost doubling.
-- **General agentic judgment**: GPT-6.1 Sol medium (index 48, $0.21). Not worth it: Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test.
+- **Agentic coding**: GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost. Not worth it: Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46). Grok at any effort (3 to 26%): Grok 4.7 xhigh ($3.74, 26%) trails GPT-6.1 Sol low ($0.13, 31%).
+- **Small, clear coding fixes**: GPT-6.1 Sol low ($0.13, Terminal-Bench 31%). Haiku 5.5 max ($0.21, 33%) in Claude. Not worth it: Opus 5.5 low for this work, since Haiku 5.5 max scores higher for 38% of the cost. Grok 4.7 low ($1.25, 16%) trails Haiku 5.5 xhigh ($0.12, 29%).
+- **Research and reasoning**: GPT-6.1 Sol medium (HLE 50%, $0.21). Not worth it: Opus 5.5 xhigh and max: 2 to 3 points per cost doubling. Grok tops out at 44% (Grok 4.6 xhigh, $1.75), below GPT-6.1 Sol low (47%, $0.13).
+- **General agentic judgment**: GPT-6.1 Sol medium (index 48, $0.21). Not worth it: Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score.
 - **Antigravity (Gemini)**: Gemini 3.8 Flash medium ($0.93 introductory API cost, index 40; expires 2026-12-31) for loops, refactors, and hard bugs. Not worth it: High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more.
 
 ## Promotional pricing and expiry
