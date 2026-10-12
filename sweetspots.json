@@ -24,6 +24,10 @@
     "Local": {
      "pick": "Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs",
      "upgrade": "Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 low ($0.38, 35)",
+     "upgrade": "Grok 4.6 medium ($1.14, 43)"
     }
    }
   },
@@ -50,6 +54,10 @@
     "Local": {
      "pick": "Light use only. Tool calls 3/4 in-house, AutomationBench 2% (AA estimate). Validate every call",
      "upgrade": "Sonnet 5.5 low"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 high ($1.48, 67%)",
+     "upgrade": "n/a"
     }
    }
   },
@@ -76,6 +84,10 @@
     "Local": {
      "pick": "Reformatting only. GDPval 569 (AA estimate)",
      "upgrade": "n/a"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 medium (1613, $1.14)",
+     "upgrade": "Grok 4.7 high (1708, $2.73)"
     }
    }
   },
@@ -102,6 +114,10 @@
     "Local": {
      "pick": "Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option",
      "upgrade": "n/a"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 low ($0.38, 26), verify names and figures",
+     "upgrade": "Rarely. Grok 4.7 xhigh ($3.74, 32) adds 6 points"
     }
    }
   },
@@ -126,6 +142,10 @@
      "upgrade": "n/a"
     },
     "Local": {
+     "pick": "Not yet evaluated",
+     "upgrade": "n/a"
+    },
+    "xAI": {
      "pick": "Not yet evaluated",
      "upgrade": "n/a"
     }
@@ -154,6 +174,10 @@
     "Local": {
      "pick": "Not yet evaluated on Terminal-Bench",
      "upgrade": "n/a"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 high ($1.48, 21%)",
+     "upgrade": "Rarely. Grok 4.7 high ($2.73, 25%) adds 4 points"
     }
    }
   },
@@ -180,6 +204,10 @@
     "Local": {
      "pick": "Not yet evaluated",
      "upgrade": "n/a"
+    },
+    "xAI": {
+     "pick": "Grok 4.7 low ($1.25, 16%)",
+     "upgrade": "Grok 4.6 high ($1.48, 21%)"
     }
    }
   },
@@ -206,6 +234,10 @@
     "Local": {
      "pick": "Not suitable. HLE 8.7% (Google card), money math 4/6 in-house",
      "upgrade": "n/a"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 medium ($1.14, 42%)",
+     "upgrade": "Rarely. Grok 4.6 xhigh ($1.75, 44%) adds 2 points"
     }
    }
   },
@@ -232,6 +264,10 @@
     "Local": {
      "pick": "Not suitable (index 17)",
      "upgrade": "n/a"
+    },
+    "xAI": {
+     "pick": "Grok 4.6 medium ($1.14, 43)",
+     "upgrade": "Rarely. Grok 4.7 high ($2.73, 46) adds 3 points"
     }
    }
   },
@@ -256,6 +292,10 @@
      "upgrade": "High only for reasoning-heavy work (HLE 48% vs 42%)"
     },
     "Local": {
+     "pick": "n/a",
+     "upgrade": "n/a"
+    },
+    "xAI": {
      "pick": "n/a",
      "upgrade": "n/a"
     }

@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 67abe87b18c4b5e3292bb2e639373672a414ef265b34806be8743d07feccdbba
+Revision: c6a100b1992d09c94df0668207f2dcf39d0367edf8e32e750a09e4a034c0926c
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -50,6 +50,17 @@ GPT-6.1 Sol at medium effort. Reviewed 2026-10-10. Balanced capability and cost 
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): Gemini 3.8 Flash high ($1.24, 48%).
 - **General agentic judgment** (Open-ended multistep tasks, planning): Gemini 3.8 Flash medium ($0.93, 40). Upgrade: High adds 1 point, not worth it.
 - **Antigravity (Gemini)** (Antigravity agent loops): Gemini 3.8 Flash medium for loops, refactors, and hard bugs. Low (33) for deterministic scripts. Upgrade: High only for reasoning-heavy work (HLE 48% vs 42%).
+
+## Grok (xAI)
+- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Grok 4.6 low ($0.38, 35). Upgrade: Grok 4.6 medium ($1.14, 43).
+- **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): Grok 4.6 high ($1.48, 67%).
+- **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Grok 4.6 medium (1613, $1.14). Upgrade: Grok 4.7 high (1708, $2.73).
+- **People, messages, money, records** (Customer and community messages, payments, exact names): Grok 4.6 low ($0.38, 26), verify names and figures. Upgrade: Rarely. Grok 4.7 xhigh ($3.74, 32) adds 6 points.
+- **Computer use and browser work** (Clicking through web apps, forms, portals): Not yet evaluated.
+- **Agentic coding** (Multi-file changes, debugging, repo work): Grok 4.6 high ($1.48, 21%). Upgrade: Rarely. Grok 4.7 high ($2.73, 25%) adds 4 points.
+- **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): Grok 4.7 low ($1.25, 16%). Upgrade: Grok 4.6 high ($1.48, 21%).
+- **Research and reasoning** (Analysis, tradeoffs, hard questions): Grok 4.6 medium ($1.14, 42%). Upgrade: Rarely. Grok 4.6 xhigh ($1.75, 44%) adds 2 points.
+- **General agentic judgment** (Open-ended multistep tasks, planning): Grok 4.6 medium ($1.14, 43). Upgrade: Rarely. Grok 4.7 high ($2.73, 46) adds 3 points.
 
 ## Local model (LM Studio)
 - **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs. Upgrade: Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions.
@@ -106,6 +117,10 @@ After expiry, standard usage applies; ignore this temporary recommendation.
 - https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra
 - https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-low-vs-gemini-3-8-flash-medium
 - https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium
+- https://artificialanalysis.ai/models/comparisons/grok-4-7-low-vs-grok-4-6-medium
+- https://artificialanalysis.ai/models/comparisons/grok-4-7-high-vs-gpt-6-1-sol-medium
+- https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6
+- https://artificialanalysis.ai/models/comparisons/grok-4-6-low-vs-grok-4-6-xhigh
 - https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low
 
 ## Review status

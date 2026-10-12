@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-10",
- "revision": "67abe87b18c4b5e3292bb2e639373672a414ef265b34806be8743d07feccdbba",
+ "revision": "c6a100b1992d09c94df0668207f2dcf39d0367edf8e32e750a09e4a034c0926c",
  "review": {
   "checked": "2026-10-09",
   "verified_points": 23,
@@ -207,6 +207,51 @@
     "task": "Antigravity (Gemini)",
     "pick": "Gemini 3.8 Flash medium for loops, refactors, and hard bugs. Low (33) for deterministic scripts",
     "upgrade": "High only for reasoning-heavy work (HLE 48% vs 42%)"
+   }
+  ],
+  "grok": [
+   {
+    "task": "Mechanical text work",
+    "pick": "Grok 4.6 low ($0.38, 35)",
+    "upgrade": "Grok 4.6 medium ($1.14, 43)"
+   },
+   {
+    "task": "Scripted relays and tool workflows",
+    "pick": "Grok 4.6 high ($1.48, 67%)"
+   },
+   {
+    "task": "Documents from supplied facts",
+    "pick": "Grok 4.6 medium (1613, $1.14)",
+    "upgrade": "Grok 4.7 high (1708, $2.73)"
+   },
+   {
+    "task": "People, messages, money, records",
+    "pick": "Grok 4.6 low ($0.38, 26), verify names and figures",
+    "upgrade": "Rarely. Grok 4.7 xhigh ($3.74, 32) adds 6 points"
+   },
+   {
+    "task": "Computer use and browser work",
+    "pick": "Not yet evaluated"
+   },
+   {
+    "task": "Agentic coding",
+    "pick": "Grok 4.6 high ($1.48, 21%)",
+    "upgrade": "Rarely. Grok 4.7 high ($2.73, 25%) adds 4 points"
+   },
+   {
+    "task": "Small, clear coding fixes",
+    "pick": "Grok 4.7 low ($1.25, 16%)",
+    "upgrade": "Grok 4.6 high ($1.48, 21%)"
+   },
+   {
+    "task": "Research and reasoning",
+    "pick": "Grok 4.6 medium ($1.14, 42%)",
+    "upgrade": "Rarely. Grok 4.6 xhigh ($1.75, 44%) adds 2 points"
+   },
+   {
+    "task": "General agentic judgment",
+    "pick": "Grok 4.6 medium ($1.14, 43)",
+    "upgrade": "Rarely. Grok 4.7 high ($2.73, 46) adds 3 points"
    }
   ],
   "local": [
