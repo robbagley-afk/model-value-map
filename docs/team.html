@@ -128,6 +128,12 @@ h2,.panel h3{font-weight:800;letter-spacing:-.02em}
 .site-nav a{font-weight:600}
 td.sc.best{background:var(--rp-surface)}
 td.sc.best::after{color:var(--rp-accent-text);border-color:var(--rp-accent-text)}
+/* Filter chips: shown = solid ink with a check, hidden = dashed outline, muted text, faded marker. */
+button.chip[aria-pressed="true"]{background:var(--rp-ink);color:var(--rp-bg);border:2px solid var(--rp-ink)}
+button.chip[aria-pressed="true"]::before{content:"\2713";font-weight:800}
+button.chip[aria-pressed="false"]{background:transparent;color:var(--rp-muted);border:2px dashed var(--rp-muted);text-decoration:line-through;text-decoration-thickness:1px}
+button.chip[aria-pressed="false"] svg{opacity:.35}
+button.chip:hover{border-color:var(--rp-accent)}
 </style>
 </head><body><div class="rp-backlink"><a href="https://robs-ai-expert-toolkit.airy-emu-9499.chatgpt.site/">← AI Quick Start</a></div>
 
@@ -165,6 +171,7 @@ td.sc.best::after{color:var(--rp-accent-text);border-color:var(--rp-accent-text)
 <section>
   <h2>How the models compare on each task</h2>
   <div class="controls" id="filters"><span class="lab">Show</span></div>
+  <p class="muted" style="font-size:15px;margin-top:-8px">Click a model to show or hide it. Solid with a check means shown. Dashed and crossed out means hidden.</p>
   <div class="chartcard" id="chart" role="figure" aria-label="Scores for each model by type of work"><div class="tip" id="tip" role="status" hidden></div></div>
   <p class="muted lede">Each row uses its own scale. Further right is better. Hover or tab to a marker to see its score and cost. Gemma has no published score for coding.</p>
 </section>

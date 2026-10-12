@@ -128,6 +128,12 @@ h2,.panel h3{font-weight:800;letter-spacing:-.02em}
 .site-nav a{font-weight:600}
 td.sc.best{background:var(--rp-surface)}
 td.sc.best::after{color:var(--rp-accent-text);border-color:var(--rp-accent-text)}
+/* Filter chips: shown = solid ink with a check, hidden = dashed outline, muted text, faded marker. */
+button.chip[aria-pressed="true"]{background:var(--rp-ink);color:var(--rp-bg);border:2px solid var(--rp-ink)}
+button.chip[aria-pressed="true"]::before{content:"\2713";font-weight:800}
+button.chip[aria-pressed="false"]{background:transparent;color:var(--rp-muted);border:2px dashed var(--rp-muted);text-decoration:line-through;text-decoration-thickness:1px}
+button.chip[aria-pressed="false"] svg{opacity:.35}
+button.chip:hover{border-color:var(--rp-accent)}
 </style>
 <style>
 ol.steps{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:12px;max-width:80ch}
