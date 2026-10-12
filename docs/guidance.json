@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-10",
- "revision": "1ab34f60aabd5f9f1cc1f08652bd280cf164c08945461e8183638a72cc1b3c1a",
+ "revision": "3e4c874fd0fb9aa1165174ccc4f3d4b4255e9a3896681248f8008e6a5361ffa1",
  "review": {
   "checked": "2026-10-09",
   "verified_points": 23,
@@ -164,7 +164,7 @@
   "antigravity": [
    {
     "task": "Mechanical text work",
-    "pick": "Gemini 3.8 Flash low (index 33, cost per task not published)",
+    "pick": "Gemini 3.8 Flash low (index 33, cost per task not published), also for deterministic scripts",
     "upgrade": "Medium ($0.93, 40)"
    },
    {
@@ -187,7 +187,7 @@
    },
    {
     "task": "Agentic coding",
-    "pick": "Gemini 3.8 Flash medium ($0.93, 20%), weak for coding",
+    "pick": "Gemini 3.8 Flash medium ($0.93, 20%) for agent loops, refactors, and hard bugs. Weak for coding",
     "upgrade": "High also scores 20%"
    },
    {
@@ -196,17 +196,13 @@
    },
    {
     "task": "Research and reasoning",
-    "pick": "Gemini 3.8 Flash high ($1.24, 48%)"
+    "pick": "Gemini 3.8 Flash high ($1.24, 48%)",
+    "upgrade": "None. High is the pick here (HLE 48% vs 42% at medium)"
    },
    {
     "task": "General agentic judgment",
     "pick": "Gemini 3.8 Flash medium ($0.93, 40)",
     "upgrade": "High adds 1 point, not worth it"
-   },
-   {
-    "task": "Antigravity (Gemini)",
-    "pick": "Gemini 3.8 Flash medium for loops, refactors, and hard bugs. Low (33) for deterministic scripts",
-    "upgrade": "High only for reasoning-heavy work (HLE 48% vs 42%)"
    }
   ],
   "grok": [
@@ -299,22 +295,22 @@
   {
    "task": "Mechanical text work",
    "best": "Gemma on a local LM Studio server ($0 cloud). In the cloud, Haiku 5.5 low ($0.02, index 29)",
-   "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points"
+   "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points. Gemini 3.8 Flash medium ($0.93, 40) costs 13x GPT-6 Luna max for 2 more points. With Gemini, use Flash low (33) for deterministic scripts"
   },
   {
    "task": "Scripted relays and tool workflows",
    "best": "GPT-6 Luna max ($0.07, AutomationBench 53%), which matches Opus 5.5 low at 13% of the cost. Grok 4.6 high ($1.48, 67%) is the top score under $3 when accuracy matters more than cost",
-   "avoid": "Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling"
+   "avoid": "Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling. Gemini 3.8 Flash high (60%) scores below medium ($0.93, 61%), which already trails GPT-6.1 Sol medium (63%, $0.21)"
   },
   {
    "task": "Documents from supplied facts",
    "best": "Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish",
-   "avoid": "Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers. Grok 4.6 medium (1613, $1.14) roughly ties Haiku 5.5 max (1618, $0.21) at 5x the cost"
+   "avoid": "Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers. Grok 4.6 medium (1613, $1.14) roughly ties Haiku 5.5 max (1618, $0.21) at 5x the cost. Gemini 3.8 Flash medium (1426, $0.93) trails GPT-6 Luna max (1432, $0.07)"
   },
   {
    "task": "People, messages, money, records",
    "best": "GPT-6.1 Sol high ($0.32, AA-Omniscience 41). Sol low ($0.13, 38) for a cheaper first pass with verification",
-   "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort. Grok at any effort (26 to 32) trails GPT-6.1 Sol low (38, $0.13)"
+   "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort. Grok (26 to 32) and Gemini 3.8 Flash (29 to 30) at any effort trail GPT-6.1 Sol low (38, $0.13)"
   },
   {
    "task": "Computer use and browser work",
@@ -324,27 +320,22 @@
   {
    "task": "Agentic coding",
    "best": "GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost",
-   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46). Grok at any effort (3 to 26%): Grok 4.7 xhigh ($3.74, 26%) trails GPT-6.1 Sol low ($0.13, 31%)"
+   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46). Grok at any effort (3 to 26%): Grok 4.7 xhigh ($3.74, 26%) trails GPT-6.1 Sol low ($0.13, 31%). Gemini 3.8 Flash scores 20% at medium and high. With Gemini, use Flash medium for loops, refactors, and hard bugs, since high adds 33% to the cost for no gain"
   },
   {
    "task": "Small, clear coding fixes",
    "best": "GPT-6.1 Sol low ($0.13, Terminal-Bench 31%). Haiku 5.5 max ($0.21, 33%) in Claude",
-   "avoid": "Opus 5.5 low for this work, since Haiku 5.5 max scores higher for 38% of the cost. Grok 4.7 low ($1.25, 16%) trails Haiku 5.5 xhigh ($0.12, 29%)"
+   "avoid": "Opus 5.5 low for this work, since Haiku 5.5 max scores higher for 38% of the cost. Grok 4.7 low ($1.25, 16%) and Gemini 3.8 Flash medium ($0.93, 20%) trail Haiku 5.5 xhigh ($0.12, 29%)"
   },
   {
    "task": "Research and reasoning",
-   "best": "GPT-6.1 Sol medium (HLE 50%, $0.21)",
+   "best": "GPT-6.1 Sol medium (HLE 50%, $0.21). With Gemini, Flash high (48%, $1.24) is the one task where high beats medium (42%)",
    "avoid": "Opus 5.5 xhigh and max: 2 to 3 points per cost doubling. Grok tops out at 44% (Grok 4.6 xhigh, $1.75), below GPT-6.1 Sol low (47%, $0.13)"
   },
   {
    "task": "General agentic judgment",
    "best": "GPT-6.1 Sol medium (index 48, $0.21)",
-   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score"
-  },
-  {
-   "task": "Antigravity (Gemini)",
-   "best": "Gemini 3.8 Flash medium ($0.93 introductory API cost, index 40; expires 2026-12-31) for loops, refactors, and hard bugs",
-   "avoid": "High for coding or automation: it ties medium (Terminal-Bench 20% vs 20%, AutomationBench 60% vs 61%) for 33% more"
+   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score. Gemini 3.8 Flash high adds 1 point over medium (41 vs 40) for 33% more"
   }
  ]
 }
