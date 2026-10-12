@@ -2,12 +2,12 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/model-value-map/favicon.ico">
 <title>ChatGPT Edu Model Guide</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="preload" href="/model-value-map/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/model-value-map/assets/rob-personal.css">
 <style>
 /* Layout: full-width page on the Ensign Career Coach system. Policy note, pick table, chart by type of work, Gemma test, sources. Light theme only. */
 :root{
-  color-scheme:light;
+  
   --gemma:#c026d3; --surface-sunken:#f8fafc; --surface:#ffffff; --ink:#0f172a; --ink-muted:#475569;
   --border:#cbd5e1; --border-strong:#94a3b8; --brand:#006645; --brand-tint:#e6f2ed; --grid:#e2e8f0;
   --warn-bg:#fff7e6; --warn-border:#b45309; --warn-text:#7c2d12;
@@ -111,7 +111,24 @@ footer a{overflow-wrap:anywhere}
 @media(max-width:640px){.tbl{overflow-x:visible}.tbl table,.tbl tbody,.tbl tr{display:block}.tbl thead{display:none}.tbl tr{padding:12px;border-bottom:2px solid var(--grid)}.tbl td{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px;min-width:0!important;white-space:normal!important;text-align:left!important;padding:8px 0;overflow-wrap:anywhere}.tbl td::before{content:attr(data-label);font-weight:600;color:var(--ink-2,var(--ink-muted))}.tbl td.sc.best::after{grid-column:2;margin:0;font-size:12px}.tbl td.task,.tbl td.pick{display:block}.tbl td.task::before,.tbl td.pick::before{display:block;margin-bottom:4px}}
 
 </style>
-<style>.rp-backlink{background:#201e1d;padding:8px max(20px,calc((100% - 1120px)/2 + 20px));font-size:13px}.rp-backlink a{color:#f3f2f2;text-decoration:none}.rp-backlink a:hover{text-decoration:underline}</style>
+<style>.rp-backlink{background:#201e1d;padding:8px max(20px,calc((100% - 1120px)/2 + 20px));font-size:13px}.rp-backlink a{color:#f3f2f2;text-decoration:none}.rp-backlink a:hover{text-decoration:underline}
+/* Style Guide for the Personal Projects (ai-expert-toolkit/style-guide): maps this page's variables onto the shared rp- tokens. */
+:root{--surface-sunken:var(--rp-bg);--surface:var(--rp-bg);--ink:var(--rp-ink);--ink-muted:var(--rp-muted);--border:var(--rp-ink);--border-strong:var(--rp-ink);
+  --brand:var(--rp-accent-text);--brand-tint:var(--rp-surface);--grid:#d7d3d3;--warn-bg:var(--rp-surface);--warn-border:var(--rp-ink);--warn-text:var(--rp-ink);
+  --font:var(--rp-font);--radius-md:0;--radius-lg:0;--radius-pill:0;--shadow-card:none;--gemma:#eda100}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--rp-bg:#171615;--rp-surface:#222120;--rp-ink:#f3f2f2;--rp-muted:#b8b4b4;--rp-accent:#2a64c4;--rp-accent-text:#7fa8ec;--grid:#3a3837;--gemma:#c98500}}
+*,*::before,*::after{border-radius:0!important}
+body{font-size:17px}
+h1{font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.03em}
+h2,.panel h3{font-weight:800;letter-spacing:-.02em}
+.mark{color:var(--rp-accent-text);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px}.mark i{background:var(--rp-accent)}
+.tbl,.panel,.chartcard,.policy,.value-leader{border-width:2px}
+.policy .pill,button.chip{border-width:2px;font-weight:600}
+.value-leader{border:2px solid var(--rp-ink);border-top:8px solid var(--rp-accent)}
+.site-nav a{font-weight:600}
+td.sc.best{background:var(--rp-surface)}
+td.sc.best::after{color:var(--rp-accent-text);border-color:var(--rp-accent-text)}
+</style>
 <style>
 ol.steps{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:12px;max-width:80ch}
 ol.steps b{display:block}
