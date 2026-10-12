@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: b62286f1282b62c7523a00010e5ed66f51516cdb5251404537cacebfbea83a64
+Revision: 67abe87b18c4b5e3292bb2e639373672a414ef265b34806be8743d07feccdbba
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -81,6 +81,15 @@ Prices are date-dependent. Read the promotion end time before using a copied pri
   Conservative UTC cutoff: vendor lists dates but does not specify a timezone. Use January 1 at 00:00 UTC as a conservative display cutoff; billing follows vendor terms. AA reported medium/high costs already use introductory input/output/cache rates. Standard task estimates assume identical token usage; not a fresh benchmark run. Source: https://ai.google.dev/gemini-api/docs/pricing
   medium: reported introductory cost $0.93/task; estimated standard cost $1.86/task. Do not halve the reported cost again.
   high: reported introductory cost $1.24/task; estimated standard cost $2.48/task. Do not halve the reported cost again.
+
+## Subscription usage offers (not API discounts)*
+Goal: maximize useful completed work within the applicable usage limit. API cost per benchmark task is not a measurement of subscription allowance. A 50% allowance increase corresponds to about 33% lower effective cost per equal unit; 50% less counted usage can double eligible capacity. Weekly caps, eligibility and task quality still constrain value.
+- **Claude artifact usage promotion***: 50% less five-hour session usage for eligible artifact work; approximately 2x eligible session capacity, not a blanket token discount. Ends October 15, 2026 at 11:59 PM Pacific (2026-10-16T07:00:00Z). Checked 2026-10-12.
+Free (from October 7), Pro, Max and Team; excludes Enterprise. Eligible Claude chats and Cowork in the cloud only.
+Chat: next 10 messages after an artifact edit, up to the first 15 steps per reply. Cloud Cowork: about 45 minutes when starting with Document, Presentation or Design, or up to 80 steps after an artifact edit.
+For eligible document, slide and design work, consider Claude during this offer to stretch the five-hour allowance. Choose the lowest model and effort that passes your checks. API benchmark costs do not measure subscription allowance; no cross-vendor subscription winner is established.
+* Does not apply to API use. No Claude API, Claude Code, local desktop Cowork, scheduled/unattended tasks, usage-credit charges, older artifacts, standalone Claude Design, or Google Drive-created Docs/Sheets/Slides. Weekly allowance is unchanged. Source: https://support.claude.com/en/articles/17274727-artifact-usage-promotion
+After expiry, standard usage applies; ignore this temporary recommendation.
 
 ## Sources
 - https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low

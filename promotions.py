@@ -12,6 +12,12 @@ def effective_cost(row,promotions,at=None):
  return round(cost*factor/row['reported_cost_multiplier'],6)
 
 def validate_promotions(data):
+ for offer in data.get('subscription_promotions',[]):
+  if offer.get('api_applies') is not False:raise ValueError('Non-API offers require explicit API exclusion')
+  if not offer['source'].startswith('https://'):raise ValueError('Usage offer requires HTTPS source')
+  for key in ['starts_at','ends_at']:
+   if datetime.fromisoformat(offer[key].replace('Z','+00:00')).tzinfo is None:raise ValueError('Usage offer requires timezone')
+  if offer['ends_at']<=offer['starts_at']:raise ValueError('Invalid usage offer range')
  seen=set()
  for promo in data.get('promotions',[]):
   if promo['id'] in seen:raise ValueError('Duplicate promotion ID')

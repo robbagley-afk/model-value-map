@@ -869,5 +869,24 @@
   "basis": "Balanced capability and cost for everyday, multistep work. Use the task-specific picks below when your work needs something different.",
   "source": "https://artificialanalysis.ai/models/gpt-6-1-sol-medium",
   "task_id": "judgment"
- }
+ },
+ "subscription_promotions": [
+  {
+   "id": "claude-artifacts-oct2026",
+   "vendor": "Anthropic",
+   "name": "Claude artifact usage promotion",
+   "starts_at": "2026-10-01T18:00:00Z",
+   "ends_at": "2026-10-16T07:00:00Z",
+   "checked": "2026-10-12",
+   "api_applies": false,
+   "weekly_limit_applies": false,
+   "scope": "Free (from October 7), Pro, Max and Team; excludes Enterprise. Eligible Claude chats and Cowork in the cloud only.",
+   "benefit": "50% less five-hour session usage for eligible artifact work; approximately 2x eligible session capacity, not a blanket token discount.",
+   "limits": "Chat: next 10 messages after an artifact edit, up to the first 15 steps per reply. Cloud Cowork: about 45 minutes when starting with Document, Presentation or Design, or up to 80 steps after an artifact edit.",
+   "exclusions": "No Claude API, Claude Code, local desktop Cowork, scheduled/unattended tasks, usage-credit charges, older artifacts, standalone Claude Design, or Google Drive-created Docs/Sheets/Slides. Weekly allowance is unchanged.",
+   "expires_label": "October 15, 2026 at 11:59 PM Pacific",
+   "recommendation": "For eligible document, slide and design work, consider Claude during this offer to stretch the five-hour allowance. Choose the lowest model and effort that passes your checks. API benchmark costs do not measure subscription allowance; no cross-vendor subscription winner is established.",
+   "source": "https://support.claude.com/en/articles/17274727-artifact-usage-promotion"
+  }
+ ]
 }
