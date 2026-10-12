@@ -1,4 +1,4 @@
-# Model Value Map
+# AI Model Value Map
 
 Score against cost per task for Anthropic, OpenAI, Google, and a local Gemma model at every effort level, with the cheapest good choice for each kind of work.
 
