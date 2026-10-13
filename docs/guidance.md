@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 3e4c874fd0fb9aa1165174ccc4f3d4b4255e9a3896681248f8008e6a5361ffa1
+Revision: 3b520af7289a5b5d207169745740f293cd92931ea87a2ef65ef8dffebfd0151b
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -67,7 +67,7 @@ GPT-6.1 Sol at medium effort. Reviewed 2026-10-10. Balanced capability and cost 
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Reformatting only. GDPval 569 (AA estimate).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option.
 - **Computer use and browser work** (Clicking through web apps, forms, portals): Not yet evaluated.
-- **Agentic coding** (Multi-file changes, debugging, repo work): Not yet evaluated on Terminal-Bench.
+- **Agentic coding** (Multi-file changes, debugging, repo work): Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89). Older test, not on this chart.
 - **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): Not yet evaluated.
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): Not suitable. HLE 8.7% (Google card), money math 4/6 in-house.
 - **General agentic judgment** (Open-ended multistep tasks, planning): Not suitable (index 17).

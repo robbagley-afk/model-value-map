@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 240e54aba99fa224ec7385614bfc2905108e245d9dd7dda4c5de605131625189
+Revision: b0dd73fd7b92e13fbcfdc81dbbc10ecc3acf6ca827a1704412de2545ab8206b8
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -28,7 +28,7 @@ GPT-6.1 Sol at medium effort. Balanced capability and cost for everyday, multist
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Reformatting only. GDPval 569 (AA estimate).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option.
 - **Computer use and browser work** (Clicking through web apps, forms, portals): Not yet evaluated.
-- **Agentic coding** (Multi-file changes, debugging, repo work): Not yet evaluated on Terminal-Bench.
+- **Agentic coding** (Multi-file changes, debugging, repo work): Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89). Older test, not on this chart.
 - **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): Not yet evaluated.
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): Not suitable. HLE 8.7% (Google card), money math 4/6 in-house.
 - **General agentic judgment** (Open-ended multistep tasks, planning): Not suitable (index 17).

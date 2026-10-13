@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-10",
- "revision": "3e4c874fd0fb9aa1165174ccc4f3d4b4255e9a3896681248f8008e6a5361ffa1",
+ "revision": "3b520af7289a5b5d207169745740f293cd92931ea87a2ef65ef8dffebfd0151b",
  "review": {
   "checked": "2026-10-09",
   "verified_points": 23,
@@ -275,7 +275,7 @@
    },
    {
     "task": "Agentic coding",
-    "pick": "Not yet evaluated on Terminal-Bench"
+    "pick": "Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89). Older test, not on this chart"
    },
    {
     "task": "Small, clear coding fixes",
