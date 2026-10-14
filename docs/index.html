@@ -146,7 +146,7 @@ button.chip{border-width:2px;font-weight:600}
 
 <div class="wrap">
 <header>
-<nav class="site-nav" aria-label="Guides"><a href="https://robs-ai-expert-toolkit.airy-emu-9499.chatgpt.site/">AI Quick Start Guide</a><a href="/model-value-map/team/">Career Services</a><a href="/model-value-map/chatgpt-edu/">ChatGPT Edu</a><a href="#plugin">Install the plugin</a><a href="/model-value-map/guidance.md">AI tool guidance</a></nav>
+<nav class="site-nav" aria-label="Guides"><a href="https://robs-ai-expert-toolkit.airy-emu-9499.chatgpt.site/">AI Quick Start Guide</a><a href="/model-value-map/team/">Career Services</a><a href="/model-value-map/chatgpt-edu/">ChatGPT Edu</a><a href="#plugin">Install the plugin</a><a href="/model-value-map/guidance.md">AI tool guidance</a><a href="/model-value-map/guidance.html">Guidance page</a></nav>
 <div class="header-intro"><div class="header-copy">
   <div class="eyebrow">Cost-aware AI model guide · updated <span id="upd"></span></div>
   <h1>AI Model Value Map</h1>
@@ -221,7 +221,7 @@ Rules: do not edit my instruction files or account settings, do not create sched
 
 <section style="display:flex;flex-direction:column;gap:14px" id="use">
   <h2>Pick the prompt for the tools you use</h2>
-  <p class="note">Copy the prompt that matches your goal and paste it into one of those assistants. Each prompt carries the current guidance, so it works even when your network blocks GitHub. Text version for AI tools: <a id="lmd" href="guidance.md" target="_blank" rel="noopener">guidance.md</a> or <a id="ljs" href="guidance.json" target="_blank" rel="noopener">guidance.json</a>.</p>
+  <p class="note">Copy the prompt that matches your goal and paste it into one of those assistants. Each prompt carries the current guidance, so it works even when your network blocks GitHub. Text version for AI tools: <a id="lmd" href="guidance.md" target="_blank" rel="noopener">guidance.md</a>, <a id="ljs" href="guidance.json" target="_blank" rel="noopener">guidance.json</a> or <a id="lht" href="guidance.html" target="_blank" rel="noopener">guidance.html</a>.</p>
   <div class="spot goal-picker">
     <label for="goal-sel" class="goal-label">Select which AI Platforms you Use</label>
     <p class="ex goal-hint" id="goal-count"></p>
@@ -515,7 +515,7 @@ function share(){
   if(typeof SHARE==="undefined"||!SHARE)return;
   $("s-task").textContent=SHARE.task_prompt;
   const gs=$("goal-sel");SHARE.goals.forEach(g=>gs.add(new Option(g.title,g.id)));const showGoal=()=>{const g=SHARE.goals.find(x=>x.id===gs.value);$("goal-desc").textContent=g.desc;$("goal-text").textContent=g.text};gs.onchange=showGoal;gs.value=SHARE.goals[0].id;showGoal();$("goal-count").textContent=SHARE.goals.length+" choices. Open the menu to pick the prompt for Claude, Gemini, Grok and more.";
-  if(!location.hostname.endsWith("github.io")){$("lmd").href=SHARE.site+"guidance.md";$("ljs").href=SHARE.site+"guidance.json"}
+  if(!location.hostname.endsWith("github.io")){$("lmd").href=SHARE.site+"guidance.md";$("ljs").href=SHARE.site+"guidance.json";$("lht").href=SHARE.site+"guidance.html"}
   document.querySelectorAll(".cbtn").forEach(b=>b.dataset.label=b.textContent);
   document.querySelectorAll(".cbtn").forEach(b=>b.onclick=()=>{const el=$(b.dataset.t),txt=el.textContent,done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent=b.dataset.label,1600)};
     const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected. Press Cmd+C or Ctrl+C"};
