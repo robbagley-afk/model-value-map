@@ -4,7 +4,8 @@
 <title>AI Model Value Map</title>
 <link rel="preload" href="/model-value-map/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/model-value-map/assets/rob-personal.css">
-<style>p,h1,h2,h3,h4{margin:revert} /* keep this page's browser-default spacing under the shared reset */</style>
+<style>p,h1,h2,h3,h4{margin:revert} /* keep this page's browser-default spacing under the shared reset */.goal-picker{border:2px solid var(--accent,#1d4ed8)}.goal-label{display:block;font-size:22px;font-weight:700;margin-bottom:4px}.goal-hint{margin:0 0 8px}.goal-sel{width:100%;font:inherit;font-size:18px;font-weight:600;padding:12px 44px 12px 14px;border:2px solid var(--accent,#1d4ed8);border-radius:8px;background:var(--card,#fff) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M3 6l5 5 5-5' fill='none' stroke='%231d4ed8' stroke-width='2.5'/%3E%3C/svg%3E") no-repeat right 14px center;appearance:none;-webkit-appearance:none;cursor:pointer;color:inherit}.goal-sel:focus-visible{outline:3px solid var(--accent,#1d4ed8);outline-offset:2px}
+</style>
 <style>
 /* Layout: one wide column. Header, filter row, chart, sweet-spot list, data table, sources. Anthropic-style ivory chart card. */
 :root{
@@ -190,7 +191,13 @@ button.chip{border-width:2px;font-weight:600}
 <section style="display:flex;flex-direction:column;gap:14px" id="use">
   <h2>Pick the prompt for the tools you use</h2>
   <p class="note">Copy the prompt that matches your goal and paste it into one of those assistants. Each prompt carries the current guidance, so it works even when your network blocks GitHub. Text version for AI tools: <a id="lmd" href="guidance.md" target="_blank" rel="noopener">guidance.md</a> or <a id="ljs" href="guidance.json" target="_blank" rel="noopener">guidance.json</a>.</p>
-  <div class="gem" id="goals"></div>
+  <div class="spot goal-picker">
+    <label for="goal-sel" class="goal-label">Select which AI Platforms you Use</label>
+    <p class="ex goal-hint" id="goal-count"></p>
+    <select id="goal-sel" class="goal-sel"></select>
+    <p class="ex" id="goal-desc"></p>
+    <pre class="copy" id="goal-text"></pre><button type="button" class="cbtn" data-t="goal-text">Copy prompt</button>
+  </div>
   <h2>More ways to use this guide</h2>
   <div class="gem">
     <div class="spot"><h4>Add this line to your instructions</h4><p class="ex">Claude Code: ~/.claude/CLAUDE.md. Codex: ~/.codex/AGENTS.md.</p><pre class="copy" id="s-line"></pre><button type="button" class="cbtn" data-t="s-line">Copy line</button></div>
@@ -477,7 +484,7 @@ function gemma(){
 function share(){
   if(typeof SHARE==="undefined"||!SHARE)return;
   $("s-line").textContent=SHARE.instruction_line;$("s-task").textContent=SHARE.task_prompt;
-  const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]);$("goals").innerHTML=SHARE.goals.map(g=>`<div class="spot"><h4>${esc(g.title)}</h4><p class="ex">${esc(g.desc)}</p><pre class="copy" id="${g.id}"></pre><button type="button" class="cbtn" data-t="${g.id}">Copy prompt</button></div>`).join("");SHARE.goals.forEach(g=>$(g.id).textContent=g.text);
+  const gs=$("goal-sel");SHARE.goals.forEach(g=>gs.add(new Option(g.title,g.id)));const showGoal=()=>{const g=SHARE.goals.find(x=>x.id===gs.value);$("goal-desc").textContent=g.desc;$("goal-text").textContent=g.text};gs.onchange=showGoal;gs.value=SHARE.goals[0].id;showGoal();$("goal-count").textContent=SHARE.goals.length+" choices. Open the menu to pick the prompt for Claude, Gemini, Grok and more.";
   $("s-claude-block").textContent=SHARE.prompt_claude_block;
   $("s-how").textContent=SHARE.how_to.map(h=>h[0]+": "+h[1]).join(" ");
   if(!location.hostname.endsWith("github.io")){$("lmd").href=SHARE.site+"guidance.md";$("ljs").href=SHARE.site+"guidance.json"}
