@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-10. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 3b520af7289a5b5d207169745740f293cd92931ea87a2ef65ef8dffebfd0151b
+Revision: 69794d7822d69be2ea5d0dc52eadd12a79c9b9203073f8ce0e6da5f02ff88be9
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -94,10 +94,10 @@ Prices are date-dependent. Read the promotion end time before using a copied pri
 ## Subscription usage offers (not API discounts)*
 Goal: maximize useful completed work within the applicable usage limit. API cost per benchmark task is not a measurement of subscription allowance. A 50% allowance increase corresponds to about 33% lower effective cost per equal unit; 50% less counted usage can double eligible capacity. Weekly caps, eligibility and task quality still constrain value.
 - **Claude artifact usage promotion***: 50% less five-hour session usage for eligible artifact work; approximately 2x eligible session capacity, not a blanket token discount. Ends October 15, 2026 at 11:59 PM Pacific (2026-10-16T07:00:00Z). Checked 2026-10-12.
-Free (from October 7), Pro, Max and Team; excludes Enterprise. Eligible Claude chats and Cowork in the cloud only.
-Chat: next 10 messages after an artifact edit, up to the first 15 steps per reply. Cloud Cowork: about 45 minutes when starting with Document, Presentation or Design, or up to 80 steps after an artifact edit.
+Free (from October 7), Pro, Max and Team; excludes Enterprise. Eligible Claude chats and cloud tasks in the Claude app only.
+Chat: next 10 messages after an artifact edit, up to the first 15 steps per reply. Cloud tasks in the Claude app: about 45 minutes when starting with Document, Presentation or Design, or up to 80 steps after an artifact edit.
 For eligible document, slide and design work, consider Claude during this offer to stretch the five-hour allowance. Choose the lowest model and effort that passes your checks. API benchmark costs do not measure subscription allowance; no cross-vendor subscription winner is established.
-* Does not apply to API use. No Claude API, Claude Code, local desktop Cowork, scheduled/unattended tasks, usage-credit charges, older artifacts, standalone Claude Design, or Google Drive-created Docs/Sheets/Slides. Weekly allowance is unchanged. Source: https://support.claude.com/en/articles/17274727-artifact-usage-promotion
+* Does not apply to API use. No Claude API, Claude Code, local desktop tasks in the Claude app, scheduled/unattended tasks, usage-credit charges, older artifacts, standalone Claude Design, or Google Drive-created Docs/Sheets/Slides. Weekly allowance is unchanged. Source: https://support.claude.com/en/articles/17274727-artifact-usage-promotion
 After expiry, standard usage applies; ignore this temporary recommendation.
 
 ## Sources
