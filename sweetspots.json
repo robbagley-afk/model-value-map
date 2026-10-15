@@ -7,7 +7,7 @@
    "examples": "Classify, extract, reformat, dedupe, parse",
    "bench": "index",
    "best": "Gemma on a local LM Studio server ($0 cloud). In the cloud, Haiku 5.5 low ($0.02, index 29)",
-   "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points. Gemini 3.8 Flash medium ($0.93, 40) costs 13x GPT-6 Luna max for 2 more points. With Gemini, use Flash low (33) for deterministic scripts",
+   "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points. Gemini 3.8 Flash medium ($0.93, 40) costs 13x GPT-6 Luna max for 2 more points. With Gemini, use Flash low (33) for deterministic scripts Newly measured Luna low ($0.0045, index 22) is a candidate for narrow supplied-input steps after a task check, not an established replacement for the maintained picks.",
    "vendors": {
     "Anthropic": {
      "pick": "Haiku 5.5 low ($0.02, 29)",
@@ -23,7 +23,7 @@
     },
     "Local": {
      "pick": "Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs",
-     "upgrade": "Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions"
+     "upgrade": "Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions after audit"
     },
     "xAI": {
      "pick": "Grok 4.6 low ($0.38, 35)",
@@ -66,28 +66,28 @@
    "task": "Documents from supplied facts",
    "examples": "Drafts, summaries, slides, spreadsheets, reports",
    "bench": "gdp",
-   "best": "Haiku 5.5 xhigh (GDPval 1511, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish",
-   "avoid": "Opus 5.5 high (1705) adds 87 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers. Grok 4.6 medium (1613, $1.14) roughly ties Haiku 5.5 max (1618, $0.21) at 5x the cost. Gemini 3.8 Flash medium (1426, $0.93) trails GPT-6 Luna max (1432, $0.07)",
+   "best": "Haiku 5.5 xhigh (GDPval 1513, $0.12). GPT-6 Luna max (1432, $0.07) if cost matters more than polish",
+   "avoid": "Opus 5.5 high (1704) adds 86 Elo for 8.7x the cost. Sonnet 5.5 max. Haiku hallucinates often (AA-Omniscience 6 to 11), so supply the facts and check names and numbers. Grok 4.6 medium (1612, $1.14) roughly ties Haiku 5.5 max (1618, $0.21) at 5x the cost. Gemini 3.8 Flash medium (1421, $0.93) trails GPT-6 Luna max (1432, $0.07)",
    "vendors": {
     "Anthropic": {
-     "pick": "Haiku 5.5 xhigh (pilot): 1511 at $0.12, vendor chart $0.27, near Sonnet 5.5 high at less than half the cost",
+     "pick": "Haiku 5.5 xhigh (pilot): 1513 at $0.12, vendor chart $0.27, near Sonnet 5.5 high at less than half the cost",
      "upgrade": "Haiku 5.5 max (1618, $0.21) for final polish"
     },
     "OpenAI": {
      "pick": "GPT-6 Luna max (1432, $0.07)",
-     "upgrade": "GPT-6.1 Sol max (1575, $0.72)"
+     "upgrade": "GPT-6.1 Sol max (1594, $0.72)"
     },
     "Google": {
-     "pick": "Gemini 3.8 Flash medium (1426, $0.93)",
-     "upgrade": "High adds 10 Elo, not worth it"
+     "pick": "Gemini 3.8 Flash medium (1421, $0.93)",
+     "upgrade": "High adds 15 Elo, not worth it"
     },
     "Local": {
-     "pick": "Reformatting only. GDPval 569 (AA estimate)",
+     "pick": "Reformatting only. GDPval 566 (AA estimate)",
      "upgrade": "n/a"
     },
     "xAI": {
-     "pick": "Grok 4.6 medium (1613, $1.14)",
-     "upgrade": "Grok 4.7 high (1708, $2.73)"
+     "pick": "Grok 4.6 medium (1612, $1.14)",
+     "upgrade": "Grok 4.7 high (1706, $2.73)"
     }
    }
   },
@@ -247,7 +247,7 @@
    "examples": "Open-ended multistep tasks, planning",
    "bench": "index",
    "best": "GPT-6.1 Sol medium (index 48, $0.21)",
-   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score. Gemini 3.8 Flash high adds 1 point over medium (41 vs 40) for 33% more",
+   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score. Gemini 3.8 Flash high adds 1 point over medium (41 vs 40) for 33% more Fable 5.1 high (51, $3.91) ties Opus 5.5 medium (51, $1.34) at nearly 3x the task cost.",
    "vendors": {
     "Anthropic": {
      "pick": "Opus 5.5 medium ($1.34, 51)",
@@ -272,6 +272,6 @@
    }
   }
  ],
- "updated": "2026-10-09",
- "review_note": "Updated is the build/review date. Each point has its own checked date. Inaccessible sources retain dated values. Vendor charts remain approximate, read 2026-10-08. Gemini API costs are introductory prices through 2026-12-31."
+ "updated": "2026-10-15",
+ "review_note": "All 46 tracked independent model/effort points verified from comparison tables on 2026-10-15. Added 14 previously missing effort points. GDPval Elo can move as comparison results update. Vendor chart points remain approximate and dated 2026-10-08. Unpublished costs and benchmark scores remain null. Independent reasoning scores do not describe the local non-thinking QAT instance. Overall and task-specific model picks retained after review. Account-specific offers without verified eligibility and complete dates are excluded from price calculations. Gemini API costs are introductory through 2026-12-31."
 }
