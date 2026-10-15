@@ -746,6 +746,26 @@
    "note": "AA estimate for the reasoning variant at full precision. The test machine runs the QAT 4-bit build with thinking off. See the in-house test below for scores on that exact setup.",
    "checked": "2026-10-15",
    "estimated": true
+  },
+  {
+   "vendor": "Google",
+   "model": "Gemini 4 Argon",
+   "effort": "high",
+   "cost": 1.99,
+   "index": 53,
+   "tb": 57,
+   "ab": 78,
+   "gdp": 1624,
+   "omni": 42,
+   "sci": 62,
+   "hle": 57,
+   "src": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium",
+   "checked": "2026-10-15",
+   "promotion_id": "google-argon-intro-2026",
+   "reported_cost_multiplier": 0.5,
+   "pricing_checked": "2026-10-15",
+   "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+   "reported_pricing_basis": "AA comparison uses introductory $2 input/$10 output/$0.10 cached input per million; already discounted."
   }
  ],
  "vendor_charts": {
@@ -1207,7 +1227,7 @@
  },
  "review": {
   "checked": "2026-10-15",
-  "verified_points": 46,
+  "verified_points": 47,
   "pending_points": [
    "Luna none: attempted comparison returned HTTP 404",
    "Grok 4.7 medium: attempted comparison returned HTTP 404",
@@ -1215,9 +1235,10 @@
    "OpenAI Pro 200 temporary allowance: official terms confirm eligible subscriptions active September 22 through September 29 at 10 AM Pacific keep the previous allowance through October 29. Exact promotion start and expiry timezone, specific account eligibility and any credit grant are unverified. No API discount or credit amount assumed. Source checked 2026-10-15: https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
    "OpenAI referral rewards vary by account and offer. Banked Work/Codex resets normally expire 30 days after award; exact account offer, caps and award date are unverified. Not API credits. No price adjustment. Source checked 2026-10-15: https://help.openai.com/en/articles/20001271-chatgpt-desktop-referral-promotions",
    "Google Antigravity promotional overage credits require account-specific terms. No verified temporary subscription boost found in reviewed official plans/pricing. No API discount inferred. Sources checked 2026-10-15: https://antigravity.google/docs/plans and https://antigravity.google/pricing",
-   "Grok for Startups may cover API and other eligible services only after approval. Amount and expiry come from approval terms, normally six months after credit application; account eligibility and grant are unverified. Cannot stack without written approval. No token-price adjustment. Source checked 2026-10-15: https://x.ai/legal/startup-program-terms"
+   "Grok for Startups may cover API and other eligible services only after approval. Amount and expiry come from approval terms, normally six months after credit application; account eligibility and grant are unverified. Cannot stack without written approval. No token-price adjustment. Source checked 2026-10-15: https://x.ai/legal/startup-program-terms",
+   "Gemini 4 Argon low/medium: attempted comparison URLs returned HTTP 404; no scores inferred."
   ],
-  "note": "All 46 tracked independent model/effort points verified from comparison tables on 2026-10-15. Added 14 previously missing effort points. GDPval Elo can move as comparison results update. Vendor chart points remain approximate and dated 2026-10-08. Unpublished costs and benchmark scores remain null. Independent reasoning scores do not describe the local non-thinking QAT instance. Overall and task-specific model picks retained after review. Account-specific offers without verified eligibility and complete dates are excluded from price calculations."
+  "note": "All 47 tracked independent model/effort points verified from comparison tables on 2026-10-15. Added 14 previously missing effort points. GDPval Elo can move as comparison results update. Vendor chart points remain approximate and dated 2026-10-08. Unpublished costs and benchmark scores remain null. Independent reasoning scores do not describe the local non-thinking QAT instance. Overall and task-specific model picks retained after review. Account-specific offers without verified eligibility and complete dates are excluded from price calculations. The newly added model has one verified effort point; other attempted effort sources remain pending. Existing task-model picks remain in place pending the new model access and effort comparison review; news and charts do not assume account eligibility."
  },
  "promotions": [
   {
@@ -1245,6 +1266,32 @@
    "discount_label": "50% introductory API pricing",
    "last_discounted_date": "2026-12-31",
    "standard_from": "2027-01-01"
+  },
+  {
+   "id": "google-argon-intro-2026",
+   "vendor": "Google",
+   "model": "Gemini 4 Argon",
+   "scope": "Gemini Developer API paid Standard tier. No free tier. Subscription eligibility and Antigravity allowances are separate.",
+   "starts_at": null,
+   "ends_at": "2026-12-01T00:00:00Z",
+   "boundary_note": "Conservative UTC display cutoff because the vendor states December 1 without a timezone; vendor billing terms remain authoritative. Exact offer start timestamp is not specified.",
+   "promotional_multiplier": 0.5,
+   "promotional_rates": {
+    "input": 2,
+    "output": 10,
+    "cached_input": 0.1
+   },
+   "standard_rates": {
+    "input": 4,
+    "output": 20,
+    "cached_input": 0.2
+   },
+   "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+   "checked": "2026-10-15",
+   "task_estimate_note": "AA high-effort cost $1.99 already includes introductory rates; post-expiry $3.98 assumes unchanged token usage and is an estimate, not a fresh benchmark measurement.",
+   "discount_label": "50% introductory API pricing",
+   "last_discounted_date": "2026-11-30",
+   "standard_from": "2026-12-01"
   }
  ],
  "overall_value_leader": {
@@ -1272,6 +1319,39 @@
    "expires_label": "October 15, 2026 at 11:59 PM Pacific",
    "recommendation": "For eligible document, slide and design work, consider Claude during this offer to stretch the five-hour allowance. Choose the lowest model and effort that passes your checks. API benchmark costs do not measure subscription allowance; no cross-vendor subscription winner is established.",
    "source": "https://support.claude.com/en/articles/17274727-artifact-usage-promotion"
+  }
+ ],
+ "news": [
+  {
+   "id": "argon-api-intro",
+   "vendor": "Google",
+   "date": "2026-10-15",
+   "title": "Argon introductory API pricing",
+   "summary": "$2 input / $10 output per million tokens through November 30, then $4 / $20. API offer only; subscription allowances are separate.",
+   "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+   "checked": "2026-10-15",
+   "expires_at": "2026-12-01T00:00:00Z"
+  },
+  {
+   "id": "argon-release",
+   "vendor": "Google",
+   "date": "2026-10-13",
+   "title": "Gemini 4 Argon broadly available",
+   "summary": "Independent AutomationBench: 78% versus Sol Medium 63%, at $1.99 versus $0.21 per benchmark task. More capability comes at a higher task cost.",
+   "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+   "checked": "2026-10-15",
+   "expires_at": "2026-11-12T00:00:00Z",
+   "independent_source": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium"
+  },
+  {
+   "id": "sonnet-cache-cut",
+   "vendor": "Anthropic",
+   "date": "2026-10-07",
+   "title": "Sonnet 5.5 cache reads halved",
+   "summary": "Cache reads fell to $0.10 per million tokens. Anthropic estimates about 20% lower cost on most agentic tasks; this is a vendor claim, not a measured subscription saving.",
+   "source": "https://www.anthropic.com/claude-haiku-5-5",
+   "checked": "2026-10-15",
+   "expires_at": "2026-11-06T00:00:00Z"
   }
  ]
 }

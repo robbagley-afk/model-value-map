@@ -1,9 +1,42 @@
 {
  "updated": "2026-10-15",
- "revision": "31a41e51b599c5c24da30af0b72c1219066f832595a3e6796105245f648d3eec",
+ "revision": "9d07312aa327f7bebd0803bcbc1c98b12e7def8c7ada23e4f4cf03729a7e6e99",
+ "news": [
+  {
+   "id": "argon-api-intro",
+   "vendor": "Google",
+   "date": "2026-10-15",
+   "title": "Argon introductory API pricing",
+   "summary": "$2 input / $10 output per million tokens through November 30, then $4 / $20. API offer only; subscription allowances are separate.",
+   "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+   "checked": "2026-10-15",
+   "expires_at": "2026-12-01T00:00:00Z"
+  },
+  {
+   "id": "argon-release",
+   "vendor": "Google",
+   "date": "2026-10-13",
+   "title": "Gemini 4 Argon broadly available",
+   "summary": "Independent AutomationBench: 78% versus Sol Medium 63%, at $1.99 versus $0.21 per benchmark task. More capability comes at a higher task cost.",
+   "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+   "checked": "2026-10-15",
+   "expires_at": "2026-11-12T00:00:00Z",
+   "independent_source": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium"
+  },
+  {
+   "id": "sonnet-cache-cut",
+   "vendor": "Anthropic",
+   "date": "2026-10-07",
+   "title": "Sonnet 5.5 cache reads halved",
+   "summary": "Cache reads fell to $0.10 per million tokens. Anthropic estimates about 20% lower cost on most agentic tasks; this is a vendor claim, not a measured subscription saving.",
+   "source": "https://www.anthropic.com/claude-haiku-5-5",
+   "checked": "2026-10-15",
+   "expires_at": "2026-11-06T00:00:00Z"
+  }
+ ],
  "review": {
   "checked": "2026-10-15",
-  "verified_points": 46,
+  "verified_points": 47,
   "pending_points": [
    "Luna none: attempted comparison returned HTTP 404",
    "Grok 4.7 medium: attempted comparison returned HTTP 404",
@@ -11,9 +44,10 @@
    "OpenAI Pro 200 temporary allowance: official terms confirm eligible subscriptions active September 22 through September 29 at 10 AM Pacific keep the previous allowance through October 29. Exact promotion start and expiry timezone, specific account eligibility and any credit grant are unverified. No API discount or credit amount assumed. Source checked 2026-10-15: https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
    "OpenAI referral rewards vary by account and offer. Banked Work/Codex resets normally expire 30 days after award; exact account offer, caps and award date are unverified. Not API credits. No price adjustment. Source checked 2026-10-15: https://help.openai.com/en/articles/20001271-chatgpt-desktop-referral-promotions",
    "Google Antigravity promotional overage credits require account-specific terms. No verified temporary subscription boost found in reviewed official plans/pricing. No API discount inferred. Sources checked 2026-10-15: https://antigravity.google/docs/plans and https://antigravity.google/pricing",
-   "Grok for Startups may cover API and other eligible services only after approval. Amount and expiry come from approval terms, normally six months after credit application; account eligibility and grant are unverified. Cannot stack without written approval. No token-price adjustment. Source checked 2026-10-15: https://x.ai/legal/startup-program-terms"
+   "Grok for Startups may cover API and other eligible services only after approval. Amount and expiry come from approval terms, normally six months after credit application; account eligibility and grant are unverified. Cannot stack without written approval. No token-price adjustment. Source checked 2026-10-15: https://x.ai/legal/startup-program-terms",
+   "Gemini 4 Argon low/medium: attempted comparison URLs returned HTTP 404; no scores inferred."
   ],
-  "note": "All 46 tracked independent model/effort points verified from comparison tables on 2026-10-15. Added 14 previously missing effort points. GDPval Elo can move as comparison results update. Vendor chart points remain approximate and dated 2026-10-08. Unpublished costs and benchmark scores remain null. Independent reasoning scores do not describe the local non-thinking QAT instance. Overall and task-specific model picks retained after review. Account-specific offers without verified eligibility and complete dates are excluded from price calculations."
+  "note": "All 47 tracked independent model/effort points verified from comparison tables on 2026-10-15. Added 14 previously missing effort points. GDPval Elo can move as comparison results update. Vendor chart points remain approximate and dated 2026-10-08. Unpublished costs and benchmark scores remain null. Independent reasoning scores do not describe the local non-thinking QAT instance. Overall and task-specific model picks retained after review. Account-specific offers without verified eligibility and complete dates are excluded from price calculations. The newly added model has one verified effort point; other attempted effort sources remain pending. Existing task-model picks remain in place pending the new model access and effort comparison review; news and charts do not assume account eligibility."
  },
  "overall_value_leader": {
   "model": "GPT-6.1 Sol",
@@ -49,6 +83,32 @@
    "discount_label": "50% introductory API pricing",
    "last_discounted_date": "2026-12-31",
    "standard_from": "2027-01-01"
+  },
+  {
+   "id": "google-argon-intro-2026",
+   "vendor": "Google",
+   "model": "Gemini 4 Argon",
+   "scope": "Gemini Developer API paid Standard tier. No free tier. Subscription eligibility and Antigravity allowances are separate.",
+   "starts_at": null,
+   "ends_at": "2026-12-01T00:00:00Z",
+   "boundary_note": "Conservative UTC display cutoff because the vendor states December 1 without a timezone; vendor billing terms remain authoritative. Exact offer start timestamp is not specified.",
+   "promotional_multiplier": 0.5,
+   "promotional_rates": {
+    "input": 2,
+    "output": 10,
+    "cached_input": 0.1
+   },
+   "standard_rates": {
+    "input": 4,
+    "output": 20,
+    "cached_input": 0.2
+   },
+   "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+   "checked": "2026-10-15",
+   "task_estimate_note": "AA high-effort cost $1.99 already includes introductory rates; post-expiry $3.98 assumes unchanged token usage and is an estimate, not a fresh benchmark measurement.",
+   "discount_label": "50% introductory API pricing",
+   "last_discounted_date": "2026-11-30",
+   "standard_from": "2026-12-01"
   }
  ],
  "subscription_promotions": [
@@ -304,8 +364,8 @@
   },
   {
    "task": "Scripted relays and tool workflows",
-   "best": "GPT-6 Luna max ($0.07, AutomationBench 53%), which matches Opus 5.5 low at 13% of the cost. Grok 4.6 high ($1.48, 67%) is the top score under $3 when accuracy matters more than cost",
-   "avoid": "Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling. Gemini 3.8 Flash high (60%) scores below medium ($0.93, 61%), which already trails GPT-6.1 Sol medium (63%, $0.21)"
+   "best": "GPT-6 Luna max ($0.07, AutomationBench 53%), which matches Opus 5.5 low at 13% of the cost. Argon high (78%, $1.99 introductory through November 30) is the highest tracked AutomationBench score under $3; eligibility and task fit still need checking",
+   "avoid": "Haiku 5.5 at any effort (36% at xhigh). Opus 5.5 high and up, Sonnet 5.5 xhigh and max: 1 to 2 points per cost doubling. Gemini 3.8 Flash high (60%) scores below medium ($0.93, 61%), which already trails GPT-6.1 Sol medium (63%, $0.21) Argon high costs $1.99 per AA task through November 30; estimated $3.98 from December 1 assuming unchanged tokens. Subscription caps and availability are separate."
   },
   {
    "task": "Documents from supplied facts",
@@ -315,7 +375,7 @@
   {
    "task": "People, messages, money, records",
    "best": "GPT-6.1 Sol high ($0.32, AA-Omniscience 41). Sol low ($0.13, 38) for a cheaper first pass with verification",
-   "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort. Grok (26 to 32) and Gemini 3.8 Flash (29 to 30) at any effort trail GPT-6.1 Sol low (38, $0.13)"
+   "avoid": "Haiku 5.5 (3 to 11) and Sonnet 5.5 (19 to 32) at any effort. Grok (26 to 32) and Gemini 3.8 Flash (29 to 30) at any effort trail GPT-6.1 Sol low (38, $0.13) Argon high costs $1.99 per AA task through November 30; estimated $3.98 from December 1 assuming unchanged tokens. Subscription caps and availability are separate."
   },
   {
    "task": "Computer use and browser work",
@@ -325,7 +385,7 @@
   {
    "task": "Agentic coding",
    "best": "GPT-6.1 Sol medium (Terminal-Bench 48%, $0.21), about a sixth of Opus 5.5 medium's cost",
-   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46). Grok at any effort (3 to 26%): Grok 4.7 xhigh ($3.74, 26%) trails GPT-6.1 Sol low ($0.13, 31%). Gemini 3.8 Flash scores 20% at medium and high. With Gemini, use Flash medium for loops, refactors, and hard bugs, since high adds 33% to the cost for no gain"
+   "avoid": "Opus 5.5 xhigh (+3 for 1.9x) and max (+0). Sonnet 5.5 max ($5.46). Grok at any effort (3 to 26%): Grok 4.7 xhigh ($3.74, 26%) trails GPT-6.1 Sol low ($0.13, 31%). Gemini 3.8 Flash scores 20% at medium and high. With Gemini, use Flash medium for loops, refactors, and hard bugs, since high adds 33% to the cost for no gain. Argon high costs $1.99 per AA task through November 30; estimated $3.98 from December 1 assuming unchanged tokens. Subscription caps and availability are separate."
   },
   {
    "task": "Small, clear coding fixes",
@@ -334,13 +394,13 @@
   },
   {
    "task": "Research and reasoning",
-   "best": "GPT-6.1 Sol medium (HLE 50%, $0.21). With Gemini, Flash high (48%, $1.24) is the one task where high beats medium (42%)",
-   "avoid": "Opus 5.5 xhigh and max: 2 to 3 points per cost doubling. Grok tops out at 44% (Grok 4.6 xhigh, $1.75), below GPT-6.1 Sol low (47%, $0.13)"
+   "best": "GPT-6.1 Sol medium (HLE 50%, $0.21). Flash high (48%, $1.24) beats Flash medium (42%). Argon high is newly measured at 57% for $1.99 introductory; verify access before adopting it",
+   "avoid": "Opus 5.5 xhigh and max: 2 to 3 points per cost doubling. Grok tops out at 44% (Grok 4.6 xhigh, $1.75), below GPT-6.1 Sol low (47%, $0.13) Argon high costs $1.99 per AA task through November 30; estimated $3.98 from December 1 assuming unchanged tokens. Subscription caps and availability are separate."
   },
   {
    "task": "General agentic judgment",
    "best": "GPT-6.1 Sol medium (index 48, $0.21)",
-   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score. Gemini 3.8 Flash high adds 1 point over medium (41 vs 40) for 33% more Fable 5.1 high (51, $3.91) ties Opus 5.5 medium (51, $1.34) at nearly 3x the task cost."
+   "avoid": "Opus 5.5 xhigh and max (+2 per doubling). Sonnet 5.5 high (47, $0.88) trails Opus 5.5 medium on every test. Grok 4.7 high and xhigh (46) cost 13 to 18x GPT-6.1 Sol medium for a lower score. Gemini 3.8 Flash high adds 1 point over medium (41 vs 40) for 33% more. Fable 5.1 high (51, $3.91) ties Opus 5.5 medium (51, $1.34) at nearly 3x the task cost. Argon high costs $1.99 per AA task through November 30; estimated $3.98 from December 1 assuming unchanged tokens. Subscription caps and availability are separate."
   }
  ]
 }
