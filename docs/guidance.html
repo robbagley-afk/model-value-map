@@ -9,23 +9,23 @@
 <body>
 <h1>Model guidance</h1>
 <p>Updated: 2026-10-15</p>
-<p>Revision: 9d07312aa327f7bebd0803bcbc1c98b12e7def8c7ada23e4f4cf03729a7e6e99</p>
+<p>Revision: 5e991ea972cbba3ff5772dd559d754964812d2abf14d41ad733eaba1e63ae58a</p>
 <p>Rule: An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.</p>
 <section id="latest-news" class="card" aria-labelledby="news-title" style="padding:16px;font-size:15px;line-height:1.5"><h2 id="news-title" style="font-size:19px;margin:0 0 8px">Latest news</h2><ul style="margin:0;padding-left:20px"><li data-news-id="argon-api-intro"><time>2026-10-15</time> · <a href="https://ai.google.dev/gemini-api/docs/pricing?hl=en" target="_blank" rel="noopener">Argon introductory API pricing</a> — $2 input / $10 output per million tokens through November 30, then $4 / $20. API offer only; subscription allowances are separate.</li><li data-news-id="argon-release"><time>2026-10-13</time> · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" target="_blank" rel="noopener">Gemini 4 Argon broadly available</a> — Independent AutomationBench: 78% versus Sol Medium 63%, at $1.99 versus $0.21 per benchmark task. More capability comes at a higher task cost. <a href="https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium" target="_blank" rel="noopener">Benchmarks</a></li><li data-news-id="sonnet-cache-cut"><time>2026-10-07</time> · <a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Sonnet 5.5 cache reads halved</a> — Cache reads fell to $0.10 per million tokens. Anthropic estimates about 20% lower cost on most agentic tasks; this is a vendor claim, not a measured subscription saving.</li></ul></section>
 <h2>ChatGPT and Codex</h2>
 <p>Mechanical text work | GPT-6 Luna max ($0.07, 38), best when the step calls tools (AutomationBench 53%) | GPT-6.1 Sol low ($0.13, 42)</p>
-<p>Scripted relays and tool workflows | GPT-6 Luna max ($0.07, 53%) | GPT-6.1 Sol medium ($0.21, 63%)</p>
+<p>Scripted relays and tool workflows | GPT-6.1 Sol medium ($0.21, 63%) | Rarely. GPT-6.1 Sol xhigh ($0.39, 67%) adds 4 points</p>
 <p>Documents from supplied facts | GPT-6 Luna max (1432, $0.07) | GPT-6.1 Sol max (1594, $0.72)</p>
 <p>People, messages, money, records | GPT-6.1 Sol high ($0.32, 41), verify names and figures | Rarely. Sol max ($0.72, 42) adds 1 point</p>
 <p>Computer use and browser work | GPT-6 Luna max (49%, $0.22). Sol and Astra not yet evaluated on this chart | none</p>
-<p>Agentic coding | GPT-6.1 Sol medium ($0.21, 48%) | GPT-6.1 Sol high ($0.32, 52%)</p>
-<p>Small, clear coding fixes | GPT-6.1 Sol low ($0.13, 31%) | GPT-6.1 Sol medium ($0.21, 48%)</p>
+<p>Agentic coding | GPT-6.1 Sol xhigh ($0.39, 54%) | Rarely. GPT-6.1 Sol max ($0.72, 56%) adds 2 points</p>
+<p>Small, clear coding fixes | GPT-6.1 Sol medium ($0.21, 48%) | GPT-6.1 Sol xhigh ($0.39, 54%)</p>
 <p>Research and reasoning | GPT-6.1 Sol medium ($0.21, 50%) | GPT-6 Astra max ($3.26, 55%), rarely worth it</p>
 <p>General agentic judgment | GPT-6.1 Sol medium ($0.21, 48) | GPT-6.1 Sol high ($0.32, 50)</p>
 <h2>Claude</h2>
 <p>Mechanical text work | Haiku 5.5 low ($0.02, 29) | Haiku 5.5 medium ($0.05, 34) if low misses</p>
-<p>Scripted relays and tool workflows | Sonnet 5.5 low ($0.35, 49%). Opus 5.5 low ($0.55, 53%) when the run touches names or facts | Opus 5.5 medium ($1.34, 61%) when the workflow branches</p>
-<p>Documents from supplied facts | Haiku 5.5 xhigh (pilot): 1513 at $0.12, vendor chart $0.27, near Sonnet 5.5 high at less than half the cost | Haiku 5.5 max (1618, $0.21) for final polish</p>
+<p>Scripted relays and tool workflows | Sonnet 5.5 medium ($0.48, 55%). Opus 5.5 low ($0.55, 53%) when the run touches names or facts | Opus 5.5 medium ($1.34, 61%) when the workflow branches</p>
+<p>Documents from supplied facts | Haiku 5.5 max (pilot): 1618 at $0.21, near Sonnet 5.5 xhigh at a tenth of the cost | Rarely. Sonnet 5.5 xhigh (1728, $2.01) adds 110 Elo for 9.6x the cost</p>
 <p>People, messages, money, records | Opus 5.5 low ($0.55, 39) | Rarely. Opus 5.5 max adds 7 points for 11x the cost</p>
 <p>Computer use and browser work | Haiku 5.5 xhigh (pilot, 67.5%, $0.30) | Haiku 5.5 max (72.4%, $0.62) ties Sonnet 5.5 high (73%, $1.50). Sonnet 5.5 xhigh (81%, $2.30) for must-succeed runs</p>
 <p>Agentic coding | Opus 5.5 medium ($1.34, 53%) | Opus 5.5 high ($1.82, 57%) for hard bugs</p>
@@ -49,7 +49,7 @@
 <p>People, messages, money, records | Grok 4.6 low ($0.38, 26), verify names and figures | Rarely. Grok 4.7 xhigh ($3.74, 32) adds 6 points</p>
 <p>Computer use and browser work | Not yet evaluated | none</p>
 <p>Agentic coding | Grok 4.6 high ($1.48, 21%) | Rarely. Grok 4.7 high ($2.73, 25%) adds 4 points</p>
-<p>Small, clear coding fixes | Grok 4.7 low ($1.25, 16%) | Grok 4.6 high ($1.48, 21%)</p>
+<p>Small, clear coding fixes | Grok 4.6 high ($1.48, 21%) | Rarely. Grok 4.7 high ($2.73, 25%) adds 4 points</p>
 <p>Research and reasoning | Grok 4.6 medium ($1.14, 42%) | Rarely. Grok 4.6 xhigh ($1.75, 44%) adds 2 points</p>
 <p>General agentic judgment | Grok 4.6 medium ($1.14, 43) | Rarely. Grok 4.7 high ($2.73, 46) adds 3 points</p>
 <p>End of guidance. Rows: 36.</p>

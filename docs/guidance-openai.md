@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-10-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 98ec16c8b4c00d75ba2daa44870443ea6c96a7a86d97193af11f4f91ae729aa7
+Revision: 6a9c0280b332fc64c7a0630459953f8f823ccba4a431cd5e0d2ab290929a2173
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -13,12 +13,12 @@ GPT-6.1 Sol at medium effort. Balanced capability and cost for everyday, multist
 
 ## Codex (OpenAI) - for Codex and ChatGPT
 - **Mechanical text work** (Classify, extract, reformat, dedupe, parse): GPT-6 Luna max ($0.07, 38), best when the step calls tools (AutomationBench 53%). Upgrade: GPT-6.1 Sol low ($0.13, 42).
-- **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): GPT-6 Luna max ($0.07, 53%). Upgrade: GPT-6.1 Sol medium ($0.21, 63%).
+- **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): GPT-6.1 Sol medium ($0.21, 63%). Upgrade: Rarely. GPT-6.1 Sol xhigh ($0.39, 67%) adds 4 points.
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): GPT-6 Luna max (1432, $0.07). Upgrade: GPT-6.1 Sol max (1594, $0.72).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): GPT-6.1 Sol high ($0.32, 41), verify names and figures. Upgrade: Rarely. Sol max ($0.72, 42) adds 1 point.
 - **Computer use and browser work** (Clicking through web apps, forms, portals): GPT-6 Luna max (49%, $0.22). Sol and Astra not yet evaluated on this chart.
-- **Agentic coding** (Multi-file changes, debugging, repo work): GPT-6.1 Sol medium ($0.21, 48%). Upgrade: GPT-6.1 Sol high ($0.32, 52%).
-- **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): GPT-6.1 Sol low ($0.13, 31%). Upgrade: GPT-6.1 Sol medium ($0.21, 48%).
+- **Agentic coding** (Multi-file changes, debugging, repo work): GPT-6.1 Sol xhigh ($0.39, 54%). Upgrade: Rarely. GPT-6.1 Sol max ($0.72, 56%) adds 2 points.
+- **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): GPT-6.1 Sol medium ($0.21, 48%). Upgrade: GPT-6.1 Sol xhigh ($0.39, 54%).
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): GPT-6.1 Sol medium ($0.21, 50%). Upgrade: GPT-6 Astra max ($3.26, 55%), rarely worth it.
 - **General agentic judgment** (Open-ended multistep tasks, planning): GPT-6.1 Sol medium ($0.21, 48). Upgrade: GPT-6.1 Sol high ($0.32, 50).
 
