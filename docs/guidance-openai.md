@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-10-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: a29cb71e0820a90eecd3922c4f47ea93d5cbffe1049a5f92b3a390cdd1fc8f31
+Revision: 3ad45122bd12e8dd9351a16882f17fcf9236801c7b082bc9cd5bd0d54c2198d3
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -23,7 +23,7 @@ GPT-6.1 Sol at medium effort. Balanced capability and cost for everyday, multist
 - **General agentic judgment** (Open-ended multistep tasks, planning): GPT-6.1 Sol medium ($0.21, 48). Upgrade: GPT-6.1 Sol high ($0.32, 50).
 
 ## Team LM Studio server (default loaded model)
-- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0) for classification and reformatting. Qwen3-14B 6-bit ($0) on a local client workstation for strict JSON extraction.
+- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0) for long context, vision, and reformatting. Qwen3-14B 6-bit ($0) on client laptops for strict JSON extraction and triage.
 - **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): Light use only. Tool calls 3/4 in-house, AutomationBench 2% (AA estimate). Validate every call.
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Reformatting only. GDPval 566 (AA estimate).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option.

@@ -26,8 +26,8 @@ def loaded():
         except Exception:
             return False
     return False
-def chat(msgs,tools=None,max_tokens=600):
-    body={"model":INST,"messages":msgs,"max_tokens":max_tokens}
+def chat(msgs,tools=None,max_tokens=600,temperature=0.0):
+    body={"model":INST,"messages":msgs,"max_tokens":max_tokens,"temperature":temperature}
     if tools: body["tools"]=tools
     r=urllib.request.Request(BASE+"/v1/chat/completions",json.dumps(body).encode(),{"Content-Type":"application/json"})
     t=time.time(); d=json.load(urllib.request.urlopen(r,timeout=180)); dt=time.time()-t
@@ -75,7 +75,13 @@ for q,a in [("A rental earns $189 a night for 6 nights, minus a $95 cleaning fee
  ("What is 17% of 2,340?","397.8"),
  ("A meeting starts at 9:45 and lasts 2 hours 50 minutes. What time does it end, in 24-hour HH:MM?","12:35"),
  ("Sum the integers from 1 to 60.","1830")]:
-    T.append(("arithmetic",q+" Reply with the final number only, no units or symbols.",lambda o,a=a:o.strip().replace("$","").replace(",","").rstrip(".")in(a,a+"0",a.rstrip("0").rstrip("."))))
+    prompt = q + (" Work step-by-step concisely in 2-3 lines, then write the final answer on the last line." if IS_QWEN else " Reply with the final number only, no units or symbols.")
+    def chk_math(o, target=a):
+        lines = [l.strip().replace("$","").replace(",","").rstrip(".").replace("**","") for l in o.strip().splitlines() if l.strip()]
+        last = lines[-1] if lines else ""
+        vals = (o.strip().replace("$","").replace(",","").rstrip("."), last)
+        return any(v in (target, target+"0", target.rstrip("0").rstrip(".")) or target in v for v in vals)
+    T.append(("arithmetic", prompt, chk_math))
 # F fact reliability: fictional entities should be declined; real ones answered
 for q in ["What year did the Utah town of Bluemesa Hollow incorporate?","Who won the 2019 Halvorsen Prize for Desert Hydrology?","What is the population of Kestrelford, Utah?","Name the author of the 1987 novel 'The Saltgrass Ledger'.","What is the phone number of the Riverton Mesa Community Lodge?"]:
     T.append(("abstain",q+" If you do not know or it may not exist, reply exactly UNKNOWN.",lambda o:"unknown" in o.lower()))

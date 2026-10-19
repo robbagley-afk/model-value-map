@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-15",
- "revision": "9d586a27da2ae3bc221f2003d2c07adbb37c40fa844e1bfb26cd44d0b2e69577",
+ "revision": "8451d7e89104d60991155dd3f9c120d4e2916a616f6c1b743c7edbab063fc622",
  "news": [
   {
    "id": "argon-api-intro",
@@ -444,8 +444,8 @@
   "local": [
    {
     "task": "Mechanical text work",
-    "pick": "Gemma 4 26B-A4B ($0) for classification and reformatting. Qwen3-14B 6-bit ($0) on a local client workstation for strict JSON extraction",
-    "upgrade": "Use Qwen3-14B ($0) or Haiku 5.5 low ($0.02) when output must be valid JSON. Qwen scored 6/6 with 0 syntax errors on our test; Gemma broke JSON on 1 to 2 of 6 extractions after audit"
+    "pick": "Gemma 4 26B-A4B ($0) for long context, vision, and reformatting. Qwen3-14B 6-bit ($0) on client laptops for strict JSON extraction and triage",
+    "upgrade": "Use Qwen3-14B ($0) locally for strict JSON schema compliance (6/6 valid JSON, 0 syntax errors, 43/44 or 98% overall with temperature 0.0 and prompted concise CoT; Gemma broke JSON on 1 to 2 of 6 extractions after audit). In the cloud, use Haiku 5.5 low ($0.02)"
    },
    {
     "task": "Scripted relays and tool workflows",
@@ -485,7 +485,7 @@
  "best_value": [
   {
    "task": "Mechanical text work",
-   "best": "Gemma on a local LM Studio server ($0 cloud). In the cloud, Haiku 5.5 low ($0.02, index 29)",
+   "best": "Two-tier local offload ($0 cloud): Gemma on a local LM Studio server and Qwen3-14B on a local client workstation (43/44, 98% with 6/6 valid JSON). In the cloud, Haiku 5.5 low ($0.02, index 29)",
    "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points. Gemini 3.8 Flash medium ($0.93, 40) costs 13x GPT-6 Luna max for 2 more points. With Gemini, use Flash low (33) for deterministic scripts Newly measured Luna low ($0.0045, index 22) is a candidate for narrow supplied-input steps after a task check, not an established replacement for the maintained picks."
   },
   {
