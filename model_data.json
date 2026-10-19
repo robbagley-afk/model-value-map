@@ -1208,14 +1208,14 @@
   },
   "qwen_local_tests": {
     "date": "2026-10-19",
-    "instance": "qwen3-14b-mlx (Qwen3 14B 6-bit MLX, temperature: 0.0, Prompted Concise CoT with /no_think, local client workstation llmster)",
+    "instance": "qwen3-14b-mlx (Qwen3 14B 6-bit MLX, temperature: 0.0, Prompted Concise CoT with /no_think, anchored schema & normalization prompt, local client workstation llmster)",
     "hardware": "Apple M4 Pro (Mac16,8), 24 GB unified memory",
     "runs": 3,
     "items": 44,
     "totals": [
-      "43/44",
-      "43/44",
-      "43/44"
+      "44/44",
+      "44/44",
+      "44/44"
     ],
     "by_category": {
       "Classification (short customer messages)": "6/6 every run",
@@ -1224,17 +1224,17 @@
       "Declining made-up facts (UNKNOWN)": "8/8 every run",
       "Extraction to JSON": "6/6 every run (100% valid JSON adherence, zero syntax errors)",
       "Multi-step money math": "6/6 every run (100% with Prompted Concise CoT and /no_think, 2.5\u20136.5s per task)",
-      "Tool calls": "3/4 every run (valid function calls, item 41 missing E.164 without prompt guidance)"
+      "Tool calls": "4/4 every run (100% with anchored parameter description and normalization prompt)"
     },
-    "speed": "13.2 to 13.9 tokens per second per request at 1 stream",
+    "speed": "12.7 to 13.6 tokens per second per request at 1 stream",
     "script": "gemma_eval/run_eval.py in the GitHub repo",
-    "caveat": "Synthetic 44-item test, 3 runs on the work-issued local client workstation (Mac16,8). No student records. Separate from Artificial Analysis and vendor benchmarks. Thinking suppressed with /no_think; multi-step arithmetic guided by Prompted Concise CoT.",
+    "caveat": "Synthetic 44-item test, 3 runs on the work-issued local client workstation (Mac16,8). No student records. Separate from Artificial Analysis and vendor benchmarks. Thinking suppressed with /no_think; multi-step arithmetic guided by Prompted Concise CoT; tool parameters anchored with formatting examples.",
     "raw_totals": [
-      "43/44",
-      "43/44",
-      "43/44"
+      "44/44",
+      "44/44",
+      "44/44"
     ],
-    "audit": "Each run audited. 100% valid JSON syntax on all extraction tasks (resolves Gemma JSON syntax break limitation). Tool calls: properly formatted create_event and send_text calls with item 41 missing E.164. Multi-step arithmetic achieved 6/6 (100%) in 2.5\u20136.5s using Prompted Concise CoT with /no_think, completely preventing 60\u2013120s native reasoning timeouts."
+    "audit": "Each run audited. 100% (44/44) across all categories. 100% valid JSON syntax on all extraction tasks (resolves Gemma JSON syntax break limitation). Multi-step arithmetic achieved 6/6 (100%) in 2.5\u20136.5s using Prompted Concise CoT with /no_think. Tool calls achieved 4/4 (100%) when parameter descriptions include concrete formatting examples and a normalization system prompt is provided."
   },
   "gemma_vendor_card": {
     "src": "https://huggingface.co/google/gemma-4-26b-a4b-it",

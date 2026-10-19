@@ -89,7 +89,7 @@ for q,a in [("What is the capital of Utah? One word or short phrase.","salt lake
     T.append(("abstain",q,lambda o,a=a:a in o.lower()))
 # G tool calls
 TOOLS=[{"type":"function","function":{"name":"create_event","description":"Create a calendar event","parameters":{"type":"object","properties":{"title":{"type":"string"},"date":{"type":"string","description":"YYYY-MM-DD"},"start":{"type":"string","description":"HH:MM 24h"},"minutes":{"type":"integer"}},"required":["title","date","start","minutes"]}}},
-       {"type":"function","function":{"name":"send_text","description":"Send a text message","parameters":{"type":"object","properties":{"to":{"type":"string","description":"E.164 phone"},"body":{"type":"string"}},"required":["to","body"]}}}]
+       {"type":"function","function":{"name":"send_text","description":"Send a text message","parameters":{"type":"object","properties":{"to":{"type":"string","description":"Phone number in E.164 format with country code, e.g. +18015550142"},"body":{"type":"string"}},"required":["to","body"]}}}]
 def tc(name,check):
     def f(m):
         c=(m.get("tool_calls") or [])
@@ -108,7 +108,8 @@ def run(i):
     try:
         if cat=="tools":
             tool_prompt=f"/no_think {prompt}" if IS_QWEN and not prompt.startswith("/no_think") else prompt
-            m,u,dt=chat([{"role":"user","content":tool_prompt}],tools=TOOLS); ok=chk(m); out=json.dumps(m.get("tool_calls"))[:200]
+            tool_msgs=[{"role":"system","content":SYS},{"role":"user","content":tool_prompt}] if IS_QWEN else [{"role":"user","content":tool_prompt}]
+            m,u,dt=chat(tool_msgs,tools=TOOLS); ok=chk(m); out=json.dumps(m.get("tool_calls"))[:200]
         else:
             m,u,dt=chat([{"role":"system","content":SYS},{"role":"user","content":prompt}]); out=(m.get("content") or ""); ok=bool(chk(out))
     except Exception as e: return dict(i=i,cat=cat,ok=False,err=str(e)[:120],dt=0,tok=0)

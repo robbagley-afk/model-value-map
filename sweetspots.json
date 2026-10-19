@@ -6,7 +6,7 @@
       "task": "Mechanical text work",
       "examples": "Classify, extract, reformat, dedupe, parse",
       "bench": "index",
-      "best": "Two-tier local offload ($0 cloud): Gemma on a local LM Studio server and Qwen3-14B on a local client workstation (43/44, 98% with 6/6 valid JSON). In the cloud, Haiku 5.5 low ($0.02, index 29)",
+      "best": "Two-tier local offload ($0 cloud): Gemma on a local LM Studio server and Qwen3-14B on a local client workstation (44/44, 100% with 6/6 valid JSON and 4/4 tool calls). In the cloud, Haiku 5.5 low ($0.02, index 29)",
       "avoid": "Sonnet or Opus for pure mechanical work. Gemma for anything that calls tools (AutomationBench 2%). Grok for mechanical work: Grok 4.6 low ($0.38, 35) costs 19x Haiku 5.5 low for 6 more points. Gemini 3.8 Flash medium ($0.93, 40) costs 13x GPT-6 Luna max for 2 more points. With Gemini, use Flash low (33) for deterministic scripts Newly measured Luna low ($0.0045, index 22) is a candidate for narrow supplied-input steps after a task check, not an established replacement for the maintained picks.",
       "avoid_settings": [
         "Sonnet 5.5 *",
@@ -45,7 +45,7 @@
         },
         "Local": {
           "pick": "Gemma 4 26B-A4B ($0) for long context, vision, and reformatting. Qwen3-14B 6-bit ($0) on client laptops for strict JSON extraction and triage",
-          "upgrade": "Use Qwen3-14B ($0) locally for strict JSON schema compliance (6/6 valid JSON, 0 syntax errors, 43/44 or 98% overall with temperature 0.0 and prompted concise CoT; Gemma broke JSON on 1 to 2 of 6 extractions after audit). In the cloud, use Haiku 5.5 low ($0.02)"
+          "upgrade": "Use Qwen3-14B ($0) locally for strict JSON schema compliance (6/6 valid JSON, 0 syntax errors, 44/44 or 100% overall across 3 serial runs with temperature 0.0, prompted concise CoT, and schema example anchors; Gemma broke JSON on 1 to 2 of 6 extractions after audit). In the cloud, use Haiku 5.5 low ($0.02)"
         },
         "xAI": {
           "pick": "Grok 4.6 low ($0.38, 35)",
