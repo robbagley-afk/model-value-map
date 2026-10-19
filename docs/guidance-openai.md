@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-10-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 35705249185a382e1700320a55fe1ef3f1de2ebc0615f29deb699a133e6f0a18
+Revision: a29cb71e0820a90eecd3922c4f47ea93d5cbffe1049a5f92b3a390cdd1fc8f31
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -13,22 +13,22 @@ GPT-6.1 Sol at medium effort. Balanced capability and cost for everyday, multist
 
 ## Codex (OpenAI) - for Codex and ChatGPT
 - **Mechanical text work** (Classify, extract, reformat, dedupe, parse): GPT-6 Luna max ($0.07, 38), best when the step calls tools (AutomationBench 53%). Upgrade: GPT-6.1 Sol low ($0.13, 42).
-- **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): GPT-6 Luna max ($0.07, 53%). Upgrade: GPT-6.1 Sol medium ($0.21, 63%).
+- **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): GPT-6.1 Sol medium ($0.21, 63%). Upgrade: Rarely. GPT-6.1 Sol xhigh ($0.39, 67%) adds 4 points.
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): GPT-6 Luna max (1432, $0.07). Upgrade: GPT-6.1 Sol max (1594, $0.72).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): GPT-6.1 Sol high ($0.32, 41), verify names and figures. Upgrade: Rarely. Sol max ($0.72, 42) adds 1 point.
 - **Computer use and browser work** (Clicking through web apps, forms, portals): GPT-6 Luna max (49%, $0.22). Sol and Astra not yet evaluated on this chart.
-- **Agentic coding** (Multi-file changes, debugging, repo work): GPT-6.1 Sol medium ($0.21, 48%). Upgrade: GPT-6.1 Sol high ($0.32, 52%).
-- **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): GPT-6.1 Sol low ($0.13, 31%). Upgrade: GPT-6.1 Sol medium ($0.21, 48%).
+- **Agentic coding** (Multi-file changes, debugging, repo work): GPT-6.1 Sol xhigh ($0.39, 54%). Upgrade: Rarely. GPT-6.1 Sol max ($0.72, 56%) adds 2 points.
+- **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): GPT-6.1 Sol medium ($0.21, 48%). Upgrade: GPT-6.1 Sol xhigh ($0.39, 54%).
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): GPT-6.1 Sol medium ($0.21, 50%). Upgrade: GPT-6 Astra max ($3.26, 55%), rarely worth it.
 - **General agentic judgment** (Open-ended multistep tasks, planning): GPT-6.1 Sol medium ($0.21, 48). Upgrade: GPT-6.1 Sol high ($0.32, 50).
 
 ## Team LM Studio server (default loaded model)
-- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs.
+- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0) for classification and reformatting. Qwen3-14B 6-bit ($0) on a local client workstation for strict JSON extraction.
 - **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): Light use only. Tool calls 3/4 in-house, AutomationBench 2% (AA estimate). Validate every call.
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Reformatting only. GDPval 566 (AA estimate).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option.
 - **Computer use and browser work** (Clicking through web apps, forms, portals): Not yet evaluated.
-- **Agentic coding** (Multi-file changes, debugging, repo work): Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 17% (15 of 89). Older test, not on this chart.
+- **Agentic coding** (Multi-file changes, debugging, repo work): Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89). Older test, not on this chart.
 - **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): Not yet evaluated.
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): Not suitable. HLE 8.7% (Google card), money math 4/6 in-house.
 - **General agentic judgment** (Open-ended multistep tasks, planning): Not suitable (index 17).
