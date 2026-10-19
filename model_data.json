@@ -748,6 +748,23 @@
       "estimated": true
     },
     {
+      "vendor": "Local",
+      "model": "Qwen3 14B",
+      "effort": "none",
+      "cost": 0,
+      "index": 7,
+      "tb": null,
+      "ab": null,
+      "gdp": null,
+      "omni": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/qwen3-14b-instruct",
+      "note": "AA estimate for Qwen3 14B (Non-reasoning) at full precision. The laptop runs the 6-bit MLX build with thinking off. AA lists no per-test scores for this model, so it appears on the Intelligence Index chart only. See the in-house test below for scores on that exact setup.",
+      "checked": "2026-10-19",
+      "estimated": true
+    },
+    {
       "vendor": "Google",
       "model": "Gemini 4 Argon",
       "effort": "high",
@@ -1386,7 +1403,7 @@
   ],
   "qwen_vendor_card": {
     "src": "https://huggingface.co/Qwen/Qwen2.5-14B-Instruct",
-    "note": "Alibaba Qwen team published benchmarks for 14B instruction-tuned",
+    "note": "Alibaba Qwen team published benchmarks for Qwen2.5 14B Instruct, the previous generation. These are not Qwen3 14B scores",
     "scores": {
       "MMLU": "79.7%",
       "MATH": "80.0%",

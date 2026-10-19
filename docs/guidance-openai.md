@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-10-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 3ad45122bd12e8dd9351a16882f17fcf9236801c7b082bc9cd5bd0d54c2198d3
+Revision: 3779094574bc061d5bda07f883b667cfe39a6b1119587ab88f62423643e40f68
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -48,3 +48,4 @@ GPT-6.1 Sol at medium effort. Balanced capability and cost for everyday, multist
 - https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol
 - https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-xhigh-vs-gpt-6-1-sol-medium
 - https://artificialanalysis.ai/models/gemma-4-26b-a4b
+- https://artificialanalysis.ai/models/qwen3-14b-instruct

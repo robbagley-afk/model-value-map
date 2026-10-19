@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-15. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: bb62bd1040f3077fdb03ec86715ff571d221f60bdb71794c1698c65e4ce9eba0
+Revision: 7c64f1c5d218e41c0457afdd3e23727a702ae72a0b7b7559f3c8cfcd04c82159
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -144,6 +144,7 @@ After expiry, standard usage applies; ignore this temporary recommendation.
 - https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6
 - https://artificialanalysis.ai/models/comparisons/grok-4-7-high-vs-gpt-6-1-sol-medium
 - https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low
+- https://artificialanalysis.ai/models/qwen3-14b-instruct
 - https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium
 
 ## Review status
