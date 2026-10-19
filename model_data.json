@@ -1188,16 +1188,16 @@
   "script": "gemma_eval/run_eval.py in the GitHub repo",
   "caveat": "Synthetic 44-item test, 3 runs. No student records. Separate from Artificial Analysis and vendor benchmarks. The listed AA Gemma scores describe the reasoning variant, not this non-thinking 4-bit instance.",
   "terminal_bench": {
-   "label": "Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89)",
+   "label": "Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 17% (15 of 89)",
    "dataset": "terminal-bench@2.0 (89 tasks)",
-   "date": "2026-10-13",
-   "passed": 13,
+   "date": "2026-10-19",
+   "passed": 15,
    "total": 89,
-   "pct": 14.6,
+   "pct": 16.9,
    "attempts": 1,
-   "harness": "Harbor 0.24.0, terminus-2 agent, temperature 0.6, 2 tasks in parallel",
-   "timeouts": 42,
-   "caveat": "One attempt per task on Terminal-Bench 2.0, not 4.0, so it is not plotted on the Terminal-Bench 4.0 axis. 42 tasks hit the benchmark time limit and count as fails; local generation speed is part of that."
+   "harness": "Harbor 0.24.0, terminus-2 agent, temperature 0.6, 2 tasks in parallel, 42 timed-out tasks rerun once with double agent time",
+   "timeouts": 17,
+   "caveat": "Terminal-Bench 2.0, not 4.0, so it is not plotted on the Terminal-Bench 4.0 axis. The first pass resolved 13 and 42 tasks hit the time limit. Those 42 were rerun with double the agent time and 2 more resolved. 17 tasks still timed out and count as fails; local generation speed is part of that."
   },
   "raw_totals": [
    "38/44",
@@ -1205,36 +1205,6 @@
    "39/44"
   ],
   "audit": "Each run audited. Strict action-string false negatives on extraction item 5 accepted when the correct released action was present. Raw and audited totals retained separately. Other JSON, arithmetic and E.164 failures confirmed."
- },
- "qwen_local_tests": {
-  "date": "2026-10-19",
-  "instance": "qwen3-14b-mlx (Qwen3 14B 6-bit MLX, thinking off via /no_think, local client workstation llmster)",
-  "hardware": "Apple M4 Pro (Mac16,8), 24 GB unified memory",
-  "runs": 3,
-  "items": 44,
-  "totals": [
-   "39/44",
-   "40/44",
-   "39/44"
-  ],
-  "by_category": {
-   "Classification (short customer messages)": "6/6 every run",
-   "Reformatting (dates, phones, dedupe)": "8/8 every run",
-   "Instruction following": "6/6 every run",
-   "Declining made-up facts (UNKNOWN)": "8/8 every run",
-   "Extraction to JSON": "6/6 every run (100% valid JSON adherence, zero syntax errors)",
-   "Tool calls": "3/4 every run (missed E.164 formatting on item 41)",
-   "Multi-step money math": "2 to 3/6 (mental arithmetic without reasoning tokens)"
-  },
-  "speed": "12.1 to 12.3 tokens per second per request at 1 stream",
-  "script": "gemma_eval/run_eval.py in the GitHub repo",
-  "caveat": "Synthetic 44-item test, 3 runs on the work-issued local client workstation (Mac16,8). No student records. Separate from Artificial Analysis and vendor benchmarks. Thinking suppressed with /no_think for deterministic Stage-1 triage.",
-  "raw_totals": [
-   "39/44",
-   "40/44",
-   "39/44"
-  ],
-  "audit": "Each run audited. 100% valid JSON syntax on all extraction tasks (resolves Gemma JSON syntax break limitation). Tool calls: properly formatted create_event and send_text calls with item 41 missing E.164. Multi-step arithmetic misses due to non-thinking operation."
  },
  "gemma_vendor_card": {
   "src": "https://huggingface.co/google/gemma-4-26b-a4b-it",

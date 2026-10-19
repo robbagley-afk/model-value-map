@@ -2,30 +2,10 @@
    python3 run_eval.py [instance_id]   (default gemma4-26b-qat; never loads models)"""
 import json,re,sys,time,urllib.request,concurrent.futures as cf,os,datetime
 BASE=os.environ.get("LMSTUDIO_URL","http://127.0.0.1:1234")  # set LMSTUDIO_URL to reach a remote LM Studio
-args=[a for a in sys.argv[1:] if not a.startswith("--")]
-flags=sys.argv[1:]
-INST=args[0] if args else "gemma4-26b-qat"
-RUN_NUM=None
-if "--run" in flags:
-    idx=flags.index("--run")
-    if idx+1<len(flags): RUN_NUM=flags[idx+1]
-IS_QWEN="qwen" in INST.lower()
+INST=sys.argv[1] if len(sys.argv)>1 else "gemma4-26b-qat"
 def loaded():
-    try:
-        d=json.load(urllib.request.urlopen(BASE+"/api/v1/models",timeout=10))
-    except Exception:
-        return False
-    if any(INST in [i.get('id') for i in m.get('loaded_instances',[])] for m in d.get('models',[])):
-        return True
-    if any(m.get('key')==INST for m in d.get('models',[])):
-        try:
-            body={"model":INST,"messages":[{"role":"user","content":"ping"}],"max_tokens":1}
-            r=urllib.request.Request(BASE+"/v1/chat/completions",json.dumps(body).encode(),{"Content-Type":"application/json"})
-            urllib.request.urlopen(r,timeout=60)
-            return True
-        except Exception:
-            return False
-    return False
+    d=json.load(urllib.request.urlopen(BASE+"/api/v1/models",timeout=10))
+    return any(INST in [i.get('id') for i in m.get('loaded_instances',[])] for m in d.get('models',[]))
 def chat(msgs,tools=None,max_tokens=600):
     body={"model":INST,"messages":msgs,"max_tokens":max_tokens}
     if tools: body["tools"]=tools
@@ -38,7 +18,7 @@ def js(s):
         try: return json.loads(c)
         except Exception: pass
     return None
-SYS="/no_think Answer exactly as instructed. No extra text." if IS_QWEN else "Answer exactly as instructed. No extra text."
+SYS="Answer exactly as instructed. No extra text."
 T=[]
 # A extraction
 for txt,exp in [
@@ -101,24 +81,19 @@ def run(i):
     cat,prompt,chk=T[i]
     try:
         if cat=="tools":
-            tool_prompt=f"/no_think {prompt}" if IS_QWEN and not prompt.startswith("/no_think") else prompt
-            m,u,dt=chat([{"role":"user","content":tool_prompt}],tools=TOOLS); ok=chk(m); out=json.dumps(m.get("tool_calls"))[:200]
+            m,u,dt=chat([{"role":"user","content":prompt}],tools=TOOLS); ok=chk(m); out=json.dumps(m.get("tool_calls"))[:200]
         else:
             m,u,dt=chat([{"role":"system","content":SYS},{"role":"user","content":prompt}]); out=(m.get("content") or ""); ok=bool(chk(out))
     except Exception as e: return dict(i=i,cat=cat,ok=False,err=str(e)[:120],dt=0,tok=0)
     return dict(i=i,cat=cat,ok=ok,out=out[:160],dt=round(dt,2),tok=u.get("completion_tokens",0))
 if __name__=="__main__":
     assert loaded(), f"{INST} not loaded; refusing to load models"
-    workers=1 if IS_QWEN else 2
-    with cf.ThreadPoolExecutor(workers) as ex: R=list(ex.map(run,range(len(T))))
+    with cf.ThreadPoolExecutor(2) as ex: R=list(ex.map(run,range(len(T))))
     cats={}
     for r in R: c=cats.setdefault(r["cat"],[0,0]); c[0]+=r["ok"]; c[1]+=1
     tot=sum(r["ok"] for r in R); tps=[r["tok"]/r["dt"] for r in R if r["dt"]>0 and r["tok"]>5]
-    speed_key="median_tokens_per_s_per_request_at_1_parallel" if workers==1 else "median_tokens_per_s_per_request_at_2_parallel"
-    summ={"date":datetime.date.today().isoformat(),"instance":INST,"total":f"{tot}/{len(R)}","pct":round(100*tot/len(R)),"by_category":{k:f"{v[0]}/{v[1]}" for k,v in cats.items()},speed_key:round(sorted(tps)[len(tps)//2],1) if tps else None}
+    summ={"date":datetime.date.today().isoformat(),"instance":INST,"total":f"{tot}/{len(R)}","pct":round(100*tot/len(R)),"by_category":{k:f"{v[0]}/{v[1]}" for k,v in cats.items()},"median_tokens_per_s_per_request_at_2_parallel":round(sorted(tps)[len(tps)//2],1) if tps else None}
     print(json.dumps(summ,indent=1))
     for r in R:
         if not r["ok"]: print("FAIL",r["cat"],r["i"],r.get("err") or r.get("out"))
-    out_name=f"results-{INST}-{summ['date']}-run{RUN_NUM}.json" if RUN_NUM else (f"results-{INST}-{summ['date']}.json" if IS_QWEN else f"results-{summ['date']}.json")
-    json.dump({"summary":summ,"results":R},open(os.path.join(os.path.dirname(os.path.abspath(__file__)),out_name),"w"),indent=1)
-
+    json.dump({"summary":summ,"results":R},open(os.path.join(os.path.dirname(os.path.abspath(__file__)),f"results-{summ['date']}.json"),"w"),indent=1)
