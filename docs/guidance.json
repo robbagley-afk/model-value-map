@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-15",
- "revision": "5e991ea972cbba3ff5772dd559d754964812d2abf14d41ad733eaba1e63ae58a",
+ "revision": "9d586a27da2ae3bc221f2003d2c07adbb37c40fa844e1bfb26cd44d0b2e69577",
  "news": [
   {
    "id": "argon-api-intro",
@@ -444,8 +444,8 @@
   "local": [
    {
     "task": "Mechanical text work",
-    "pick": "Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs",
-    "upgrade": "Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions after audit"
+    "pick": "Gemma 4 26B-A4B ($0) for classification and reformatting. Qwen3-14B 6-bit ($0) on a local client workstation for strict JSON extraction",
+    "upgrade": "Use Qwen3-14B ($0) or Haiku 5.5 low ($0.02) when output must be valid JSON. Qwen scored 6/6 with 0 syntax errors on our test; Gemma broke JSON on 1 to 2 of 6 extractions after audit"
    },
    {
     "task": "Scripted relays and tool workflows",

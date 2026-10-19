@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-10-15. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 5e991ea972cbba3ff5772dd559d754964812d2abf14d41ad733eaba1e63ae58a
+Revision: 9d586a27da2ae3bc221f2003d2c07adbb37c40fa844e1bfb26cd44d0b2e69577
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -62,7 +62,7 @@ GPT-6.1 Sol at medium effort. Reviewed 2026-10-15. Balanced capability and cost 
 - **General agentic judgment** (Open-ended multistep tasks, planning): Grok 4.6 medium ($1.14, 43). Upgrade: Rarely. Grok 4.7 high ($2.73, 46) adds 3 points.
 
 ## Local model (LM Studio)
-- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs. Upgrade: Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions after audit.
+- **Mechanical text work** (Classify, extract, reformat, dedupe, parse): Gemma 4 26B-A4B ($0) for classification and reformatting. Qwen3-14B 6-bit ($0) on a local client workstation for strict JSON extraction. Upgrade: Use Qwen3-14B ($0) or Haiku 5.5 low ($0.02) when output must be valid JSON. Qwen scored 6/6 with 0 syntax errors on our test; Gemma broke JSON on 1 to 2 of 6 extractions after audit.
 - **Scripted relays and tool workflows** (Fixed-step handoffs, connector runs, queue imports): Light use only. Tool calls 3/4 in-house, AutomationBench 2% (AA estimate). Validate every call. Upgrade: Sonnet 5.5 low.
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Reformatting only. GDPval 566 (AA estimate).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option.

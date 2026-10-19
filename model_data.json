@@ -1206,6 +1206,36 @@
   ],
   "audit": "Each run audited. Strict action-string false negatives on extraction item 5 accepted when the correct released action was present. Raw and audited totals retained separately. Other JSON, arithmetic and E.164 failures confirmed."
  },
+ "qwen_local_tests": {
+  "date": "2026-10-19",
+  "instance": "qwen3-14b-mlx (Qwen3 14B 6-bit MLX, thinking off via /no_think, local client workstation llmster)",
+  "hardware": "Apple M4 Pro (Mac16,8), 24 GB unified memory",
+  "runs": 3,
+  "items": 44,
+  "totals": [
+   "39/44",
+   "40/44",
+   "39/44"
+  ],
+  "by_category": {
+   "Classification (short customer messages)": "6/6 every run",
+   "Reformatting (dates, phones, dedupe)": "8/8 every run",
+   "Instruction following": "6/6 every run",
+   "Declining made-up facts (UNKNOWN)": "8/8 every run",
+   "Extraction to JSON": "6/6 every run (100% valid JSON adherence, zero syntax errors)",
+   "Tool calls": "3/4 every run (missed E.164 formatting on item 41)",
+   "Multi-step money math": "2 to 3/6 (mental arithmetic without reasoning tokens)"
+  },
+  "speed": "12.1 to 12.3 tokens per second per request at 1 stream",
+  "script": "gemma_eval/run_eval.py in the GitHub repo",
+  "caveat": "Synthetic 44-item test, 3 runs on the work-issued local client workstation (Mac16,8). No student records. Separate from Artificial Analysis and vendor benchmarks. Thinking suppressed with /no_think for deterministic Stage-1 triage.",
+  "raw_totals": [
+   "39/44",
+   "40/44",
+   "39/44"
+  ],
+  "audit": "Each run audited. 100% valid JSON syntax on all extraction tasks (resolves Gemma JSON syntax break limitation). Tool calls: properly formatted create_event and send_text calls with item 41 missing E.164. Multi-step arithmetic misses due to non-thinking operation."
+ },
  "gemma_vendor_card": {
   "src": "https://huggingface.co/google/gemma-4-26b-a4b-it",
   "note": "Google model card, instruction-tuned, full precision, mode not stated",

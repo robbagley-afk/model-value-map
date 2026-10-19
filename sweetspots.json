@@ -44,8 +44,8 @@
      ]
     },
     "Local": {
-     "pick": "Gemma 4 26B-A4B ($0). In-house test: classification 6/6, reformatting 8/8, instruction following 6/6 on all three runs",
-     "upgrade": "Use Haiku 5.5 low when output must be valid JSON. Gemma broke JSON on 1 to 2 of 6 extractions after audit"
+     "pick": "Gemma 4 26B-A4B ($0) for classification and reformatting. Qwen3-14B 6-bit ($0) on a local client workstation for strict JSON extraction",
+     "upgrade": "Use Qwen3-14B ($0) or Haiku 5.5 low ($0.02) when output must be valid JSON. Qwen scored 6/6 with 0 syntax errors on our test; Gemma broke JSON on 1 to 2 of 6 extractions after audit"
     },
     "xAI": {
      "pick": "Grok 4.6 low ($0.38, 35)",
