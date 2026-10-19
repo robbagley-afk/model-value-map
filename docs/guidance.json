@@ -466,7 +466,7 @@
    },
    {
     "task": "Agentic coding",
-    "pick": "Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89). Older test, not on this chart"
+    "pick": "Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 17% (15 of 89). Older test, not on this chart"
    },
    {
     "task": "Small, clear coding fixes",

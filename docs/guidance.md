@@ -67,7 +67,7 @@ GPT-6.1 Sol at medium effort. Reviewed 2026-10-15. Balanced capability and cost 
 - **Documents from supplied facts** (Drafts, summaries, slides, spreadsheets, reports): Reformatting only. GDPval 566 (AA estimate).
 - **People, messages, money, records** (Customer and community messages, payments, exact names): Never for recall. AA-Omniscience -51. It did answer UNKNOWN to 8/8 made-up facts when offered that option.
 - **Computer use and browser work** (Clicking through web apps, forms, portals): Not yet evaluated.
-- **Agentic coding** (Multi-file changes, debugging, repo work): Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 15% (13 of 89). Older test, not on this chart.
+- **Agentic coding** (Multi-file changes, debugging, repo work): Gemma: Terminal-Bench 2.0, our run, 4-bit, thinking off: 17% (15 of 89). Older test, not on this chart.
 - **Small, clear coding fixes** (Clear-repro bug fixes, UI polish, building to a spec): Not yet evaluated.
 - **Research and reasoning** (Analysis, tradeoffs, hard questions): Not suitable. HLE 8.7% (Google card), money math 4/6 in-house.
 - **General agentic judgment** (Open-ended multistep tasks, planning): Not suitable (index 17).
