@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-24",
   "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD). Benchmarks: index (AA Intelligence Index), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1 Elo), omni (AA-Omniscience, higher = fewer hallucinations), sci (SciCode %), hle (Humanity's Last Exam no tools %). null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark.",
   "aa": [
     {
@@ -14,8 +14,8 @@
       "sci": 57,
       "hle": 49,
       "omni": 34,
-      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-low-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-low-vs-claude-fable-5-1-medium",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -30,8 +30,8 @@
       "sci": 56,
       "hle": 54,
       "omni": 38,
-      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-medium-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-low-vs-claude-fable-5-1-medium",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -40,14 +40,14 @@
       "effort": "high",
       "index": 51,
       "cost": 3.91,
-      "gdp": 1635,
+      "gdp": 1636,
       "ab": 55,
       "tb": 52,
       "sci": 59,
       "hle": 56,
       "omni": 41,
-      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-high-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-high-vs-claude-fable-5-1-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -56,14 +56,14 @@
       "effort": "xhigh",
       "index": 53,
       "cost": 5.98,
-      "gdp": 1732,
+      "gdp": 1733,
       "ab": 58,
       "tb": 55,
       "sci": 61,
       "hle": 59,
       "omni": 42,
-      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-xhigh-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-high-vs-claude-fable-5-1-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -72,14 +72,14 @@
       "effort": "max",
       "index": 53,
       "cost": 7.63,
-      "gdp": 1754,
+      "gdp": 1755,
       "ab": 59,
       "tb": 52,
       "sci": 63,
       "hle": 59,
       "omni": 43,
-      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-vs-claude-fable-5-1-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -95,7 +95,7 @@
       "sci": 49,
       "hle": 27,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-low-vs-claude-4-5-haiku",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -106,12 +106,12 @@
       "index": 34,
       "tb": 15,
       "ab": 29,
-      "gdp": 1275,
+      "gdp": 1273,
       "omni": 4,
       "sci": 49,
       "hle": 34,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -127,7 +127,7 @@
       "sci": 49,
       "hle": 37,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-high-vs-claude-sonnet-5-5-xhigh",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -143,7 +143,7 @@
       "sci": 52,
       "hle": 43,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -154,12 +154,12 @@
       "index": 43,
       "tb": 33,
       "ab": 35,
-      "gdp": 1618,
+      "gdp": 1619,
       "omni": 11,
       "sci": 55,
       "hle": 44,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-vs-claude-opus-5-5-low",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -170,12 +170,12 @@
       "index": 42,
       "tb": 31,
       "ab": 53,
-      "gdp": 1235,
+      "gdp": 1234,
       "omni": 39,
       "sci": 59,
       "hle": 48,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -186,12 +186,12 @@
       "index": 51,
       "tb": 53,
       "ab": 61,
-      "gdp": 1584,
+      "gdp": 1585,
       "omni": 40,
       "sci": 59,
       "hle": 55,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -207,7 +207,7 @@
       "sci": 60,
       "hle": 56,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -218,12 +218,12 @@
       "index": 56,
       "tb": 60,
       "ab": 65,
-      "gdp": 1831,
+      "gdp": 1829,
       "omni": 43,
       "sci": 65,
       "hle": 58,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-high-vs-claude-opus-5-5-xhigh",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -239,7 +239,7 @@
       "sci": 67,
       "hle": 61,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -250,12 +250,12 @@
       "index": 36,
       "tb": 21,
       "ab": 49,
-      "gdp": 1175,
+      "gdp": 1177,
       "omni": 19,
       "sci": 49,
       "hle": 36,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-xhigh-vs-claude-sonnet-5-5-low",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -266,12 +266,12 @@
       "index": 41,
       "tb": 30,
       "ab": 55,
-      "gdp": 1323,
+      "gdp": 1322,
       "omni": 20,
       "sci": 53,
       "hle": 40,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-opus-5-5-low",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -282,12 +282,12 @@
       "index": 47,
       "tb": 44,
       "ab": 59,
-      "gdp": 1549,
+      "gdp": 1548,
       "omni": 21,
       "sci": 54,
       "hle": 46,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-high-vs-claude-opus-5-5-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -303,7 +303,7 @@
       "sci": 57,
       "hle": 50,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-high-vs-claude-sonnet-5-5-xhigh",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -319,7 +319,7 @@
       "sci": 61,
       "hle": 55,
       "src": "https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-vs-claude-opus-5-5",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -334,8 +334,8 @@
       "sci": 54,
       "hle": 49,
       "omni": 41,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-low-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-low-vs-gpt-6-astra-low",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -344,14 +344,14 @@
       "effort": "medium",
       "index": 50,
       "cost": 1.54,
-      "gdp": 1486,
+      "gdp": 1487,
       "ab": 65,
       "tb": 49,
       "sci": 54,
       "hle": 53,
       "omni": 42,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-medium-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-medium-vs-gpt-6-astra-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -360,14 +360,14 @@
       "effort": "high",
       "index": 51,
       "cost": 1.73,
-      "gdp": 1523,
+      "gdp": 1525,
       "ab": 67,
       "tb": 54,
       "sci": 55,
       "hle": 53,
       "omni": 44,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-high-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-high-vs-gpt-6-astra-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -376,14 +376,14 @@
       "effort": "xhigh",
       "index": 52,
       "cost": 2.31,
-      "gdp": 1556,
+      "gdp": 1557,
       "ab": 67,
       "tb": 60,
       "sci": 56,
       "hle": 55,
       "omni": 43,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-xhigh-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-medium-vs-gpt-6-astra-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -394,12 +394,12 @@
       "index": 53,
       "tb": 59,
       "ab": 68,
-      "gdp": 1573,
+      "gdp": 1574,
       "omni": 43,
       "sci": 56,
       "hle": 55,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -408,14 +408,14 @@
       "effort": "low",
       "index": 22,
       "cost": 0.0045,
-      "gdp": 1033,
+      "gdp": 1032,
       "ab": 12,
       "tb": 0,
       "sci": 47,
       "hle": 20,
       "omni": -9,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-low-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -424,14 +424,14 @@
       "effort": "medium",
       "index": 30,
       "cost": 0.02,
-      "gdp": 1262,
+      "gdp": 1263,
       "ab": 40,
       "tb": 3,
       "sci": 51,
       "hle": 28,
       "omni": -5,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-medium-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -440,14 +440,14 @@
       "effort": "high",
       "index": 33,
       "cost": 0.03,
-      "gdp": 1340,
+      "gdp": 1343,
       "ab": 48,
       "tb": 5,
       "sci": 50,
       "hle": 33,
       "omni": -6,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-high-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-high-vs-gpt-6-luna-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -456,14 +456,14 @@
       "effort": "xhigh",
       "index": 35,
       "cost": 0.04,
-      "gdp": 1364,
+      "gdp": 1363,
       "ab": 48,
       "tb": 8,
       "sci": 52,
       "hle": 34,
       "omni": -2,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-xhigh-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-luna-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -474,12 +474,12 @@
       "index": 38,
       "tb": 13,
       "ab": 53,
-      "gdp": 1432,
+      "gdp": 1433,
       "omni": 1,
       "sci": 55,
       "hle": 39,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -490,12 +490,12 @@
       "index": 42,
       "tb": 31,
       "ab": 53,
-      "gdp": 1315,
+      "gdp": 1316,
       "omni": 38,
       "sci": 53,
       "hle": 47,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-low-vs-claude-sonnet-5-5-low",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -510,8 +510,8 @@
       "omni": 40,
       "sci": 53,
       "hle": 50,
-      "src": "https://artificialanalysis.ai/models/comparisons/claude-haiku-5-5-medium-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-low-vs-gpt-6-1-sol-medium",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -522,12 +522,12 @@
       "index": 50,
       "tb": 52,
       "ab": 64,
-      "gdp": 1511,
+      "gdp": 1512,
       "omni": 41,
       "sci": 56,
       "hle": 51,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -536,14 +536,14 @@
       "effort": "xhigh",
       "index": 51,
       "cost": 0.39,
-      "gdp": 1538,
+      "gdp": 1539,
       "ab": 67,
       "tb": 54,
       "sci": 56,
       "hle": 53,
       "omni": 41,
-      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-xhigh-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-xhigh-vs-gpt-6-astra-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -554,12 +554,12 @@
       "index": 52,
       "tb": 56,
       "ab": 65,
-      "gdp": 1594,
+      "gdp": 1596,
       "omni": 42,
       "sci": 54,
       "hle": 53,
       "src": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -586,12 +586,12 @@
       "index": 40,
       "tb": 20,
       "ab": 61,
-      "gdp": 1421,
+      "gdp": 1423,
       "omni": 29,
       "sci": 55,
       "hle": 42,
       "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "promotion_id": "google-gemini38-intro-2026",
       "reported_cost_multiplier": 0.5,
       "pricing_checked": "2026-10-10",
@@ -611,7 +611,7 @@
       "sci": 57,
       "hle": 48,
       "src": "https://artificialanalysis.ai/models/comparisons/gemini-3-8-flash-vs-gemini-3-8-flash-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "promotion_id": "google-gemini38-intro-2026",
       "reported_cost_multiplier": 0.5,
       "pricing_checked": "2026-10-10",
@@ -631,7 +631,7 @@
       "sci": 49,
       "hle": 28,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-6-low-vs-grok-4-6-xhigh",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -646,8 +646,8 @@
       "omni": 28,
       "sci": 56,
       "hle": 42,
-      "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-low-vs-grok-4-6-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/grok-4-6-medium-vs-grok-4-6-xhigh",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -663,7 +663,7 @@
       "sci": 56,
       "hle": 43,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -679,7 +679,7 @@
       "sci": 53,
       "hle": 44,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-6-low-vs-grok-4-6-xhigh",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -690,12 +690,12 @@
       "index": 42,
       "tb": 16,
       "ab": 57,
-      "gdp": 1588,
+      "gdp": 1583,
       "omni": 30,
       "sci": 55,
       "hle": 39,
-      "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-low-vs-grok-4-6-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-high-vs-grok-4-7-low",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -706,12 +706,12 @@
       "index": 46,
       "tb": 25,
       "ab": 64,
-      "gdp": 1706,
+      "gdp": 1707,
       "omni": 31,
       "sci": 58,
       "hle": 42,
-      "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-high-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-high-vs-grok-4-7-low",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -722,12 +722,12 @@
       "index": 46,
       "tb": 26,
       "ab": 66,
-      "gdp": 1711,
+      "gdp": 1714,
       "omni": 32,
       "sci": 57,
       "hle": 43,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
     },
     {
@@ -777,7 +777,7 @@
       "sci": 62,
       "hle": 57,
       "src": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "promotion_id": "google-argon-intro-2026",
       "reported_cost_multiplier": 0.5,
       "pricing_checked": "2026-10-15",
@@ -1273,19 +1273,19 @@
     "checked": "2026-10-15"
   },
   "review": {
-    "checked": "2026-10-15",
-    "verified_points": 47,
+    "checked": "2026-10-24",
+    "verified_points": 45,
     "pending_points": [
-      "Luna none: attempted comparison returned HTTP 404",
-      "Grok 4.7 medium: attempted comparison returned HTTP 404",
-      "Vendor chart images: approximate points retained from 2026-10-08",
-      "OpenAI Pro 200 temporary allowance: official terms confirm eligible subscriptions active September 22 through September 29 at 10 AM Pacific keep the previous allowance through October 29. Exact promotion start and expiry timezone, specific account eligibility and any credit grant are unverified. No API discount or credit amount assumed. Source checked 2026-10-15: https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "OpenAI referral rewards vary by account and offer. Banked Work/Codex resets normally expire 30 days after award; exact account offer, caps and award date are unverified. Not API credits. No price adjustment. Source checked 2026-10-15: https://help.openai.com/en/articles/20001271-chatgpt-desktop-referral-promotions",
-      "Google Antigravity promotional overage credits require account-specific terms. No verified temporary subscription boost found in reviewed official plans/pricing. No API discount inferred. Sources checked 2026-10-15: https://antigravity.google/docs/plans and https://antigravity.google/pricing",
-      "Grok for Startups may cover API and other eligible services only after approval. Amount and expiry come from approval terms, normally six months after credit application; account eligibility and grant are unverified. Cannot stack without written approval. No token-price adjustment. Source checked 2026-10-15: https://x.ai/legal/startup-program-terms",
-      "Gemini 4 Argon low/medium: attempted comparison URLs returned HTTP 404; no scores inferred."
+      "Google / Gemini 3.8 Flash / low \u2014 comparison omits cost/task; prior row and checked date preserved.",
+      "Local / Gemma 4 26B-A4B / reasoning \u2014 frozen baseline; no refresh performed.",
+      "Local / Qwen3 14B / none \u2014 comparison omits multiple fields and cost/task; prior row and checked date preserved.",
+      "Grok 4.6 medium: collector candidate $1.35 rejected as token price; reopened AA comparison confirms $1.14 per task.",
+      "Sol medium GDPval: reopened AA comparison confirms 1450, not collector candidate 1449.",
+      "Argon low/medium: no complete independent effort evidence. Antigravity access is plan/product dependent; not available in Antigravity IDE.",
+      "Expired Claude artifact offer: analyst source recovery unavailable; historical dates retained. No API or weekly-allowance effect.",
+      "Recurring credits and account-specific offers require claim/eligibility checks and have no verified uniform token-price discount. They do not reduce chart costs."
     ],
-    "note": "All 47 tracked independent model/effort points verified from comparison tables on 2026-10-15. Added 14 previously missing effort points. GDPval Elo can move as comparison results update. Vendor chart points remain approximate and dated 2026-10-08. Unpublished costs and benchmark scores remain null. Independent reasoning scores do not describe the local non-thinking QAT instance. Overall and task-specific model picks retained after review. Account-specific offers without verified eligibility and complete dates are excluded from price calculations. The newly added model has one verified effort point; other attempted effort sources remain pending. Existing task-model picks remain in place pending the new model access and effort comparison review; news and charts do not assume account eligibility."
+    "note": "Analyst reviewed 2026-10-24. Unavailable and frozen rows retain historical dates. Material citation conflicts were corrected after direct source recovery. Independent API task costs, vendor-reported charts and subscription allowances remain separate. Local model scores and checked dates are unchanged. Recommendations were reviewed against the value rule with explicit task-specific exceptions and availability limits. The overall value leader remains Sol medium."
   },
   "promotions": [
     {
@@ -1308,7 +1308,7 @@
         "cached_input": 0.15
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "task_estimate_note": "AA reported medium/high costs already use introductory input/output/cache rates. Standard task estimates assume identical token usage; not a fresh benchmark run.",
       "discount_label": "50% introductory API pricing",
       "last_discounted_date": "2026-12-31",
@@ -1334,7 +1334,7 @@
         "cached_input": 0.2
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "task_estimate_note": "AA high-effort cost $1.99 already includes introductory rates; post-expiry $3.98 assumes unchanged token usage and is an estimate, not a fresh benchmark measurement.",
       "discount_label": "50% introductory API pricing",
       "last_discounted_date": "2026-11-30",
@@ -1344,7 +1344,7 @@
   "overall_value_leader": {
     "model": "GPT-6.1 Sol",
     "effort": "medium",
-    "reviewed": "2026-10-15",
+    "reviewed": "2026-10-24",
     "basis": "Balanced capability and cost for everyday, multistep work. Use the task-specific picks below when your work needs something different.",
     "source": "https://artificialanalysis.ai/models/gpt-6-1-sol-medium",
     "task_id": "judgment"
@@ -1376,7 +1376,7 @@
       "title": "Argon introductory API pricing",
       "summary": "$2 input / $10 output per million tokens through November 30, then $4 / $20. API offer only; subscription allowances are separate.",
       "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "expires_at": "2026-12-01T00:00:00Z"
     },
     {
@@ -1397,7 +1397,7 @@
       "title": "Sonnet 5.5 cache reads halved",
       "summary": "Cache reads fell to $0.10 per million tokens. Anthropic estimates about 20% lower cost on most agentic tasks; this is a vendor claim, not a measured subscription saving.",
       "source": "https://www.anthropic.com/claude-haiku-5-5",
-      "checked": "2026-10-15",
+      "checked": "2026-10-24",
       "expires_at": "2026-11-06T00:00:00Z"
     }
   ],

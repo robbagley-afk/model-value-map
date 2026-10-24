@@ -8,44 +8,44 @@
 </head>
 <body>
 <h1>Model guidance</h1>
-<p>Updated: 2026-10-15</p>
-<p>Revision: 7c64f1c5d218e41c0457afdd3e23727a702ae72a0b7b7559f3c8cfcd04c82159</p>
+<p>Updated: 2026-10-24</p>
+<p>Revision: 11d259d3736ede0670b2bcac0ef0e2de4e277958e1ae02f1f5f68db64107da10</p>
 <p>Rule: An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.</p>
 <section id="latest-news" class="card" aria-labelledby="news-title" style="padding:16px;font-size:15px;line-height:1.5"><h2 id="news-title" style="font-size:19px;margin:0 0 8px">Latest news</h2><ul style="margin:0;padding-left:20px"><li data-news-id="argon-api-intro"><time>2026-10-15</time> · <a href="https://ai.google.dev/gemini-api/docs/pricing?hl=en" target="_blank" rel="noopener">Argon introductory API pricing</a> — $2 input / $10 output per million tokens through November 30, then $4 / $20. API offer only; subscription allowances are separate.</li><li data-news-id="argon-release"><time>2026-10-13</time> · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" target="_blank" rel="noopener">Gemini 4 Argon broadly available</a> — Independent AutomationBench: 78% versus Sol Medium 63%, at $1.99 versus $0.21 per benchmark task. More capability comes at a higher task cost. <a href="https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium" target="_blank" rel="noopener">Benchmarks</a></li><li data-news-id="sonnet-cache-cut"><time>2026-10-07</time> · <a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Sonnet 5.5 cache reads halved</a> — Cache reads fell to $0.10 per million tokens. Anthropic estimates about 20% lower cost on most agentic tasks; this is a vendor claim, not a measured subscription saving.</li></ul></section>
 <h2>ChatGPT and Codex</h2>
 <p>Mechanical text work | GPT-6 Luna max ($0.07, 38), best when the step calls tools (AutomationBench 53%) | GPT-6.1 Sol low ($0.13, 42)</p>
 <p>Scripted relays and tool workflows | GPT-6.1 Sol medium ($0.21, 63%) | Rarely. GPT-6.1 Sol xhigh ($0.39, 67%) adds 4 points</p>
-<p>Documents from supplied facts | GPT-6 Luna max (1432, $0.07) | GPT-6.1 Sol max (1594, $0.72)</p>
+<p>Documents from supplied facts | GPT-6 Luna max (1433, $0.07) | GPT-6.1 Sol max (1596, $0.72)</p>
 <p>People, messages, money, records | GPT-6.1 Sol high ($0.32, 41), verify names and figures | Rarely. Sol max ($0.72, 42) adds 1 point</p>
 <p>Computer use and browser work | GPT-6 Luna max (49%, $0.22). Sol and Astra not yet evaluated on this chart | none</p>
 <p>Agentic coding | GPT-6.1 Sol xhigh ($0.39, 54%) | Rarely. GPT-6.1 Sol max ($0.72, 56%) adds 2 points</p>
 <p>Small, clear coding fixes | GPT-6.1 Sol medium ($0.21, 48%) | GPT-6.1 Sol xhigh ($0.39, 54%)</p>
-<p>Research and reasoning | GPT-6.1 Sol medium ($0.21, 50%) | GPT-6 Astra max ($3.26, 55%), rarely worth it</p>
+<p>Research and reasoning | GPT-6.1 Sol low ($0.13, 47%) | GPT-6.1 Sol medium ($0.21, 50%) after a failed task check; its 3-point gain is below the value threshold</p>
 <p>General agentic judgment | GPT-6.1 Sol medium ($0.21, 48) | GPT-6.1 Sol high ($0.32, 50)</p>
 <h2>Claude</h2>
 <p>Mechanical text work | Haiku 5.5 low ($0.02, 29) | Haiku 5.5 medium ($0.05, 34) if low misses</p>
 <p>Scripted relays and tool workflows | Sonnet 5.5 medium ($0.48, 55%). Opus 5.5 low ($0.55, 53%) when the run touches names or facts | Opus 5.5 medium ($1.34, 61%) when the workflow branches</p>
-<p>Documents from supplied facts | Haiku 5.5 max (pilot): 1618 at $0.21, near Sonnet 5.5 xhigh at a tenth of the cost | Rarely. Sonnet 5.5 xhigh (1728, $2.01) adds 110 Elo for 9.6x the cost</p>
+<p>Documents from supplied facts | Haiku 5.5 max (pilot): 1619 at $0.21, near Sonnet 5.5 xhigh at a tenth of the cost | Rarely. Sonnet 5.5 xhigh (1728, $2.01) adds 110 Elo for 9.6x the cost</p>
 <p>People, messages, money, records | Opus 5.5 low ($0.55, 39) | Rarely. Opus 5.5 max adds 7 points for 11x the cost</p>
 <p>Computer use and browser work | Haiku 5.5 xhigh (pilot, 67.5%, $0.30) | Haiku 5.5 max (72.4%, $0.62) ties Sonnet 5.5 high (73%, $1.50). Sonnet 5.5 xhigh (81%, $2.30) for must-succeed runs</p>
-<p>Agentic coding | Opus 5.5 medium ($1.34, 53%) | Opus 5.5 high ($1.82, 57%) for hard bugs</p>
-<p>Small, clear coding fixes | Haiku 5.5 max (pilot, $0.21, 33%), ahead of Opus 5.5 low (31%, $0.55) | Opus 5.5 medium if the fix stalls</p>
-<p>Research and reasoning | Opus 5.5 low ($0.55, 48%). Vendor chart shows Sonnet 5.5 high at 48% for $0.08 per question | Opus 5.5 high ($1.82, 56%)</p>
-<p>General agentic judgment | Opus 5.5 medium ($1.34, 51) | Opus 5.5 high ($1.82, 54)</p>
+<p>Agentic coding | Opus 5.5 high ($1.82, 57%) | Rarely. Opus 5.5 xhigh ($3.46, 60%) adds 3 points for 1.90x the API task cost</p>
+<p>Small, clear coding fixes | Haiku 5.5 max (pilot, $0.21, 33%), ahead of Opus 5.5 low (31%, $0.55) | Opus 5.5 high ($1.82, 57%) if the bounded fix fails its check</p>
+<p>Research and reasoning | Opus 5.5 medium ($1.34, 55%) | Rarely. Opus 5.5 high ($1.82, 56%) adds 1 HLE point</p>
+<p>General agentic judgment | Opus 5.5 high ($1.82, 54) | Rarely. Opus 5.5 xhigh ($3.46, 56) adds 2 index points</p>
 <h2>Gemini/Antigravity</h2>
 <p>Mechanical text work | Gemini 3.8 Flash low (index 33, cost per task not published), also for deterministic scripts | Medium ($0.93, 40)</p>
-<p>Scripted relays and tool workflows | Gemini 3.8 Flash medium ($0.93, 61%) | None. High scores 60%</p>
-<p>Documents from supplied facts | Gemini 3.8 Flash medium (1421, $0.93) | High adds 15 Elo, not worth it</p>
-<p>People, messages, money, records | Gemini 3.8 Flash medium ($0.93, 29), below Opus 5.5 low and Sol low | none</p>
+<p>Scripted relays and tool workflows | Gemini 4 Argon high ($1.99, 78%) where available; paid API, eligible Antigravity App/CLI/extensions. Not available in Antigravity IDE | No measured higher effort. Antigravity IDE or ineligible plans: Gemini 3.8 Flash medium ($0.93). Argon API cost estimated $3.98 from December 1 assuming unchanged tokens; subscription usage is separate</p>
+<p>Documents from supplied facts | Gemini 4 Argon high ($1.99, 1624) where available; paid API, eligible Antigravity App/CLI/extensions. Not available in Antigravity IDE | No measured higher effort. Antigravity IDE or ineligible plans: Gemini 3.8 Flash medium ($0.93). Argon API cost estimated $3.98 from December 1 assuming unchanged tokens; subscription usage is separate</p>
+<p>People, messages, money, records | Gemini 4 Argon high ($1.99, 42) where available; paid API, eligible Antigravity App/CLI/extensions. Not available in Antigravity IDE | No measured higher effort. Antigravity IDE or ineligible plans: Gemini 3.8 Flash medium ($0.93). Argon API cost estimated $3.98 from December 1 assuming unchanged tokens; subscription usage is separate</p>
 <p>Computer use and browser work | Not yet evaluated | none</p>
-<p>Agentic coding | Gemini 3.8 Flash medium ($0.93, 20%) for agent loops, refactors, and hard bugs. Weak for coding | High also scores 20%</p>
-<p>Small, clear coding fixes | Gemini 3.8 Flash medium ($0.93, 20%) | none</p>
-<p>Research and reasoning | Gemini 3.8 Flash high ($1.24, 48%) | None. High is the pick here (HLE 48% vs 42% at medium)</p>
-<p>General agentic judgment | Gemini 3.8 Flash medium ($0.93, 40) | High adds 1 point, not worth it</p>
+<p>Agentic coding | Gemini 4 Argon high ($1.99, 57%) where available; paid API, eligible Antigravity App/CLI/extensions. Not available in Antigravity IDE | No measured higher effort. Antigravity IDE or ineligible plans: Gemini 3.8 Flash medium ($0.93). Argon API cost estimated $3.98 from December 1 assuming unchanged tokens; subscription usage is separate</p>
+<p>Small, clear coding fixes | Gemini 3.8 Flash medium ($0.93, 20%) for a bounded Antigravity IDE fix; check the result | Gemini 4 Argon high ($1.99, 57%) in eligible App/CLI/extensions or API if the fix stalls; unavailable in Antigravity IDE</p>
+<p>Research and reasoning | Gemini 4 Argon high ($1.99, 57%) where available; paid API, eligible Antigravity App/CLI/extensions. Not available in Antigravity IDE | No measured higher effort. Antigravity IDE or ineligible plans: Gemini 3.8 Flash high ($1.24, 48%). Argon API cost estimated $3.98 from December 1 assuming unchanged tokens; subscription usage is separate</p>
+<p>General agentic judgment | Gemini 4 Argon high ($1.99, 53) where available; paid API, eligible Antigravity App/CLI/extensions. Not available in Antigravity IDE | No measured higher effort. Antigravity IDE or ineligible plans: Gemini 3.8 Flash medium ($0.93). Argon API cost estimated $3.98 from December 1 assuming unchanged tokens; subscription usage is separate</p>
 <h2>Grok</h2>
 <p>Mechanical text work | Grok 4.6 low ($0.38, 35) | Grok 4.6 medium ($1.14, 43)</p>
 <p>Scripted relays and tool workflows | Grok 4.6 high ($1.48, 67%) | none</p>
-<p>Documents from supplied facts | Grok 4.6 medium (1612, $1.14) | Grok 4.7 high (1706, $2.73)</p>
+<p>Documents from supplied facts | Grok 4.6 medium (1612, $1.14) | Grok 4.7 high (1707, $2.73)</p>
 <p>People, messages, money, records | Grok 4.6 low ($0.38, 26), verify names and figures | Rarely. Grok 4.7 xhigh ($3.74, 32) adds 6 points</p>
 <p>Computer use and browser work | Not yet evaluated | none</p>
 <p>Agentic coding | Grok 4.6 high ($1.48, 21%) | Rarely. Grok 4.7 high ($2.73, 25%) adds 4 points</p>
