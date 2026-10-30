@@ -271,6 +271,7 @@ const BENCH = {
   v_terminal:{name:"Terminal-Bench (Anthropic chart)",task:"Agentic coding",unit:"%",src:"vendor",key:"terminal"}
 };
 const VENDORS=["Anthropic","OpenAI","Google","xAI","Local"];
+const VLABEL={Anthropic:"Claude (Anthropic)",OpenAI:"ChatGPT (OpenAI)",Local:"Local models"};
 const VCOL={Anthropic:"--v-anthropic",OpenAI:"--v-openai",Google:"--v-google",xAI:"--v-xai",Local:"--v-local"};
 const TIER={"GPT-6.1 Terra":"mid","Gemini 4 Argon":"flag","Fable 5.1":"flag","Opus 5.5":"flag","GPT-6 Astra":"flag","Sonnet 5.5":"mid","GPT-6.1 Sol":"mid","Gemini 3.8 Flash":"mid","Grok 4.7":"flag","Grok 4.6":"mid","Haiku 5.5":"small","GPT-6 Luna":"small","Gemma 4 26B-A4B":"small","Haiku 4.5":"small"};
 const MODEL_SLOT={"GPT-6.1 Terra":"--m2","Gemini 4 Argon":"--m2","Fable 5.1":"--m4","Sonnet 5.5":"--m1","Opus 5.5":"--m2","Haiku 5.5":"--m3","Haiku 4.5":"--m4","GPT-6.1 Sol":"--m1","GPT-6 Astra":"--m2","GPT-6 Luna":"--m3","Gemini 3.8 Flash":"--m1","Grok 4.7":"--m2","Grok 4.6":"--m1","Gemma 4 26B-A4B":"--m4"};
@@ -508,12 +509,12 @@ function table(){
 }
 function ui(){
   const pr=$("presets");pr.querySelectorAll("button").forEach(b=>b.remove());
-  [["All companies",VENDORS],["Anthropic only",["Anthropic"]],["OpenAI only",["OpenAI"]],["Google only",["Google"]],["xAI only",["xAI"]],["Cloud vs local",VENDORS]].forEach(([n,vs],i)=>{
+  [["All companies",VENDORS],["Claude (Anthropic) only",["Anthropic"]],["ChatGPT (OpenAI) only",["OpenAI"]],["Google only",["Google"]],["xAI only",["xAI"]],["Cloud vs local",VENDORS]].forEach(([n,vs],i)=>{
     if(i===5)return;const b=document.createElement("button");b.className="chip";b.textContent=n;
     const on=vs.length===st.vendors.size&&vs.every(v=>st.vendors.has(v));b.setAttribute("aria-pressed",on);
     b.onclick=()=>{st.vendors=new Set(vs);save();ui();draw()};pr.appendChild(b)});
   const vr=$("vendors");vr.querySelectorAll("button").forEach(b=>b.remove());
-  VENDORS.forEach(v=>{const b=document.createElement("button");b.className="chip";b.innerHTML=`<i class="sw" style="background:${css(VCOL[v])}"></i>${v==="Local"?"Local models":v}`;
+  VENDORS.forEach(v=>{const b=document.createElement("button");b.className="chip";b.innerHTML=`<i class="sw" style="background:${css(VCOL[v])}"></i>${VLABEL[v]||v}`;
     b.setAttribute("aria-pressed",st.vendors.has(v));b.onclick=()=>{st.vendors.has(v)?st.vendors.delete(v):st.vendors.add(v);if(!st.vendors.size)st.vendors.add(v);save();ui();draw()};vr.appendChild(b)});
   const sr=$("srcrow");sr.querySelectorAll("button").forEach(b=>b.remove());
   [["aa","Independent (Artificial Analysis)"],["vendor","Vendor charts"]].forEach(([k,n])=>{const b=document.createElement("button");b.className="chip";b.textContent=n;b.setAttribute("aria-pressed",st.src===k);
