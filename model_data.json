@@ -29,7 +29,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 2.37,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -58,7 +59,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 2.98,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -87,7 +89,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 3.91,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -116,7 +119,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 5.98,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -145,7 +149,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 7.63,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -174,7 +179,8 @@
         "checked": "2026-10-24"
       },
       "legacy_cost": 0.02,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -203,7 +209,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.05,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -232,7 +239,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.08,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -261,7 +269,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.12,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -290,7 +299,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.21,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -319,7 +329,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.55,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -348,7 +359,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 1.34,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -377,7 +389,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 1.82,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -406,7 +419,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 3.46,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -435,7 +449,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 5.98,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -464,7 +479,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.35,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -493,7 +509,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.48,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -522,7 +539,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.88,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -551,7 +569,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 2.01,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Anthropic",
@@ -580,7 +599,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 5.46,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -609,7 +629,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.82,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -638,7 +659,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 1.54,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -667,7 +689,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 1.73,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -696,7 +719,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 2.31,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -725,7 +749,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 3.26,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -754,7 +779,8 @@
         "checked": "2026-10-24"
       },
       "legacy_cost": 0.0045,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -783,7 +809,8 @@
         "checked": "2026-10-24"
       },
       "legacy_cost": 0.02,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -812,7 +839,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.03,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -841,7 +869,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.04,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -870,7 +899,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.07,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -899,7 +929,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.13,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -928,7 +959,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.21,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -957,7 +989,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.32,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -986,7 +1019,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.39,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -1015,7 +1049,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.72,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Google",
@@ -1044,7 +1079,8 @@
         "checked": "2026-10-15"
       },
       "legacy_cost": null,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Google",
@@ -1077,7 +1113,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 2.59,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Google",
@@ -1110,7 +1147,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 3.49,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "xAI",
@@ -1126,7 +1164,8 @@
       "hle": 28,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-6-low-vs-grok-4-6-xhigh",
       "checked": "2026-10-27",
-      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied.",
+      "frozen_since": "2026-10-27"
     },
     {
       "vendor": "xAI",
@@ -1142,7 +1181,8 @@
       "hle": 42,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-6-medium-vs-grok-4-6-xhigh",
       "checked": "2026-10-27",
-      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied.",
+      "frozen_since": "2026-10-27"
     },
     {
       "vendor": "xAI",
@@ -1158,7 +1198,8 @@
       "hle": 43,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6",
       "checked": "2026-10-27",
-      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied.",
+      "frozen_since": "2026-10-27"
     },
     {
       "vendor": "xAI",
@@ -1174,7 +1215,8 @@
       "hle": 44,
       "src": "https://artificialanalysis.ai/models/comparisons/grok-4-6-low-vs-grok-4-6-xhigh",
       "checked": "2026-10-27",
-      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied."
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied.",
+      "frozen_since": "2026-10-27"
     },
     {
       "vendor": "xAI",
@@ -1203,7 +1245,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 1.03,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "xAI",
@@ -1232,7 +1275,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 2.36,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "xAI",
@@ -1261,7 +1305,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 3.24,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "Local",
@@ -1329,7 +1374,8 @@
         "reported_cost_multiplier": 0.5
       },
       "legacy_cost": 1.62,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     },
     {
       "vendor": "OpenAI",
@@ -1358,7 +1404,8 @@
         "checked": "2026-10-27"
       },
       "legacy_cost": 0.1,
-      "aa_version": "v5.0"
+      "aa_version": "v5.0",
+      "frozen_since": "2026-10-31"
     }
   ],
   "vendor_charts": {
@@ -2054,5 +2101,15 @@
       "xAI|Grok 4.6|high",
       "xAI|Grok 4.6|xhigh"
     ]
-  }
+  },
+  "aa_index_version": "v5.0",
+  "model_lines": [
+    {
+      "vendor": "xAI",
+      "models": [
+        "Grok 4.6",
+        "Grok 4.7"
+      ]
+    }
+  ]
 }
