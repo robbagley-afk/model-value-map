@@ -9,7 +9,10 @@ def front(pts):
     return f
 B={'index':'Intelligence Index','tb':'Terminal-Bench (coding)','ab':'AutomationBench (tool workflows)','gdp':'GDPval (knowledge work)','omni':'AA-Omniscience (fact reliability)','hle':'HLE (reasoning)'}
 for k,n in B.items():
-    pts=[(p['vendor'],p['model'],p['effort'],effective_cost(p,d.get('promotions',[])),p[k]) for p in d['aa']]
+    # Retired benchmarks (v4.3.2) pair with legacy_cost. Withheld rows lack a v5.0 row and skip current charts.
+    legacy=k in ('gdp','sci','hle');held=set(d.get('aa_current_version_withheld',{}).get('rows',[]))
+    pts=[(p['vendor'],p['model'],p['effort'],p['legacy_cost'] if legacy and 'legacy_cost' in p else effective_cost(p,d.get('promotions',[])),p[k]) for p in d['aa']
+         if legacy or f"{p['vendor']}|{p['model']}|{p['effort']}" not in held]
     print('\n##',n,'(AA, cost per Index task)')
     f=front(pts);prev=None
     for p in f:
