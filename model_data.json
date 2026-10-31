@@ -1756,6 +1756,44 @@
           65
         ]
       ]
+    },
+    "ale": {
+      "label": "Agents' Last Exam, max effort (%)",
+      "src": "https://letsdatascience.com/blog/gpt-6-1-terra-beats-openai-flagship-claude-still-leads",
+      "vendor_source": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "source_quality": "third_party_copy",
+      "source_note": "OpenAI chart as reproduced by Let's Data Science; openai.com could not be read directly. Replace with the official chart when it can be read.",
+      "checked": "2026-10-31",
+      "points": [
+        [
+          "Anthropic",
+          "Opus 5.5",
+          "max",
+          8.82,
+          63.2
+        ],
+        [
+          "OpenAI",
+          "GPT-6.1 Terra",
+          "max",
+          1.01,
+          60.0
+        ],
+        [
+          "OpenAI",
+          "GPT-6 Astra",
+          "max",
+          7.24,
+          59.3
+        ],
+        [
+          "OpenAI",
+          "GPT-6.1 Sol",
+          "max",
+          2.0,
+          58.6
+        ]
+      ]
     }
   },
   "local_tests": {
