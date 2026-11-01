@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-31",
- "revision": "be76d11f63f2026cb05671c514871d740e1701fd891698df0f03eaa4a8adc6d5",
+ "revision": "9dc50b5d99139f6c2dbf2103797162bac88123b5d9a4bb8d1e2a220edcc59ed2",
  "news": [
   {
    "id": "terra-release",
@@ -77,7 +77,7 @@
    },
    "source": "https://ai.google.dev/gemini-api/docs/pricing",
    "checked": "2026-10-27",
-   "task_estimate_note": "AA reported Gemini 3.8 Flash Medium cost $2.59 already uses introductory rates. Post-expiry task cost $5.18 assumes identical token usage and is an estimate, not a fresh benchmark measurement. Input, output, and cache rates all scale uniformly by 2x.",
+   "task_estimate_note": "AA v5.0 reported Gemini 3.8 Flash Medium cost $6.26 and High cost $7.77 already use introductory rates. Post-expiry task costs $12.52 and $15.54 assume identical token usage and are estimates, not fresh benchmark measurements. Input, output, and cache rates all scale uniformly by 2x. Historical v4.3.2 costs stay frozen separately.",
    "discount_label": "50% introductory API pricing",
    "last_discounted_date": "2026-12-31",
    "standard_from": "2027-01-01"
@@ -103,7 +103,7 @@
    },
    "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
    "checked": "2026-10-27",
-   "task_estimate_note": "AA reported Gemini 4 Argon High cost $1.62 already uses introductory rates. Post-expiry task cost $3.24 assumes identical token usage and is an estimate, not a fresh benchmark measurement. Input, output, and cache rates all scale uniformly by 2x.",
+   "task_estimate_note": "AA v5.0 reported Gemini 4 Argon High cost $7.68 uses standard $4 input/$20 output/$0.20 cached input per million tokens. Uniform introductory rates are 50% of those rates, so the current unchanged-token estimate is $3.84 through November 30 and $7.68 from December 1. These are task-cost estimates, not fresh benchmark measurements or subscription savings. Historical v4.3.2 costs stay frozen separately.",
    "discount_label": "50% introductory API pricing",
    "last_discounted_date": "2026-11-30",
    "standard_from": "2026-12-01"
@@ -342,18 +342,18 @@
    },
    {
     "task": "Scripted relays and tool workflows",
-    "pick": "Gemini 4 Argon high ($3.84, 78%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Argon high ($3.84, 78%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
    },
    {
     "task": "Documents from supplied facts",
-    "pick": "Gemini 4 Argon high ($1.62, 1631  Elo) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Argon high ($1.62, 1631  Elo) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
    },
    {
     "task": "People, messages, money, records",
-    "pick": "Gemini 4 Argon high ($3.84, 46) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Argon high ($3.84, 46) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
    },
    {
     "task": "Computer use and browser work",
@@ -361,23 +361,23 @@
    },
    {
     "task": "Agentic coding",
-    "pick": "Gemini 4 Argon high ($3.84, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Argon high ($3.84, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
    },
    {
     "task": "Small, clear coding fixes",
-    "pick": "Gemini 4 Argon high ($3.84, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Argon high ($3.84, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
    },
    {
     "task": "Research and reasoning",
-    "pick": "Gemini 4 Argon high ($1.62, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Argon high ($1.62, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
    },
    {
     "task": "General agentic judgment",
-    "pick": "Gemini 4 Argon high ($3.84, 50) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Introductory through November 30; $3.24/task estimate from December 1 assumes unchanged tokens.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium:20% coding,40index,$2.59/API task; high:48%HLE,$3.49. API price does not measure Antigravity plan usage.",
+    "pick": "Gemini 4 Argon high ($3.84, 50) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0 API task estimate: $3.84 through November 30; $7.68/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
+    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage.",
     "callouts": [
      "Cheaper elsewhere: OpenAI GPT-6.1 Sol high scores 50.0 vs 50.0 at $0.59 per task, 15% of the cost. API cost, not subscription usage."
     ]

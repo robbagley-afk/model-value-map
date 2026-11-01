@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-31",
-  "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD), AA Intelligence Index v5.0 basket. Benchmarks: index (AA Intelligence Index v5.0), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1  Elo; AA v4.3.2, retired), omni (AA-Omniscience v1.1, higher = fewer hallucinations), sci (SciCode %; AA v4.3.2, retired), hle (Humanity's Last Exam no tools %; AA v4.3.2, retired). Retired benchmarks are frozen at their v4.3.2 values and charted with legacy_cost (the v4.3.2 cost per task). legacy_v4_3_2 keeps each row's prior values. null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark.",
+  "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD), AA Intelligence Index v5.0 basket. Benchmarks: index (AA Intelligence Index v5.0), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1  Elo; AA v4.3.2, retired), omni (AA-Omniscience v1.1, higher = fewer hallucinations), sci (SciCode %; AA v4.3.2, retired), hle (Humanity's Last Exam no tools %; AA v4.3.2, retired). Retired benchmarks are frozen at their v4.3.2 values and charted with legacy_cost (the v4.3.2 cost per task). legacy_v4_3_2 keeps each row's prior values. null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark. Pricing-basis correction for the retained Argon row annotation: AA v5.0 reports standard $4/$20/$0.20 per million tokens and $7.68 per task; the current introductory unchanged-token estimate is $3.84, reverting to $7.68 on December 1. The old row annotation is retained under the freeze policy; the promotion task_estimate_note records the corrected current basis.",
   "aa": [
     {
       "vendor": "Anthropic",
@@ -1968,7 +1968,7 @@
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked": "2026-10-27",
-      "task_estimate_note": "AA reported Gemini 3.8 Flash Medium cost $2.59 already uses introductory rates. Post-expiry task cost $5.18 assumes identical token usage and is an estimate, not a fresh benchmark measurement. Input, output, and cache rates all scale uniformly by 2x.",
+      "task_estimate_note": "AA v5.0 reported Gemini 3.8 Flash Medium cost $6.26 and High cost $7.77 already use introductory rates. Post-expiry task costs $12.52 and $15.54 assume identical token usage and are estimates, not fresh benchmark measurements. Input, output, and cache rates all scale uniformly by 2x. Historical v4.3.2 costs stay frozen separately.",
       "discount_label": "50% introductory API pricing",
       "last_discounted_date": "2026-12-31",
       "standard_from": "2027-01-01"
@@ -1994,7 +1994,7 @@
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
       "checked": "2026-10-27",
-      "task_estimate_note": "AA reported Gemini 4 Argon High cost $1.62 already uses introductory rates. Post-expiry task cost $3.24 assumes identical token usage and is an estimate, not a fresh benchmark measurement. Input, output, and cache rates all scale uniformly by 2x.",
+      "task_estimate_note": "AA v5.0 reported Gemini 4 Argon High cost $7.68 uses standard $4 input/$20 output/$0.20 cached input per million tokens. Uniform introductory rates are 50% of those rates, so the current unchanged-token estimate is $3.84 through November 30 and $7.68 from December 1. These are task-cost estimates, not fresh benchmark measurements or subscription savings. Historical v4.3.2 costs stay frozen separately.",
       "discount_label": "50% introductory API pricing",
       "last_discounted_date": "2026-11-30",
       "standard_from": "2026-12-01"
