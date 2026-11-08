@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
-Updated: 2026-10-31. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 7bea53ce4cd77724b5c80ec66f778dff60a164a3ccbbd9fe7f683b5c09a23acc
+Updated: 2026-11-07. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
+Revision: c31d3030612aed7593319e6f41e69001fcf7d271ddb7ea252ffb6f5f3364582e
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -9,7 +9,7 @@ Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to
 An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.
 
 ## Overall general purpose recommendation
-GPT-6.1 Terra at medium effort. For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task (AA v5.0 costs). Sol medium scores 63% at 2.1 times the cost, below the upgrade rule. Work/Codex/API only, not ChatGPT Chat. Use Sol low for consequential facts and Sol xhigh for coding. API costs do not measure subscription savings.
+GPT-6.1 Terra at medium effort. For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task. Sol medium adds 5 points at $0.36, or 4.6 points per cost doubling, below the 5-point threshold. Work, Codex and API availability only. Use Sol low for consequential facts and Sol xhigh for coding. AA v5.0.1 API costs do not measure subscription savings.
 
 ## Codex (OpenAI) - for Codex and ChatGPT
 - **Mechanical text work** (Fixed supplied-input classification, parsing and reformatting with code checks): GPT-6 Luna low ($0.01, 10) Narrow supplied-input transformations only, with schema/content checks; tool workflows use the relay row.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
