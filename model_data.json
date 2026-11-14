@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-14",
   "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD), AA Intelligence Index v5.0.1 basket. Benchmarks: index (AA Intelligence Index v5.0.1), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1  Elo; AA v4.3.2, retired), omni (AA-Omniscience v1.1, higher = fewer hallucinations), sci (SciCode %; AA v4.3.2, retired), hle (Humanity's Last Exam no tools %; AA v4.3.2, retired). Retired benchmarks are frozen at their v4.3.2 values and charted with legacy_cost (the v4.3.2 cost per task). legacy_v4_3_2 keeps each row's prior values. null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark. Pricing-basis correction for the retained Argon row annotation: AA v5.0.1 reports standard $4/$20/$0.20 per million tokens and $9.95 per task; the current introductory unchanged-token estimate is $4.97, reverting to $9.95 on December 1. The old row annotation is retained under the freeze policy; the promotion task_estimate_note records the corrected current basis.",
   "aa": [
     {
@@ -1407,6 +1407,168 @@
       "legacy_cost": 0.1,
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-07"
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Fable 5.2",
+      "effort": "high",
+      "index": 61.82,
+      "cost": 9.0784,
+      "ab": 71.36,
+      "tb": 59.6,
+      "omni": 64.03,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Fable 5.2",
+      "effort": "low",
+      "index": 53.92,
+      "cost": 3.0972,
+      "ab": 68.0,
+      "tb": 54.55,
+      "omni": 62.93,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Fable 5.2",
+      "effort": "max",
+      "index": 64.56,
+      "cost": 26.5386,
+      "ab": 76.42,
+      "tb": 59.6,
+      "omni": 66.77,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Fable 5.2",
+      "effort": "medium",
+      "index": 56.41,
+      "cost": 3.8026,
+      "ab": 68.82,
+      "tb": 55.05,
+      "omni": 63.5,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Anthropic",
+      "model": "Fable 5.2",
+      "effort": "xhigh",
+      "index": 62.22,
+      "cost": 14.8286,
+      "ab": 74.16,
+      "tb": 61.62,
+      "omni": 64.77,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 4 Hydrogen",
+      "effort": "high",
+      "index": 50.79,
+      "cost": 1.8733,
+      "ab": 74.44,
+      "tb": 54.04,
+      "omni": 43.67,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 4 Hydrogen",
+      "effort": "low",
+      "index": 26.89,
+      "cost": 0.2922,
+      "ab": 60.51,
+      "tb": 6.57,
+      "omni": 36.1,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 4 Hydrogen",
+      "effort": "medium",
+      "index": 41.23,
+      "cost": 0.798,
+      "ab": 72.01,
+      "tb": 29.29,
+      "omni": 41.9,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "Google",
+      "model": "Gemini 4 Hydrogen",
+      "effort": "xhigh",
+      "index": 53.92,
+      "cost": 3.1602,
+      "ab": 76.14,
+      "tb": 53.54,
+      "omni": 46.27,
+      "gdp": null,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+      "checked": "2026-11-14",
+      "aa_version": "v5.0.1",
+      "frozen_since": "2026-11-14",
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
     }
   ],
   "vendor_charts": {
@@ -1968,7 +2130,7 @@
         "cached_input": 0.15
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked": "2026-11-07",
+      "checked": "2026-11-14",
       "task_estimate_note": "AA v5.0.1 reported Gemini 3.8 Flash Medium cost $6.26 and High cost $7.77 already use introductory rates. Post-expiry task costs $12.52 and $15.54 assume identical token usage and are estimates, not fresh benchmark measurements. Input, output, and cache rates all scale uniformly by 2x. Historical v4.3.2 costs stay frozen separately.",
       "discount_label": "50% introductory API pricing",
       "last_discounted_date": "2026-12-31",
@@ -1994,7 +2156,7 @@
         "cached_input": 0.2
       },
       "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
-      "checked": "2026-11-07",
+      "checked": "2026-11-14",
       "task_estimate_note": "AA v5.0.1 reported Gemini 4 Argon High cost $9.95 uses standard $4 input/$20 output/$0.20 cached input per million tokens. Uniform introductory rates are 50% of those rates, so the current unchanged-token estimate is $4.97 through November 30 and $9.95 from December 1. These are task-cost estimates, not fresh benchmark measurements or subscription savings. Historical v4.3.2 costs stay frozen separately.",
       "discount_label": "50% introductory API pricing",
       "last_discounted_date": "2026-11-30",
@@ -2004,7 +2166,7 @@
   "overall_value_leader": {
     "model": "GPT-6.1 Terra",
     "effort": "medium",
-    "reviewed": "2026-11-07",
+    "reviewed": "2026-11-14",
     "basis": "For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task. Sol medium adds 5 points at $0.36, or 4.6 points per cost doubling, below the 5-point threshold. Work, Codex and API availability only. Use Sol low for consequential facts and Sol xhigh for coding. AA v5.0.1 API costs do not measure subscription savings.",
     "source": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium",
     "task_id": "judgment"
@@ -2052,6 +2214,28 @@
       "independent_source": "https://artificialanalysis.ai/models/releases/gemini-4-carbon",
       "checked": "2026-11-07",
       "expires_at": "2026-11-27T00:00:00Z"
+    },
+    {
+      "id": "fable-52-release",
+      "vendor": "Anthropic",
+      "date": "2026-11-09",
+      "title": "Claude Fable 5.2 released",
+      "summary": "AA measured 62.93 Omniscience and 68.00% AutomationBench at Low, with $3.0972 per API benchmark task and default fallback enabled.",
+      "source": "https://www.anthropic.com/claude/fable",
+      "independent_source": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "checked": "2026-11-14",
+      "expires_at": "2026-12-09T00:00:00Z"
+    },
+    {
+      "id": "hydrogen-release",
+      "vendor": "Google",
+      "date": "2026-11-12",
+      "title": "Gemini 4 Hydrogen released",
+      "summary": "AA Medium scores 72.01% on AutomationBench at $0.798 per API benchmark task. Google lists API and paid Antigravity Pro and Ultra availability.",
+      "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "independent_source": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+      "checked": "2026-11-14",
+      "expires_at": "2026-12-12T00:00:00Z"
     }
   ],
   "qwen_vendor_card": {
@@ -2216,6 +2400,13 @@
       "models": [
         "Grok 4.6",
         "Grok 4.7"
+      ]
+    },
+    {
+      "vendor": "Anthropic",
+      "models": [
+        "Fable 5.1",
+        "Fable 5.2"
       ]
     }
   ]

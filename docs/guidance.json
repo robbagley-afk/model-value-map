@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07",
- "revision": "b4027fd0bd8070b2e4f683bf73da26271bddba324a3082405e997a315bb1e415",
+ "updated": "2026-11-14",
+ "revision": "550158128a145800901d5c033c204162539bce028d0a9908e4bbb9bfa9c1dd7b",
  "news": [
   {
    "id": "terra-release",
@@ -43,6 +43,28 @@
    "independent_source": "https://artificialanalysis.ai/models/releases/gemini-4-carbon",
    "checked": "2026-11-07",
    "expires_at": "2026-11-27T00:00:00Z"
+  },
+  {
+   "id": "fable-52-release",
+   "vendor": "Anthropic",
+   "date": "2026-11-09",
+   "title": "Claude Fable 5.2 released",
+   "summary": "AA measured 62.93 Omniscience and 68.00% AutomationBench at Low, with $3.0972 per API benchmark task and default fallback enabled.",
+   "source": "https://www.anthropic.com/claude/fable",
+   "independent_source": "https://artificialanalysis.ai/models/claude-fable-5-2",
+   "checked": "2026-11-14",
+   "expires_at": "2026-12-09T00:00:00Z"
+  },
+  {
+   "id": "hydrogen-release",
+   "vendor": "Google",
+   "date": "2026-11-12",
+   "title": "Gemini 4 Hydrogen released",
+   "summary": "AA Medium scores 72.01% on AutomationBench at $0.798 per API benchmark task. Google lists API and paid Antigravity Pro and Ultra availability.",
+   "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+   "independent_source": "https://artificialanalysis.ai/models/gemini-4-hydrogen",
+   "checked": "2026-11-14",
+   "expires_at": "2026-12-12T00:00:00Z"
   }
  ],
  "review": {
@@ -61,7 +83,7 @@
  "overall_value_leader": {
   "model": "GPT-6.1 Terra",
   "effort": "medium",
-  "reviewed": "2026-11-07",
+  "reviewed": "2026-11-14",
   "basis": "For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task. Sol medium adds 5 points at $0.36, or 4.6 points per cost doubling, below the 5-point threshold. Work, Codex and API availability only. Use Sol low for consequential facts and Sol xhigh for coding. AA v5.0.1 API costs do not measure subscription savings.",
   "source": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium",
   "task_id": "judgment"
@@ -87,7 +109,7 @@
     "cached_input": 0.15
    },
    "source": "https://ai.google.dev/gemini-api/docs/pricing",
-   "checked": "2026-11-07",
+   "checked": "2026-11-14",
    "task_estimate_note": "AA v5.0.1 reported Gemini 3.8 Flash Medium cost $6.26 and High cost $7.77 already use introductory rates. Post-expiry task costs $12.52 and $15.54 assume identical token usage and are estimates, not fresh benchmark measurements. Input, output, and cache rates all scale uniformly by 2x. Historical v4.3.2 costs stay frozen separately.",
    "discount_label": "50% introductory API pricing",
    "last_discounted_date": "2026-12-31",
@@ -113,7 +135,7 @@
     "cached_input": 0.2
    },
    "source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
-   "checked": "2026-11-07",
+   "checked": "2026-11-14",
    "task_estimate_note": "AA v5.0.1 reported Gemini 4 Argon High cost $9.95 uses standard $4 input/$20 output/$0.20 cached input per million tokens. Uniform introductory rates are 50% of those rates, so the current unchanged-token estimate is $4.97 through November 30 and $9.95 from December 1. These are task-cost estimates, not fresh benchmark measurements or subscription savings. Historical v4.3.2 costs stay frozen separately.",
    "discount_label": "50% introductory API pricing",
    "last_discounted_date": "2026-11-30",
@@ -270,20 +292,20 @@
     "task": "Mechanical text work",
     "pick": "Haiku 5.5 low ($0.04, 19)",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "exception": "Mechanical rows are supplied-input transforms checked by code, so the lowest effort that passes those checks is the pick. On AA v5.0.1 index Haiku medium25/$0.09 adds6 over low19/$0.04 for 2.25x cost (5.1 points per doubling), barely above the rule, and the index measures general reasoning rather than checked transforms. Raise effort only after a failed check.",
+    "exception": "For supplied-input transforms with deterministic output checks, Haiku 5.5 low costs $0.04 per API task. Medium buys 6 general index points at 2.25\u00d7 cost, but the index does not establish a completion gain for this narrower workload.",
     "callouts": [
-     "Rule exception: Mechanical rows are supplied-input transforms checked by code, so the lowest effort that passes those checks is the pick. On AA v5.0.1 index Haiku medium25/$0.09 adds6 over low19/$0.04 for 2.25x cost (5.1 points per doubling), barely above the rule, and the index measures general reasoning rather than checked transforms. Raise effort only after a failed check.",
+     "Rule exception: For supplied-input transforms with deterministic output checks, Haiku 5.5 low costs $0.04 per API task. Medium buys 6 general index points at 2.25\u00d7 cost, but the index does not establish a completion gain for this narrower workload.",
      "New model not yet placed: Fable 5.1 xhigh ($10.85, 50.0) is tracked but not yet reviewed for this row."
     ]
    },
    {
     "task": "Scripted relays and tool workflows",
-    "pick": "Sonnet 5.5 medium ($0.78, 55%). Xhigh reaches 66% at $4.09, or 4.6 points per cost doubling.",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "Sonnet 5.5 low ($0.51, 49.4%)",
+    "pick": "Fable 5.2 low ($3.10, 68.0%) AA tested Anthropic's Default Fallback configuration.",
+    "upgrade": "Upgrade only after a failed workload check.",
+    "budget": "Sonnet 5.5 high ($1.64, 59.4%)",
     "callouts": [
      "New model not yet placed: Fable 5.1 max ($12.99, 59.4%) is tracked but not yet reviewed for this row.",
-     "Cheaper elsewhere: OpenAI GPT-6.1 Terra medium scores 57.8% vs 54.9% at $0.17 per task, 22% of the cost. API cost, not subscription usage."
+     "Cheaper elsewhere: Google Gemini 4 Hydrogen medium scores 72.01% vs 68.0% at $0.80 per task, 26% of the cost. API cost, not subscription usage."
     ]
    },
    {
@@ -297,11 +319,11 @@
    },
    {
     "task": "People, messages, money, records",
-    "pick": "Opus 5.5 low ($0.98, 39)",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+    "pick": "Fable 5.2 low ($3.10, 62.93) AA tested Anthropic's Default Fallback configuration.",
+    "upgrade": "Verify consequential claims against primary sources.",
+    "budget": "Opus 5.5 low ($0.98, 39.0)",
     "callouts": [
-     "New model not yet placed: Fable 5.1 max ($12.99, 46.0) is tracked but not yet reviewed for this row.",
-     "Cheaper elsewhere: OpenAI GPT-6.1 Sol medium scores 40.0 vs 39.0 at $0.36 per task, 37% of the cost. API cost, not subscription usage."
+     "New model not yet placed: Fable 5.1 max ($12.99, 46.0) is tracked but not yet reviewed for this row."
     ]
    },
    {
@@ -346,9 +368,9 @@
     "pick": "Sonnet 5.5 medium ($0.78, index 31), for branching SaaS and tool workflows (AutomationBench 55%). Use Opus low for factual recall.",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
     "budget": "Haiku 5.5 high ($0.16, 30.0)",
-    "exception": "Scoped to AutomationBench. Cheapest Haiku low is 23% at $0.04. Sonnet medium gains 32 points at 19.5 times the cost, or 7.5 points per doubling. Xhigh adds 11 at $4.09, or 4.6 points per doubling. No paying direct upgrade on this benchmark. Use Opus low for consequential facts.",
+    "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
     "callouts": [
-     "Rule exception: Scoped to AutomationBench. Cheapest Haiku low is 23% at $0.04. Sonnet medium gains 32 points at 19.5 times the cost, or 7.5 points per doubling. Xhigh adds 11 at $4.09, or 4.6 points per doubling. No paying direct upgrade on this benchmark. Use Opus low for consequential facts.",
+     "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
      "New model not yet placed: Fable 5.1 xhigh ($10.85, 50.0) is tracked but not yet reviewed for this row.",
      "Smaller model beats larger: Haiku 5.5 high ($0.16, 30.0) scores at least as well as Sonnet 5.5 low ($0.51, 26.0).",
      "Cheaper elsewhere: OpenAI GPT-6.1 Sol low scores 35.0 vs 31.0 at $0.16 per task, 21% of the cost. API cost, not subscription usage."
@@ -433,9 +455,9 @@
     "pick": "GPT-6.1 Terra medium ($0.17, 38) Work/Codex/API only; not ChatGPT Chat.",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
     "budget": "GPT-6 Luna xhigh ($0.10, 23.0)",
-    "exception": "Branching tool-assisted requests use AutomationBench (AA v5.0.1 costs): Terra medium58%/$0.17 versus Luna low12%/$0.01 and max53%/$0.15. Sol medium63%/$0.36 adds5 points for 2.1x cost (4.6 points per doubling), below the rule. No paying direct same-vendor upgrade remains on AutomationBench. AA-Omniscience v1.1 27 trails Sol low38; consequential facts use the facts row.",
+    "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
     "callouts": [
-     "Rule exception: Branching tool-assisted requests use AutomationBench (AA v5.0.1 costs): Terra medium58%/$0.17 versus Luna low12%/$0.01 and max53%/$0.15. Sol medium63%/$0.36 adds5 points for 2.1x cost (4.6 points per doubling), below the rule. No paying direct same-vendor upgrade remains on AutomationBench. AA-Omniscience v1.1 27 trails Sol low38; consequential facts use the facts row.",
+     "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
      "New model not yet placed: GPT-6 Astra max ($6.24, 57.0) is tracked but not yet reviewed for this row."
     ]
    }
@@ -448,8 +470,9 @@
    },
    {
     "task": "Scripted relays and tool workflows",
-    "pick": "Gemini 4 Argon high ($4.97, 78%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0.1 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Hydrogen medium ($0.80, 72.01%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
+    "upgrade": "Argon high reaches 77.5% at an estimated $4.975 per API task through November 30, then $9.95 at unchanged token usage.",
+    "budget": "Gemini 4 Hydrogen low ($0.29, 60.51%)"
    },
    {
     "task": "Documents from supplied facts",
@@ -458,8 +481,11 @@
    },
    {
     "task": "People, messages, money, records",
-    "pick": "Gemini 4 Argon high ($4.97, 46) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0.1 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Hydrogen low ($0.29, 36.1) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
+    "upgrade": "Verify consequential claims against primary sources.",
+    "callouts": [
+     "Cheaper elsewhere: OpenAI GPT-6.1 Sol low scores 38.0 vs 36.1 at $0.16 per task, 55% of the cost. API cost, not subscription usage."
+    ]
    },
    {
     "task": "Computer use and browser work",
@@ -467,13 +493,13 @@
    },
    {
     "task": "Agentic coding",
-    "pick": "Gemini 4 Argon high ($4.97, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0.1 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Hydrogen high ($1.87, 54.04%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
+    "upgrade": "Upgrade only after a failed workload check."
    },
    {
     "task": "Small, clear coding fixes",
-    "pick": "Gemini 4 Argon high ($4.97, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0.1 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage."
+    "pick": "Gemini 4 Hydrogen high ($1.87, 54.04%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
+    "upgrade": "Upgrade only after a failed workload check."
    },
    {
     "task": "Research and reasoning",
@@ -482,10 +508,13 @@
    },
    {
     "task": "General agentic judgment",
-    "pick": "Gemini 4 Argon high ($4.97, 50) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
-    "upgrade": "For an unavailable Argon surface, select an available measured model and verify output. Flash medium: v5.0.1 index30, Terminal-Bench20%, $6.26/API task. Historical v4.3.2 no-tools HLE high48% uses its separate $3.49 cost. API price does not measure Antigravity plan usage.",
+    "pick": "Gemini 4 Hydrogen medium ($0.80, 41.23) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
+    "upgrade": "Upgrade only after a failed workload check.",
+    "budget": "Gemini 4 Hydrogen low ($0.29, 26.89)",
+    "exception": "Use the branching-tool benchmark for this workflow. Hydrogen high buys 2.43 AutomationBench points over medium at 2.35\u00d7 the API task cost.",
     "callouts": [
-     "Cheaper elsewhere: OpenAI GPT-6.1 Sol high scores 50.0 vs 50.0 at $0.59 per task, 12% of the cost. API cost, not subscription usage."
+     "Rule exception: Use the branching-tool benchmark for this workflow. Hydrogen high buys 2.43 AutomationBench points over medium at 2.35\u00d7 the API task cost.",
+     "Cheaper elsewhere: OpenAI GPT-6.1 Sol medium scores 46.0 vs 41.23 at $0.36 per task, 45% of the cost. API cost, not subscription usage."
     ]
    }
   ],
@@ -502,7 +531,10 @@
     "task": "Scripted relays and tool workflows",
     "pick": "Grok 4.6 xhigh ($4.68, 67%) where accessible. AA marks it deprecated. The documented US endpoint has a 10% token surcharge.",
     "upgrade": "If Grok 4.6 access is unavailable, Grok 4.7 xhigh ($7.77, 66%) is the highest measured result on the current API line.",
-    "budget": "Grok 4.7 low ($2.92, 56.7%)"
+    "budget": "Grok 4.7 low ($2.92, 56.7%)",
+    "callouts": [
+     "Cheaper elsewhere: Google Gemini 4 Hydrogen medium scores 72.01% vs 67.0% at $0.80 per task, 17% of the cost. API cost, not subscription usage."
+    ]
    },
    {
     "task": "Documents from supplied facts",

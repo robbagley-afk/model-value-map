@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
-Updated: 2026-11-07. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: c31d3030612aed7593319e6f41e69001fcf7d271ddb7ea252ffb6f5f3364582e
+Updated: 2026-11-14. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
+Revision: 6a2884094a387252dfb2e6ba975c99562cb68b3e80a8964885d33b653002ede8
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
