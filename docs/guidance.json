@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-14",
- "revision": "e5ba31ae6974372fa3f4ce8c720b6d267aa2aa772170de142cdcbccab84143de",
+ "updated": "2026-11-15",
+ "revision": "045588ac949ceed900dd3e5e47c38ff0f18e0fbe8cd431b9847ae6bbea861774",
  "news": [
   {
    "id": "terra-release",
@@ -390,9 +390,9 @@
    },
    {
     "task": "Scripted relays and tool workflows",
-    "pick": "GPT-6.1 Terra medium ($0.17, 58%) Work/Codex/API only; not ChatGPT Chat.",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6 Luna high ($0.07, 47.8%)",
+    "pick": "GPT-6.1 Terra low ($0.07, 56.2%) Work/Codex/API only; not ChatGPT Chat.",
+    "upgrade": "Terra medium adds 1.6 points on AutomationBench for 2.43x the cost, which does not clear the upgrade rule. Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+    "budget": "GPT-6 Luna medium ($0.04, 40.5%)",
     "callouts": [
      "New model not yet placed: GPT-6 Astra max ($6.24, 68.5%) is tracked but not yet reviewed for this row."
     ]
@@ -410,6 +410,7 @@
     "task": "People, messages, money, records",
     "pick": "GPT-6.1 Sol low ($0.16, 38)",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+    "budget": "GPT-6.1 Terra low ($0.07, 22.9)",
     "callouts": [
      "New model not yet placed: GPT-6 Astra high ($3.24, 45.0) is tracked but not yet reviewed for this row."
     ]
@@ -454,7 +455,7 @@
     "task": "General agentic judgment",
     "pick": "GPT-6.1 Terra medium ($0.17, 38) Work/Codex/API only; not ChatGPT Chat.",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6 Luna xhigh ($0.10, 23.0)",
+    "budget": "GPT-6.1 Terra low ($0.07, 29.4)",
     "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
     "callouts": [
      "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
@@ -494,12 +495,18 @@
    {
     "task": "Agentic coding",
     "pick": "Gemini 4 Hydrogen high ($1.87, 54.04%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-    "upgrade": "Upgrade only after a failed workload check."
+    "upgrade": "Upgrade only after a failed workload check.",
+    "callouts": [
+     "Cheaper elsewhere: OpenAI GPT-6.1 Terra max scores 55.6% vs 54.04% at $0.96 per task, 51% of the cost. API cost, not subscription usage."
+    ]
    },
    {
     "task": "Small, clear coding fixes",
     "pick": "Gemini 4 Hydrogen high ($1.87, 54.04%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-    "upgrade": "Upgrade only after a failed workload check."
+    "upgrade": "Upgrade only after a failed workload check.",
+    "callouts": [
+     "Cheaper elsewhere: OpenAI GPT-6.1 Terra max scores 55.6% vs 54.04% at $0.96 per task, 51% of the cost. API cost, not subscription usage."
+    ]
    },
    {
     "task": "Research and reasoning",
@@ -514,7 +521,7 @@
     "exception": "Use the branching-tool benchmark for this workflow. Hydrogen high buys 2.43 AutomationBench points over medium at 2.35\u00d7 the API task cost.",
     "callouts": [
      "Rule exception: Use the branching-tool benchmark for this workflow. Hydrogen high buys 2.43 AutomationBench points over medium at 2.35\u00d7 the API task cost.",
-     "Cheaper elsewhere: OpenAI GPT-6.1 Sol medium scores 46.0 vs 41.23 at $0.36 per task, 45% of the cost. API cost, not subscription usage."
+     "Cheaper elsewhere: OpenAI GPT-6.1 Terra high scores 42.4 vs 41.23 at $0.26 per task, 33% of the cost. API cost, not subscription usage."
     ]
    }
   ],

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "notes": "aa = Artificial Analysis, independent. cost = AA cost per Intelligence Index task (USD), AA Intelligence Index v5.0.1 basket. Benchmarks: index (AA Intelligence Index v5.0.1), tb (Terminal-Bench 4.0 %), ab (AutomationBench-AA %), gdp (GDPval-AA v2.1  Elo; AA v4.3.2, retired), omni (AA-Omniscience v1.1, higher = fewer hallucinations), sci (SciCode %; AA v4.3.2, retired), hle (Humanity's Last Exam no tools %; AA v4.3.2, retired). Retired benchmarks are frozen at their v4.3.2 values and charted with legacy_cost (the v4.3.2 cost per task). legacy_v4_3_2 keeps each row's prior values. null = not published. vendor = vendor-run charts read from images, approximate, cost per attempt on that benchmark. Pricing-basis correction for the retained Argon row annotation: AA v5.0.1 reports standard $4/$20/$0.20 per million tokens and $9.95 per task; the current introductory unchanged-token estimate is $4.97, reverting to $9.95 on December 1. The old row annotation is retained under the freeze policy; the promotion task_estimate_note records the corrected current basis.",
   "aa": [
     {
@@ -1590,6 +1590,74 @@
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
       "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-6.1 Terra",
+      "effort": "low",
+      "index": 29.4,
+      "cost": 0.07,
+      "gdp": 1204,
+      "ab": 56.2,
+      "tb": 15.2,
+      "sci": 52,
+      "hle": 36,
+      "omni": 22.9,
+      "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "checked": "2026-11-15",
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
+      "aa_version": "v5.0.1"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-6.1 Terra",
+      "effort": "high",
+      "index": 42.4,
+      "cost": 0.26,
+      "gdp": 1353,
+      "ab": 58.5,
+      "tb": 41.9,
+      "sci": 52,
+      "hle": 43,
+      "omni": 27.8,
+      "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "checked": "2026-11-15",
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
+      "aa_version": "v5.0.1"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-6.1 Terra",
+      "effort": "xhigh",
+      "index": 45.3,
+      "cost": 0.4,
+      "gdp": 1416,
+      "ab": 59.9,
+      "tb": 46.5,
+      "sci": 53,
+      "hle": 44,
+      "omni": 28.9,
+      "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "checked": "2026-11-15",
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
+      "aa_version": "v5.0.1"
+    },
+    {
+      "vendor": "OpenAI",
+      "model": "GPT-6.1 Terra",
+      "effort": "max",
+      "index": 51.3,
+      "cost": 0.96,
+      "gdp": 1476,
+      "ab": 60.2,
+      "tb": 55.6,
+      "sci": 55,
+      "hle": 46,
+      "omni": 29.6,
+      "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "checked": "2026-11-15",
+      "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
+      "aa_version": "v5.0.1"
     }
   ],
   "vendor_charts": {

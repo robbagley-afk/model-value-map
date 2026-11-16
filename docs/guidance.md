@@ -1,6 +1,6 @@
 # Model and Effort Guidance
-Updated: 2026-11-14. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: e5ba31ae6974372fa3f4ce8c720b6d267aa2aa772170de142cdcbccab84143de
+Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/
+Revision: 045588ac949ceed900dd3e5e47c38ff0f18e0fbe8cd431b9847ae6bbea861774
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -30,7 +30,7 @@ GPT-6.1 Terra at medium effort. Reviewed 2026-11-14. For ordinary branching tool
 
 ## Codex (OpenAI) - for Codex and ChatGPT
 - **Mechanical text work** (Fixed supplied-input classification, parsing and reformatting with code checks): GPT-6 Luna low ($0.01, 10) Narrow supplied-input transformations only, with schema/content checks; tool workflows use the relay row.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
-- **Scripted relays and tool workflows** (Branching connector runs, fixed-step handoffs and queue imports): GPT-6.1 Terra medium ($0.17, 58%) Work/Codex/API only; not ChatGPT Chat.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
+- **Scripted relays and tool workflows** (Branching connector runs, fixed-step handoffs and queue imports): GPT-6.1 Terra low ($0.07, 56.2%) Work/Codex/API only; not ChatGPT Chat.. Upgrade: Terra medium adds 1.6 points on AutomationBench for 2.43x the cost, which does not clear the upgrade rule. Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **Documents from supplied facts** (Drafts, summaries, slides and reports from supplied facts): GPT-6 Luna max ($0.07, 1445  Elo). Upgrade: Sol max GDPval 1608/$0.72 adds163  Elo over Luna max1445/$0.07 for10.29x cost:48.5  Elo per doubling, below75. Upgrade only for a failed workload check, not on this value rule..
 - **People, messages, money, records** (Names, messages, payments and records checked against sources): GPT-6.1 Sol low ($0.16, 38). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **Computer use and browser work** (Clicking through web apps, forms and portals with checked entries): GPT-6 Luna max ($0.22, 49%). Upgrade: No routine upgrade pays in the historical approximate vendor chart. No claim of must-succeed browser reliability.
@@ -147,6 +147,7 @@ Billing credits do not change benchmark costs, token prices or subscription usag
 - https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium
 - https://artificialanalysis.ai/models/claude-fable-5-2
 - https://artificialanalysis.ai/models/gemini-4-hydrogen
+- https://artificialanalysis.ai/models/gpt-6-1-terra
 
 ## Review status
 Cloud comparisons use the AA v5.0.1 cost basket. Incomplete rows retain dated history. GDPval-AA Elo, SciCode and no-tools HLE retain the separate v4.3.2 scores and cost basket. Local results are frozen. Restricted-access Carbon is recorded separately.
