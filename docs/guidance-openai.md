@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: fc6d5222d5691d07d143924615e3bb66e502b880682c7fbd9db64cd716c7226b
+Revision: a67df0d485fc5a28f2d84ab53e0971932116a7ef1d0fbe7d91cb283478719c3f
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -20,7 +20,7 @@ GPT-6.1 Terra at medium effort. For ordinary branching tool workflows: Automatio
 - **Agentic coding** (Multi-file changes, debugging and repository work): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule..
 - **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule..
 - **Research and reasoning** (Math and analysis with independently checked answers, no automatic factual claims): GPT-6.1 Sol low ($0.13, 47%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
-- **General agentic judgment** (Branching tool-assisted requests; tool-free writing and facts use their specific rows): GPT-6.1 Terra medium ($0.17, 38) Work/Codex/API only; not ChatGPT Chat.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
+- **General agentic judgment** (Branching tool-assisted requests; tool-free writing and facts use their specific rows): GPT-6.1 Sol xhigh ($0.76, 52) Work/Codex/API only; not ChatGPT Chat.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 
 ## Team LM Studio server (default loaded model)
 - **Mechanical text work** (Fixed supplied-input classification, parsing and reformatting with code checks): Gemma 4 26B-A4B ($0) for long context, vision, and reformatting. Qwen3-14B 6-bit ($0) on client laptops for strict JSON extraction and triage.

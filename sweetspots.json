@@ -434,50 +434,43 @@
    "task": "General agentic judgment",
    "examples": "Branching tool-assisted requests; tool-free writing and facts use their specific rows",
    "bench": "index",
-   "best": "GPT-6.1 Terra medium for ordinary branching tool workflows at $0.17 (AutomationBench 58%). Use Sol low for factual reliability and Sol xhigh for coding. API cost is not a subscription savings measurement.",
+   "best": "GPT-6.1 Sol xhigh for general agentic judgment at $0.76 (index 52). Terra high is the cheaper choice at $0.26 (index 42.4). Use Sol low for factual reliability. API cost is not a subscription savings measurement.",
    "avoid": "Do not infer subscription usage or real-workload success from API benchmark cost. Use the facts row when names, dates or money must be correct.",
    "avoid_settings": [],
    "vendors": {
     "Anthropic": {
-     "pick": "Sonnet 5.5 medium ($0.78, index 31), for branching SaaS and tool workflows (AutomationBench 55%). Use Opus low for factual recall.",
+     "pick": "Haiku 5.5 xhigh ($0.25, index 35), for branching SaaS and tool workflows. It scores higher than Sonnet 5.5 medium at 0.32x the cost. Use Opus low for factual recall.",
      "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-     "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
      "budget": "Haiku 5.5 high ($0.16, 30.0)",
      "chart": {
-      "recommended": "Sonnet 5.5 medium",
+      "recommended": "Haiku 5.5 xhigh",
       "budget": "Haiku 5.5 high"
      },
      "callouts": [
-      "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
-      "Smaller model beats larger: Haiku 5.5 high ($0.16, 30.0) scores at least as well as Sonnet 5.5 low ($0.51, 26.0).",
-      "Cheaper elsewhere: OpenAI GPT-6.1 Sol low scores 35.0 vs 31.0 at $0.16 per task, 21% of the cost. API cost, not subscription usage."
+      "Cheaper elsewhere: OpenAI GPT-6.1 Sol low scores 35.0 vs 35.0 at $0.16 per task, 64% of the cost. API cost, not subscription usage."
      ]
     },
     "OpenAI": {
-     "pick": "GPT-6.1 Terra medium ($0.17, 38) Work/Codex/API only; not ChatGPT Chat.",
+     "pick": "GPT-6.1 Sol xhigh ($0.76, 52) Work/Codex/API only; not ChatGPT Chat.",
      "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-     "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
-     "budget": "GPT-6.1 Terra low ($0.07, 29.4)",
+     "budget": "GPT-6.1 Sol low ($0.16, 35.0)",
+     "mid": "GPT-6.1 Sol medium ($0.36, 46.0)",
      "chart": {
-      "recommended": "GPT-6.1 Terra medium",
-      "budget": "GPT-6.1 Terra low"
-     },
-     "callouts": [
-      "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade."
-     ]
+      "recommended": "GPT-6.1 Sol xhigh",
+      "budget": "GPT-6.1 Sol low",
+      "mid": "GPT-6.1 Sol medium"
+     }
     },
     "Google": {
-     "pick": "Gemini 4 Hydrogen medium ($0.80, 41.23) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-     "upgrade": "Upgrade only after a failed workload check.",
-     "exception": "Use the branching-tool benchmark for this workflow. Hydrogen high buys 2.43 AutomationBench points over medium at 2.35× the API task cost.",
-     "budget": "Gemini 4 Hydrogen low ($0.29, 26.89)",
+     "pick": "Gemini 4 Hydrogen high ($1.87, 50.79) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
+     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+     "budget": "Gemini 4 Hydrogen medium ($0.80, 41.23)",
      "chart": {
-      "recommended": "Gemini 4 Hydrogen medium",
-      "budget": "Gemini 4 Hydrogen low"
+      "recommended": "Gemini 4 Hydrogen high",
+      "budget": "Gemini 4 Hydrogen medium"
      },
      "callouts": [
-      "Rule exception: Use the branching-tool benchmark for this workflow. Hydrogen high buys 2.43 AutomationBench points over medium at 2.35× the API task cost.",
-      "Cheaper elsewhere: OpenAI GPT-6.1 Terra high scores 42.4 vs 41.23 at $0.26 per task, 33% of the cost. API cost, not subscription usage."
+      "Cheaper elsewhere: OpenAI GPT-6.1 Sol xhigh scores 52.0 vs 50.79 at $0.76 per task, 41% of the cost. API cost, not subscription usage."
      ]
     },
     "Local": {
