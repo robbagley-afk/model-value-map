@@ -275,8 +275,8 @@ const VENDORS=["Anthropic","OpenAI","Google","xAI","Local"];
 const DEFAULT_VENDORS=VENDORS.filter(v=>v!=="xAI");
 const VLABEL={xAI:"Grok (xAI)",Local:"Local models"};
 const VCOL={Anthropic:"--v-anthropic",OpenAI:"--v-openai",Google:"--v-google",xAI:"--v-xai",Local:"--v-local"};
-const TIER={"GPT-6.1 Terra":"mid","Gemini 4 Argon":"flag","Gemini 4 Hydrogen":"mid","Fable 5.1":"flag","Opus 5.5":"flag","GPT-6 Astra":"flag","Sonnet 5.5":"mid","GPT-6.1 Sol":"mid","Gemini 3.8 Flash":"mid","Grok 4.7":"flag","Grok 4.6":"mid","Haiku 5.5":"small","GPT-6 Luna":"small","Gemma 4 26B-A4B":"small","Haiku 4.5":"small"};
-const MODEL_SLOT={"GPT-6.1 Terra":"--m2","Gemini 4 Argon":"--m2","Gemini 4 Hydrogen":"--m3","Fable 5.1":"--m4","Sonnet 5.5":"--m1","Opus 5.5":"--m2","Haiku 5.5":"--m3","Haiku 4.5":"--m4","GPT-6.1 Sol":"--m1","GPT-6 Astra":"--m2","GPT-6 Luna":"--m3","Gemini 3.8 Flash":"--m1","Grok 4.7":"--m2","Grok 4.6":"--m1","Gemma 4 26B-A4B":"--m4"};
+const TIER={"GPT-6.1 Terra":"mid","Gemini 4 Argon":"flag","Gemini 4 Hydrogen":"mid","Fable 5.1":"flag","Fable 5.2":"flag","Opus 5.5":"flag","GPT-6 Astra":"flag","Sonnet 5.5":"mid","GPT-6.1 Sol":"mid","Gemini 3.8 Flash":"mid","Grok 4.7":"flag","Grok 4.6":"mid","Haiku 5.5":"small","GPT-6 Luna":"small","Gemma 4 26B-A4B":"small","Haiku 4.5":"small"};
+const MODEL_SLOT={"GPT-6.1 Terra":"--m2","Gemini 4 Argon":"--m2","Gemini 4 Hydrogen":"--m3","Fable 5.1":"--m4","Fable 5.2":"--m4","Sonnet 5.5":"--m1","Opus 5.5":"--m2","Haiku 5.5":"--m3","Haiku 4.5":"--m4","GPT-6.1 Sol":"--m1","GPT-6 Astra":"--m2","GPT-6 Luna":"--m3","Gemini 3.8 Flash":"--m1","Grok 4.7":"--m2","Grok 4.6":"--m1","Gemma 4 26B-A4B":"--m4"};
 const EFF=["none","reasoning","low","medium","high","xhigh","max"];
 const st={bench:"index",vendors:new Set(DEFAULT_VENDORS),src:"aa",task:null};
 try{const s=JSON.parse(localStorage.getItem("mvm")||"null");if(s){st.bench=s.bench||st.bench;st.src=s.src||st.src;st.task=s.task||null}}catch(e){}
