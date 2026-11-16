@@ -30,7 +30,8 @@
       },
       "legacy_cost": 2.37,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 7.6
     },
     {
       "vendor": "Anthropic",
@@ -60,7 +61,8 @@
       },
       "legacy_cost": 2.98,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 9.4
     },
     {
       "vendor": "Anthropic",
@@ -90,7 +92,8 @@
       },
       "legacy_cost": 3.91,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 13.4
     },
     {
       "vendor": "Anthropic",
@@ -120,7 +123,8 @@
       },
       "legacy_cost": 5.98,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 18.7
     },
     {
       "vendor": "Anthropic",
@@ -150,7 +154,8 @@
       },
       "legacy_cost": 7.63,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 22.0
     },
     {
       "vendor": "Anthropic",
@@ -180,7 +185,8 @@
       },
       "legacy_cost": 0.02,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 2.3
     },
     {
       "vendor": "Anthropic",
@@ -210,7 +216,8 @@
       },
       "legacy_cost": 0.05,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 4.0
     },
     {
       "vendor": "Anthropic",
@@ -240,7 +247,8 @@
       },
       "legacy_cost": 0.08,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 6.5
     },
     {
       "vendor": "Anthropic",
@@ -270,7 +278,8 @@
       },
       "legacy_cost": 0.12,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 9.8
     },
     {
       "vendor": "Anthropic",
@@ -300,7 +309,8 @@
       },
       "legacy_cost": 0.21,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 14.6
     },
     {
       "vendor": "Anthropic",
@@ -330,7 +340,8 @@
       },
       "legacy_cost": 0.55,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 3.0
     },
     {
       "vendor": "Anthropic",
@@ -360,7 +371,8 @@
       },
       "legacy_cost": 1.34,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 6.9
     },
     {
       "vendor": "Anthropic",
@@ -390,7 +402,8 @@
       },
       "legacy_cost": 1.82,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 9.3
     },
     {
       "vendor": "Anthropic",
@@ -420,7 +433,8 @@
       },
       "legacy_cost": 3.46,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 15.6
     },
     {
       "vendor": "Anthropic",
@@ -450,7 +464,8 @@
       },
       "legacy_cost": 5.98,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 24.9
     },
     {
       "vendor": "Anthropic",
@@ -480,7 +495,8 @@
       },
       "legacy_cost": 0.35,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 2.6
     },
     {
       "vendor": "Anthropic",
@@ -510,7 +526,8 @@
       },
       "legacy_cost": 0.48,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 4.1
     },
     {
       "vendor": "Anthropic",
@@ -540,7 +557,8 @@
       },
       "legacy_cost": 0.88,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 6.9
     },
     {
       "vendor": "Anthropic",
@@ -570,7 +588,8 @@
       },
       "legacy_cost": 2.01,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 14.2
     },
     {
       "vendor": "Anthropic",
@@ -600,7 +619,8 @@
       },
       "legacy_cost": 5.46,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 31.3
     },
     {
       "vendor": "OpenAI",
@@ -630,7 +650,8 @@
       },
       "legacy_cost": 0.82,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 3.4
     },
     {
       "vendor": "OpenAI",
@@ -660,7 +681,8 @@
       },
       "legacy_cost": 1.54,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 6.9
     },
     {
       "vendor": "OpenAI",
@@ -690,7 +712,8 @@
       },
       "legacy_cost": 1.73,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 9.1
     },
     {
       "vendor": "OpenAI",
@@ -720,7 +743,8 @@
       },
       "legacy_cost": 2.31,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 11.4
     },
     {
       "vendor": "OpenAI",
@@ -750,7 +774,8 @@
       },
       "legacy_cost": 3.26,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 21.0
     },
     {
       "vendor": "OpenAI",
@@ -780,7 +805,8 @@
       },
       "legacy_cost": 0.0045,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 0.6
     },
     {
       "vendor": "OpenAI",
@@ -810,7 +836,8 @@
       },
       "legacy_cost": 0.02,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 3.5
     },
     {
       "vendor": "OpenAI",
@@ -840,7 +867,8 @@
       },
       "legacy_cost": 0.03,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 5.7
     },
     {
       "vendor": "OpenAI",
@@ -870,7 +898,8 @@
       },
       "legacy_cost": 0.04,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 7.3
     },
     {
       "vendor": "OpenAI",
@@ -900,7 +929,8 @@
       },
       "legacy_cost": 0.07,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 12.1
     },
     {
       "vendor": "OpenAI",
@@ -930,7 +960,8 @@
       },
       "legacy_cost": 0.13,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 1.9
     },
     {
       "vendor": "OpenAI",
@@ -960,7 +991,8 @@
       },
       "legacy_cost": 0.21,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 4.4
     },
     {
       "vendor": "OpenAI",
@@ -990,7 +1022,8 @@
       },
       "legacy_cost": 0.32,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 7.6
     },
     {
       "vendor": "OpenAI",
@@ -1020,7 +1053,8 @@
       },
       "legacy_cost": 0.39,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 9.8
     },
     {
       "vendor": "OpenAI",
@@ -1050,7 +1084,8 @@
       },
       "legacy_cost": 0.72,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 22.7
     },
     {
       "vendor": "Google",
@@ -1114,7 +1149,8 @@
       },
       "legacy_cost": 2.59,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 11.8
     },
     {
       "vendor": "Google",
@@ -1148,7 +1184,8 @@
       },
       "legacy_cost": 3.49,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 14.5
     },
     {
       "vendor": "xAI",
@@ -1217,7 +1254,8 @@
       "checked": "2026-11-07",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the token rates shown on the cited comparison; no additional discount applied.",
       "frozen_since": "2026-11-07",
-      "aa_version": "v5.0.1"
+      "aa_version": "v5.0.1",
+      "time": 13.9
     },
     {
       "vendor": "xAI",
@@ -1247,7 +1285,8 @@
       },
       "legacy_cost": 1.03,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 10.2
     },
     {
       "vendor": "xAI",
@@ -1277,7 +1316,8 @@
       },
       "legacy_cost": 2.36,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 22.2
     },
     {
       "vendor": "xAI",
@@ -1307,7 +1347,8 @@
       },
       "legacy_cost": 3.24,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 25.7
     },
     {
       "vendor": "Local",
@@ -1376,7 +1417,8 @@
       },
       "legacy_cost": 1.62,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 29.5
     },
     {
       "vendor": "Google",
@@ -1397,7 +1439,8 @@
       "reported_cost_multiplier": 1,
       "pricing_checked": "2026-10-15",
       "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
-      "reported_pricing_basis": "AA v5.0.1 cost at standard $4 input/$20 output/$0.20 cached input per million. AA shows $4.31 at the introductory 50% rate; the standard-rate figure is double that. Introductory estimate uses the verified 50% rate ratio once."
+      "reported_pricing_basis": "AA v5.0.1 cost at standard $4 input/$20 output/$0.20 cached input per million. AA shows $4.31 at the introductory 50% rate; the standard-rate figure is double that. Introductory estimate uses the verified 50% rate ratio once.",
+      "time": 27.6
     },
     {
       "vendor": "OpenAI",
@@ -1427,7 +1470,8 @@
       },
       "legacy_cost": 0.1,
       "aa_version": "v5.0.1",
-      "frozen_since": "2026-11-07"
+      "frozen_since": "2026-11-07",
+      "time": 2.8
     },
     {
       "vendor": "Anthropic",
@@ -1445,7 +1489,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 15.3
     },
     {
       "vendor": "Anthropic",
@@ -1463,7 +1508,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 5.5
     },
     {
       "vendor": "Anthropic",
@@ -1481,7 +1527,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 41.7
     },
     {
       "vendor": "Anthropic",
@@ -1499,7 +1546,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 7.1
     },
     {
       "vendor": "Anthropic",
@@ -1517,7 +1565,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 26.6
     },
     {
       "vendor": "Google",
@@ -1535,7 +1584,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 8.3
     },
     {
       "vendor": "Google",
@@ -1553,7 +1603,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 1.4
     },
     {
       "vendor": "Google",
@@ -1571,7 +1622,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 3.8
     },
     {
       "vendor": "Google",
@@ -1589,7 +1641,8 @@
       "checked": "2026-11-14",
       "aa_version": "v5.0.1",
       "frozen_since": "2026-11-14",
-      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates."
+      "reported_pricing_basis": "AA v5.0.1 cost per Intelligence Index task at the listed API rates.",
+      "time": 14.7
     },
     {
       "vendor": "OpenAI",
@@ -1606,7 +1659,8 @@
       "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
       "checked": "2026-11-15",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
-      "aa_version": "v5.0.1"
+      "aa_version": "v5.0.1",
+      "time": 1.1
     },
     {
       "vendor": "OpenAI",
@@ -1623,7 +1677,8 @@
       "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
       "checked": "2026-11-15",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
-      "aa_version": "v5.0.1"
+      "aa_version": "v5.0.1",
+      "time": 4.1
     },
     {
       "vendor": "OpenAI",
@@ -1640,7 +1695,8 @@
       "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
       "checked": "2026-11-15",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
-      "aa_version": "v5.0.1"
+      "aa_version": "v5.0.1",
+      "time": 6.3
     },
     {
       "vendor": "OpenAI",
@@ -1657,7 +1713,8 @@
       "src": "https://artificialanalysis.ai/models/gpt-6-1-terra",
       "checked": "2026-11-15",
       "reported_pricing_basis": "AA cost per Intelligence Index task using the cited comparison's first-party Standard API token rates; no promotional discount applied.",
-      "aa_version": "v5.0.1"
+      "aa_version": "v5.0.1",
+      "time": 13.8
     }
   ],
   "vendor_charts": {
@@ -2498,5 +2555,10 @@
         "Fable 5.2"
       ]
     }
-  ]
+  ],
+  "time_source": {
+    "src": "https://artificialanalysis.ai/models/<model>",
+    "checked": "2026-11-15",
+    "note": "AA \"Time per Task\": inference time in minutes per Intelligence Index task, from each model page FAQ. Local models have no publicly available API."
+  }
 }
