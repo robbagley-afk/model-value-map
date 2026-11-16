@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-11-14. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 550158128a145800901d5c033c204162539bce028d0a9908e4bbb9bfa9c1dd7b
+Revision: e5ba31ae6974372fa3f4ce8c720b6d267aa2aa772170de142cdcbccab84143de
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -100,6 +100,7 @@ Expired offer notices disappear within seven days on live pages; new guidance om
   USD per million input/output/cached-input tokens: 2 / 10 / 0.1; standard from 2026-12-01: 4 / 20 / 0.2.
   Conservative UTC display cutoff because the vendor states December 1 without a timezone; vendor billing terms remain authoritative. Exact offer start timestamp is not specified. AA v5.0.1 reported Gemini 4 Argon High cost $9.95 uses standard $4 input/$20 output/$0.20 cached input per million tokens. Uniform introductory rates are 50% of those rates, so the current unchanged-token estimate is $4.97 through November 30 and $9.95 from December 1. These are task-cost estimates, not fresh benchmark measurements or subscription savings. Historical v4.3.2 costs stay frozen separately. Source: https://ai.google.dev/gemini-api/docs/pricing?hl=en
   high: reported cost $9.95/task at 100% of standard token rates; introductory estimate $4.97/task; standard estimate $9.95/task. Apply the token-rate ratio once.
+  medium: reported cost $8.63/task at 100% of standard token rates; introductory estimate $4.32/task; standard estimate $8.63/task. Apply the token-rate ratio once.
 
 ## Subscription usage offers (not API discounts)*
 Goal: maximize useful completed work within the applicable usage limit. API cost per benchmark task is not a measurement of subscription allowance. A 50% allowance increase corresponds to about 33% lower effective cost per equal unit; 50% less counted usage can double eligible capacity. Weekly caps, eligibility and task quality still constrain value.
@@ -142,6 +143,7 @@ Billing credits do not change benchmark costs, token prices or subscription usag
 - https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemini-3-8-flash-low
 - https://artificialanalysis.ai/models/qwen3-14b-instruct
 - https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-1-sol-medium
+- https://artificialanalysis.ai/models/gemini-4-argon
 - https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium
 - https://artificialanalysis.ai/models/claude-fable-5-2
 - https://artificialanalysis.ai/models/gemini-4-hydrogen

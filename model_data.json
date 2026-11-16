@@ -1379,6 +1379,27 @@
       "frozen_since": "2026-11-07"
     },
     {
+      "vendor": "Google",
+      "model": "Gemini 4 Argon",
+      "effort": "medium",
+      "cost": 8.63,
+      "index": 47.6,
+      "tb": 55.1,
+      "ab": 75.8,
+      "gdp": null,
+      "omni": 41.1,
+      "sci": null,
+      "hle": null,
+      "src": "https://artificialanalysis.ai/models/gemini-4-argon",
+      "checked": "2026-11-15",
+      "aa_version": "v5.0.1",
+      "promotion_id": "google-argon-intro-2026",
+      "reported_cost_multiplier": 1,
+      "pricing_checked": "2026-10-15",
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+      "reported_pricing_basis": "AA v5.0.1 cost at standard $4 input/$20 output/$0.20 cached input per million. AA shows $4.31 at the introductory 50% rate; the standard-rate figure is double that. Introductory estimate uses the verified 50% rate ratio once."
+    },
+    {
       "vendor": "OpenAI",
       "model": "GPT-6.1 Terra",
       "effort": "medium",
