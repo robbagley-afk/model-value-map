@@ -484,7 +484,7 @@ function draw(){
     });
     const last=ps[ps.length-1];if(!narrow){const lx=Math.min((last.cost>0?X(last.cost):m.l+lane/2)+10,W-m.r+8),w=mo.length*7;let ly=Y(last.score)+4;
       // Keep the name next to its own top point: right side first, then left side, then farther up or down.
-      const lxL=(last.cost>0?X(last.cost):m.l+lane/2)-10,tries=[[lx,0,"start"],[lx,-14,"start"],[lx,14,"start"],[lxL,0,"end"],[lxL,-14,"end"],[lxL,14,"end"],[lx,-28,"start"],[lx,28,"start"]];
+      const lxL=(last.cost>0?X(last.cost):m.l+lane/2)-10,tries=[[lx,0,"start"],[lx,-14,"start"],[lx,14,"start"],[lxL,0,"end"],[lxL,-14,"end"],[lxL,14,"end"],[lx,-28,"start"],[lx,28,"start"],[lxL,-28,"end"],[lxL,28,"end"],[lx,-42,"start"],[lx,42,"start"],[lxL,-42,"end"],[lxL,42,"end"],[lx,-56,"start"],[lx,56,"start"],[lxL,-56,"end"],[lxL,56,"end"]];
       for(const [tx,d,an] of tries){const bx=an==="end"?tx-w:tx;if(bx>=m.l&&free(bx,ly+d-11,w,14)){add("text",{x:tx,y:ly+d,class:"mdl","text-anchor":an},mo);break}}}
   });
   const segments=[];
