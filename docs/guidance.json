@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-15",
- "revision": "045588ac949ceed900dd3e5e47c38ff0f18e0fbe8cd431b9847ae6bbea861774",
+ "revision": "f04149d51a6b361905b0b7117211057d63d6e13d7320b2f39f567d7ab319927f",
  "news": [
   {
    "id": "terra-release",
@@ -294,8 +294,7 @@
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
     "exception": "For supplied-input transforms with deterministic output checks, Haiku 5.5 low costs $0.04 per API task. Medium buys 6 general index points at 2.25\u00d7 cost, but the index does not establish a completion gain for this narrower workload.",
     "callouts": [
-     "Rule exception: For supplied-input transforms with deterministic output checks, Haiku 5.5 low costs $0.04 per API task. Medium buys 6 general index points at 2.25\u00d7 cost, but the index does not establish a completion gain for this narrower workload.",
-     "New model not yet placed: Fable 5.1 xhigh ($10.85, 50.0) is tracked but not yet reviewed for this row."
+     "Rule exception: For supplied-input transforms with deterministic output checks, Haiku 5.5 low costs $0.04 per API task. Medium buys 6 general index points at 2.25\u00d7 cost, but the index does not establish a completion gain for this narrower workload."
     ]
    },
    {
@@ -304,7 +303,6 @@
     "upgrade": "Upgrade only after a failed workload check.",
     "budget": "Sonnet 5.5 high ($1.64, 59.4%)",
     "callouts": [
-     "New model not yet placed: Fable 5.1 max ($12.99, 59.4%) is tracked but not yet reviewed for this row.",
      "Cheaper elsewhere: Google Gemini 4 Hydrogen medium scores 72.01% vs 68.0% at $0.80 per task, 26% of the cost. API cost, not subscription usage."
     ]
    },
@@ -312,19 +310,13 @@
     "task": "Documents from supplied facts",
     "pick": "Haiku 5.5 max ($0.21, 1628  Elo)",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "Haiku 5.5 xhigh ($0.12, 1521)",
-    "callouts": [
-     "New model not yet placed: Fable 5.1 max ($7.63, 1764) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "Haiku 5.5 xhigh ($0.12, 1521)"
    },
    {
     "task": "People, messages, money, records",
     "pick": "Fable 5.2 low ($3.10, 62.93) AA tested Anthropic's Default Fallback configuration.",
     "upgrade": "Verify consequential claims against primary sources.",
-    "budget": "Opus 5.5 low ($0.98, 39.0)",
-    "callouts": [
-     "New model not yet placed: Fable 5.1 max ($12.99, 46.0) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "Opus 5.5 low ($0.98, 39.0)"
    },
    {
     "task": "Computer use and browser work",
@@ -336,20 +328,18 @@
    {
     "task": "Agentic coding",
     "pick": "Opus 5.5 high ($3.46, 57%)",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: Fable 5.1 xhigh costs more and scores lower than Opus 5.5 high.",
     "budget": "Sonnet 5.5 high ($1.64, 43.9%)",
     "callouts": [
-     "New model not yet placed: Fable 5.1 xhigh ($10.85, 55.1%) is tracked but not yet reviewed for this row.",
      "Smaller model beats larger: Haiku 5.5 max ($0.41, 32.8%) scores at least as well as Opus 5.5 low ($0.98, 31.3%)."
     ]
    },
    {
     "task": "Small, clear coding fixes",
     "pick": "Opus 5.5 high ($3.46, 57%)",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: Fable 5.1 xhigh costs more and scores lower than Opus 5.5 high.",
     "budget": "Sonnet 5.5 high ($1.64, 43.9%)",
     "callouts": [
-     "New model not yet placed: Fable 5.1 xhigh ($10.85, 55.1%) is tracked but not yet reviewed for this row.",
      "Smaller model beats larger: Haiku 5.5 max ($0.41, 32.8%) scores at least as well as Opus 5.5 low ($0.98, 31.3%)."
     ]
    },
@@ -358,10 +348,7 @@
     "pick": "Haiku 5.5 xhigh ($0.12, 43%) AA-Omniscience 6: independently verify research facts and use the facts row when recall matters.",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
     "mid": "Haiku 5.5 high ($0.08, 37%)",
-    "budget": "Haiku 5.5 low ($0.02, 27%)",
-    "callouts": [
-     "New model not yet placed: Fable 5.1 xhigh ($5.98, 59%) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "Haiku 5.5 low ($0.02, 27%)"
    },
    {
     "task": "General agentic judgment",
@@ -371,7 +358,6 @@
     "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
     "callouts": [
      "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
-     "New model not yet placed: Fable 5.1 xhigh ($10.85, 50.0) is tracked but not yet reviewed for this row.",
      "Smaller model beats larger: Haiku 5.5 high ($0.16, 30.0) scores at least as well as Sonnet 5.5 low ($0.51, 26.0).",
      "Cheaper elsewhere: OpenAI GPT-6.1 Sol low scores 35.0 vs 31.0 at $0.16 per task, 21% of the cost. API cost, not subscription usage."
     ]
@@ -384,36 +370,26 @@
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
     "exception": "Supplied-input transforms have independent schema and content checks. Luna low costs $0.01 and scores 10 on the general index. Sol low scores 35 at $0.16, or 6.25 points per doubling on that general index. Raise effort when the actual transform fails a check.",
     "callouts": [
-     "Rule exception: Supplied-input transforms have independent schema and content checks. Luna low costs $0.01 and scores 10 on the general index. Sol low scores 35 at $0.16, or 6.25 points per doubling on that general index. Raise effort when the actual transform fails a check.",
-     "New model not yet placed: GPT-6 Astra max ($6.24, 57.0) is tracked but not yet reviewed for this row."
+     "Rule exception: Supplied-input transforms have independent schema and content checks. Luna low costs $0.01 and scores 10 on the general index. Sol low scores 35 at $0.16, or 6.25 points per doubling on that general index. Raise effort when the actual transform fails a check."
     ]
    },
    {
     "task": "Scripted relays and tool workflows",
     "pick": "GPT-6.1 Terra low ($0.07, 56.2%) Work/Codex/API only; not ChatGPT Chat.",
     "upgrade": "Terra medium adds 1.6 points on AutomationBench for 2.43x the cost, which does not clear the upgrade rule. Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6 Luna medium ($0.04, 40.5%)",
-    "callouts": [
-     "New model not yet placed: GPT-6 Astra max ($6.24, 68.5%) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "GPT-6 Luna medium ($0.04, 40.5%)"
    },
    {
     "task": "Documents from supplied facts",
     "pick": "GPT-6 Luna max ($0.07, 1445  Elo)",
     "upgrade": "Sol max GDPval 1608/$0.72 adds163  Elo over Luna max1445/$0.07 for10.29x cost:48.5  Elo per doubling, below75. Upgrade only for a failed workload check, not on this value rule.",
-    "budget": "GPT-6 Luna xhigh ($0.04, 1373)",
-    "callouts": [
-     "New model not yet placed: GPT-6 Astra max ($3.26, 1584) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "GPT-6 Luna xhigh ($0.04, 1373)"
    },
    {
     "task": "People, messages, money, records",
     "pick": "GPT-6.1 Sol low ($0.16, 38)",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6.1 Terra low ($0.07, 22.9)",
-    "callouts": [
-     "New model not yet placed: GPT-6 Astra high ($3.24, 45.0) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "GPT-6.1 Terra low ($0.07, 22.9)"
    },
    {
     "task": "Computer use and browser work",
@@ -427,29 +403,20 @@
    {
     "task": "Agentic coding",
     "pick": "GPT-6.1 Sol xhigh ($0.76, 54%)",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6.1 Sol medium ($0.36, 48.0%)",
-    "callouts": [
-     "New model not yet placed: GPT-6 Astra xhigh ($3.66, 59.6%) is tracked but not yet reviewed for this row."
-    ]
+    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule.",
+    "budget": "GPT-6.1 Sol medium ($0.36, 48.0%)"
    },
    {
     "task": "Small, clear coding fixes",
     "pick": "GPT-6.1 Sol xhigh ($0.76, 54%)",
-    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6.1 Sol medium ($0.36, 48.0%)",
-    "callouts": [
-     "New model not yet placed: GPT-6 Astra xhigh ($3.66, 59.6%) is tracked but not yet reviewed for this row."
-    ]
+    "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule.",
+    "budget": "GPT-6.1 Sol medium ($0.36, 48.0%)"
    },
    {
     "task": "Research and reasoning",
     "pick": "GPT-6.1 Sol low ($0.13, 47%)",
     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-    "budget": "GPT-6 Luna max ($0.07, 39%)",
-    "callouts": [
-     "New model not yet placed: GPT-6 Astra xhigh ($2.31, 55%) is tracked but not yet reviewed for this row."
-    ]
+    "budget": "GPT-6 Luna max ($0.07, 39%)"
    },
    {
     "task": "General agentic judgment",
@@ -458,8 +425,7 @@
     "budget": "GPT-6.1 Terra low ($0.07, 29.4)",
     "exception": "This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
     "callouts": [
-     "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade.",
-     "New model not yet placed: GPT-6 Astra max ($6.24, 57.0) is tracked but not yet reviewed for this row."
+     "Rule exception: This pick is scoped to branching tool workflows. The AutomationBench comparison in the relay row drives the pick. General Intelligence Index gains do not establish a tool-workflow upgrade."
     ]
    }
   ],

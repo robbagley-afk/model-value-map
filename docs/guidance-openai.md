@@ -1,6 +1,6 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 9864e1e2f3151aa72653d36c289ca2b0dff368b392de430f4a912b475561f6ea
+Revision: fc6d5222d5691d07d143924615e3bb66e502b880682c7fbd9db64cd716c7226b
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
@@ -17,8 +17,8 @@ GPT-6.1 Terra at medium effort. For ordinary branching tool workflows: Automatio
 - **Documents from supplied facts** (Drafts, summaries, slides and reports from supplied facts): GPT-6 Luna max ($0.07, 1445  Elo). Upgrade: Sol max GDPval 1608/$0.72 adds163  Elo over Luna max1445/$0.07 for10.29x cost:48.5  Elo per doubling, below75. Upgrade only for a failed workload check, not on this value rule..
 - **People, messages, money, records** (Names, messages, payments and records checked against sources): GPT-6.1 Sol low ($0.16, 38). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **Computer use and browser work** (Clicking through web apps, forms and portals with checked entries): GPT-6 Luna max ($0.22, 49%). Upgrade: No routine upgrade pays in the historical approximate vendor chart. No claim of must-succeed browser reliability.
-- **Agentic coding** (Multi-file changes, debugging and repository work): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
-- **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
+- **Agentic coding** (Multi-file changes, debugging and repository work): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule..
+- **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule..
 - **Research and reasoning** (Math and analysis with independently checked answers, no automatic factual claims): GPT-6.1 Sol low ($0.13, 47%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **General agentic judgment** (Branching tool-assisted requests; tool-free writing and facts use their specific rows): GPT-6.1 Terra medium ($0.17, 38) Work/Codex/API only; not ChatGPT Chat.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 

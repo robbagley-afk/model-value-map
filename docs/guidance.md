@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 045588ac949ceed900dd3e5e47c38ff0f18e0fbe8cd431b9847ae6bbea861774
+Revision: f04149d51a6b361905b0b7117211057d63d6e13d7320b2f39f567d7ab319927f
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -23,8 +23,8 @@ GPT-6.1 Terra at medium effort. Reviewed 2026-11-14. For ordinary branching tool
 - **Documents from supplied facts** (Drafts, summaries, slides and reports from supplied facts): Haiku 5.5 max ($0.21, 1628  Elo). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **People, messages, money, records** (Names, messages, payments and records checked against sources): Fable 5.2 low ($3.10, 62.93) AA tested Anthropic's Default Fallback configuration.. Upgrade: Verify consequential claims against primary sources..
 - **Computer use and browser work** (Clicking through web apps, forms and portals with checked entries): Haiku 5.5 xhigh ($0.30, 67.5%). Upgrade: No routine upgrade pays in the historical approximate vendor chart. No claim of must-succeed browser reliability.
-- **Agentic coding** (Multi-file changes, debugging and repository work): Opus 5.5 high ($3.46, 57%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
-- **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): Opus 5.5 high ($3.46, 57%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
+- **Agentic coding** (Multi-file changes, debugging and repository work): Opus 5.5 high ($3.46, 57%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: Fable 5.1 xhigh costs more and scores lower than Opus 5.5 high..
+- **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): Opus 5.5 high ($3.46, 57%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: Fable 5.1 xhigh costs more and scores lower than Opus 5.5 high..
 - **Research and reasoning** (Math and analysis with independently checked answers, no automatic factual claims): Haiku 5.5 xhigh ($0.12, 43%) AA-Omniscience 6: independently verify research facts and use the facts row when recall matters.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **General agentic judgment** (Branching tool-assisted requests; tool-free writing and facts use their specific rows): Sonnet 5.5 medium ($0.78, index 31), for branching SaaS and tool workflows (AutomationBench 55%). Use Opus low for factual recall.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 
@@ -34,8 +34,8 @@ GPT-6.1 Terra at medium effort. Reviewed 2026-11-14. For ordinary branching tool
 - **Documents from supplied facts** (Drafts, summaries, slides and reports from supplied facts): GPT-6 Luna max ($0.07, 1445  Elo). Upgrade: Sol max GDPval 1608/$0.72 adds163  Elo over Luna max1445/$0.07 for10.29x cost:48.5  Elo per doubling, below75. Upgrade only for a failed workload check, not on this value rule..
 - **People, messages, money, records** (Names, messages, payments and records checked against sources): GPT-6.1 Sol low ($0.16, 38). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **Computer use and browser work** (Clicking through web apps, forms and portals with checked entries): GPT-6 Luna max ($0.22, 49%). Upgrade: No routine upgrade pays in the historical approximate vendor chart. No claim of must-succeed browser reliability.
-- **Agentic coding** (Multi-file changes, debugging and repository work): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
-- **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
+- **Agentic coding** (Multi-file changes, debugging and repository work): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule..
+- **Small, clear coding fixes** (Clear-repro fixes and work to a spec, verified with relevant tests): GPT-6.1 Sol xhigh ($0.76, 54%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule..
 - **Research and reasoning** (Math and analysis with independently checked answers, no automatic factual claims): GPT-6.1 Sol low ($0.13, 47%). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 - **General agentic judgment** (Branching tool-assisted requests; tool-free writing and facts use their specific rows): GPT-6.1 Terra medium ($0.17, 38) Work/Codex/API only; not ChatGPT Chat.. Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
 
