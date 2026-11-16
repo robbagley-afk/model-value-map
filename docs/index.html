@@ -52,6 +52,9 @@ button.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)
 .cardhead .meta{color:var(--ink-3);font-size:13px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
 .legend span{display:inline-flex;gap:6px;align-items:center}
+.fctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 10px}
+.fcap{flex:1 1 260px;font-size:13px;line-height:1.45;color:var(--ink-2)}
+button.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .chartbox{position:relative;width:100%;min-width:0}
 svg{display:block;width:100%;height:auto;font-family:var(--sans)}
 svg text,svg polyline{pointer-events:none}
@@ -179,6 +182,11 @@ button.chip{border-width:2px;font-weight:600}
 
 <section class="card" aria-live="polite">
   <div class="cardhead"><h3 id="ctitle"></h3><span class="meta" id="cmeta">Score vs. cost</span></div>
+  <div class="fctl" id="fctl" role="group" aria-label="Frontier line options">
+    <button type="button" class="chip" id="fline" aria-pressed="true">Frontier line</button>
+    <button type="button" class="chip" id="flabels" aria-pressed="false">Frontier labels only</button>
+    <span class="fcap" id="fcap">The dashed frontier line joins the best score at each price. A model below or to the right of it is beaten on both cost and score by a model on the line. &ldquo;Frontier labels only&rdquo; shows names just for models on the line.</span>
+  </div>
   <div class="legend" id="legend"></div>
   <div class="chartbox" id="chartbox"><svg id="chart" role="img" aria-labelledby="ctitle"></svg><div class="tip" id="tip" hidden></div></div>
   <p class="note" id="cnote"></p>
@@ -279,7 +287,7 @@ const VCOL={Anthropic:"--v-anthropic",OpenAI:"--v-openai",Google:"--v-google",xA
 const TIER={"GPT-6.1 Terra":"mid","Gemini 4 Argon":"flag","Gemini 4 Hydrogen":"mid","Fable 5.1":"flag","Fable 5.2":"flag","Opus 5.5":"flag","GPT-6 Astra":"flag","Sonnet 5.5":"mid","GPT-6.1 Sol":"mid","Gemini 3.8 Flash":"mid","Grok 4.7":"flag","Grok 4.6":"mid","Haiku 5.5":"small","GPT-6 Luna":"small","Gemma 4 26B-A4B":"small","Haiku 4.5":"small"};
 const MODEL_SLOT={"GPT-6.1 Terra":"--m2","Gemini 4 Argon":"--m2","Gemini 4 Hydrogen":"--m3","Fable 5.1":"--m4","Fable 5.2":"--m4","Sonnet 5.5":"--m1","Opus 5.5":"--m2","Haiku 5.5":"--m3","Haiku 4.5":"--m4","GPT-6.1 Sol":"--m1","GPT-6 Astra":"--m2","GPT-6 Luna":"--m3","Gemini 3.8 Flash":"--m1","Grok 4.7":"--m2","Grok 4.6":"--m1","Gemma 4 26B-A4B":"--m4"};
 const EFF=["none","reasoning","low","medium","high","xhigh","max"];
-const st={bench:"index",vendors:new Set(DEFAULT_VENDORS),src:"aa",task:null};
+const st={bench:"index",vendors:new Set(DEFAULT_VENDORS),src:"aa",task:null,fline:true,flabels:false};
 try{const s=JSON.parse(localStorage.getItem("mvm")||"null");if(s){st.bench=s.bench||st.bench;st.src=s.src||st.src;st.task=s.task||null}}catch(e){}
 function save(){try{localStorage.setItem("mvm",JSON.stringify({bench:st.bench,src:st.src,task:st.task,vendors:[...st.vendors]}))}catch(e){}}
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -434,7 +442,7 @@ function draw(){
   $("cmeta").textContent=b.src==="aa"?"Artificial Analysis \u00b7 "+(b.lower?"minutes per Index task, lower is better":"cost per Index task"):"Vendor chart, read from image \u00b7 cost per attempt";
   const svg=$("chart");svg.innerHTML="";const W=Math.max(240,$("chartbox").clientWidth),H=Math.round(Math.min(520,Math.max(320,W*0.55)));
   svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
-  const narrow=W<560,m={l:narrow?44:56,r:narrow?16:120,t:16,b:46};
+  const narrow=W<560;$("flabels").hidden=narrow;const m={l:narrow?44:56,r:narrow?16:120,t:16,b:46};
   const local=every.filter(p=>p.cost===0),paid=all.filter(p=>p.cost>0),scaleP=every.filter(p=>p.cost>0);
   const lane=local.length?(narrow?40:56):0;
   if(!every.length){svg.innerHTML=`<text x="${W/2}" y="${H/2}" text-anchor="middle" class="axl">No data on this test yet.</text>`;$("legend").innerHTML="";$("cnote").textContent="";table();spots();return}
@@ -458,9 +466,9 @@ function draw(){
   ghosts.forEach(p=>{const x=p.cost>0?X(p.cost):m.l+lane/2-2;const c=add("circle",{cx:x,cy:Y(p.score),r:4,fill:css("--grid"),stroke:css("--ink-3"),"stroke-width":1,opacity:.8});const ti=document.createElementNS(ns,"title");ti.textContent=`${p.model} ${p.effort}: ${p.score}${b.unit} at ${fmt$(p.cost)} (filtered out)`;c.appendChild(ti)});
   // frontier
   const f=frontier(paid),task=chartTask();
-  if(f.length>1)add("polyline",{points:f.map(p=>`${X(p.cost)},${Y(p.score)}`).join(" "),fill:"none",stroke:css("--ink-3"),"stroke-width":1.5,"stroke-dasharray":"4 4"});
+  if(st.fline&&f.length>1)add("polyline",{points:f.map(p=>`${X(p.cost)},${Y(p.score)}`).join(" "),fill:"none",stroke:css("--ink-3"),"stroke-width":1.5,"stroke-dasharray":"4 4"});
   // series
-  const models=[...new Set(all.map(p=>p.model))];
+  const models=[...new Set(all.map(p=>p.model))];const onF=new Set(f.map(p=>p.model));
   // Same vendor and size class share color and shape, so every model after the first in that group is drawn hollow.
   const kind=mo=>{const p=all.find(q=>q.model===mo);return p.vendor+"|"+(p.vendor==="Local"?"local":TIER[mo]||"mid")};
   const hollow=new Set(models.filter((mo,i)=>models.slice(0,i).some(o=>kind(o)===kind(mo))));
@@ -486,7 +494,7 @@ function draw(){
       const show=()=>Ladder.show(pt,p,ladderContext(),{left:svg.getBoundingClientRect().left+x*svg.getBoundingClientRect().width/W,bottom:svg.getBoundingClientRect().top+y*svg.getBoundingClientRect().width/W});
       tipPts.push({x,y,show,pt,p});
     });
-    const last=ps[ps.length-1];if(!narrow){const lx=Math.min((last.cost>0?X(last.cost):m.l+lane/2)+10,W-m.r+8),w=mo.length*7;let ly=Y(last.score)+4;
+    const last=ps[ps.length-1];if(!narrow&&(!st.flabels||onF.has(mo))){const lx=Math.min((last.cost>0?X(last.cost):m.l+lane/2)+10,W-m.r+8),w=mo.length*7;let ly=Y(last.score)+4;
       // Keep the name next to its own top point: right side first, then left side, then farther up or down.
       const lxL=(last.cost>0?X(last.cost):m.l+lane/2)-10,tries=[[lx,0,"start"],[lx,-14,"start"],[lx,14,"start"],[lxL,0,"end"],[lxL,-14,"end"],[lxL,14,"end"],[lx,-28,"start"],[lx,28,"start"],[lxL,-28,"end"],[lxL,28,"end"],[lx,-42,"start"],[lx,42,"start"],[lxL,-42,"end"],[lxL,42,"end"],[lx,-56,"start"],[lx,56,"start"],[lxL,-56,"end"],[lxL,56,"end"]];
       for(let k=70;k<=210;k+=14)tries.push([lx,-k,"start"],[lx,k,"start"],[lxL,-k,"end"],[lxL,k,"end"]);
@@ -508,9 +516,13 @@ function draw(){
   else [...new Set(all.map(p=>p.vendor))].forEach(v=>lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${css(VCOL[v])}"></i>${v}</span>`));
   if(ghosts.length)lg.insertAdjacentHTML("beforeend",`<span><i class="sw" style="background:${css('--grid')};border:1px solid ${css('--ink-3')}"></i>Other vendors (filtered out)</span>`);
   if(!single&&hollow.size)lg.insertAdjacentHTML("beforeend",`<span>hollow marker = ${[...hollow].map(esc).join(", ")}</span>`);
-  lg.insertAdjacentHTML("beforeend",`<span>&#9670; flagship &middot; &#9679; mid &middot; &#9650; small</span><span>&#9711; ring = Recommended &middot; dashed ring = Mid-value &middot; &#9633; square = Budget choice</span><span>- - ${b.lower?"fastest":"best score"} at each price</span><span><i class="sw" style="background:${css(VCOL.Local)}"></i>large dot = local model</span>`);
+  lg.insertAdjacentHTML("beforeend",`<span>&#9670; flagship &middot; &#9679; mid &middot; &#9650; small</span><span>&#9711; ring = Recommended &middot; dashed ring = Mid-value &middot; &#9633; square = Budget choice</span>${st.fline?`<span>- - ${b.lower?"fastest":"best score"} at each price</span>`:""}<span><i class="sw" style="background:${css(VCOL.Local)}"></i>large dot = local model</span>`);
   $("cnote").textContent=pickCaption(task)+(b.src==="vendor"?" Vendor charts are read from images, so values are approximate.":"")+(b.src==="vendor"&&DATA.vendor_charts[b.key].source_note?" "+DATA.vendor_charts[b.key].source_note:"")+(!all.length?` None of the selected vendors has a scored point on this test. Gray markers show the others.`:"")+(missing.length?` Not plotted: ${[...new Set(missing.map(p=>p.model))].join(", ")} has no published ${b.name} score.`:"")+(nocost.length?` Not plotted, no published cost: ${nocost.map(p=>p.model+" "+p.effort+" ("+p.score+b.unit+")").join(", ")}.`:"");
   table();spots();
+}
+function fctl(){
+  [["fline","fline"],["flabels","flabels"]].forEach(([id,k])=>{const b=$(id);b.setAttribute("aria-pressed",st[k]);
+    b.onclick=()=>{st[k]=!st[k];b.setAttribute("aria-pressed",st[k]);draw()}});
 }
 function pickCaption(task){
   if(!task)return "";const rows=VENDORS.filter(v=>st.vendors.has(v)).map(v=>[v,task.vendors[v]&&task.vendors[v].chart,task.vendors[v]]).filter(([v,c])=>c);
@@ -583,7 +595,7 @@ function foot(){
   $("foot").innerHTML=`<div>${DATA.notes}</div>${DATA.aa.filter(p=>p.vendor==="Local").map(p=>`<div>${p.model}: ${p.note}</div>`).join("")}<div>Sources, checked ${DATA.updated}: ${[...new Set(srcs)].map(u=>`<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https:\/\/(www\.)?/,"").replace("models/comparisons/","")}</a>`).join(" · ")}</div><div>Reviewed weekly on Saturday. Text version for AI tools: <a href="guidance.md">guidance.md</a>.</div>`;
   if(DATA.review){const n=document.createElement('p');n.textContent=DATA.review.note+' Pending source refresh: '+DATA.review.pending_points.join(', ');$("foot").append(n);}
 }
-ui();foot();gemma();share();draw();
+fctl();ui();foot();gemma();share();draw();
 Promotions.start(()=>{ui();draw()});
 let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(draw,120)});
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{ui();draw()});
