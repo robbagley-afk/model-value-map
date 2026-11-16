@@ -2560,5 +2560,18 @@
     "src": "https://artificialanalysis.ai/models/<model>",
     "checked": "2026-11-15",
     "note": "AA \"Time per Task\": inference time in minutes per Intelligence Index task, from each model page FAQ. Local models have no publicly available API."
+  },
+  "local_compare": {
+    "title": "Qwen3.6 vs Gemma 4 on Artificial Analysis (full precision, not our 4-bit runs)",
+    "note": "Artificial Analysis publishes no Intelligence Index score for either model under v5.0.1, the version this map uses. These are earlier snapshots, so they are not on the same scale as the rest of the map and index versions differ between snapshots.",
+    "src": "https://artificialanalysis.ai/models/comparisons/qwen3-6-27b-vs-gemma-4-26b-a4b",
+    "rows": {
+      "Qwen3.6 27B (reasoning), AA head-to-head snapshot": "37",
+      "Gemma 4 26B-A4B (reasoning), same snapshot": "26",
+      "Gemma 4 26B-A4B, AA small-model list, v4.3.2": "17",
+      "Our blind rating, Gemma 6-bit vs Qwen3.6": "4.19 vs 3.96",
+      "What we run": "Gemma 4 26B-A4B QAT 4-bit, thinking off"
+    },
+    "caveat": "AA scores full-precision models with thinking on. We run 4-bit with thinking off, so use this as direction only. Qwen leads on AA; in our blind rating of career-service tasks Gemma led, and Gemma was faster and smaller."
   }
 }
