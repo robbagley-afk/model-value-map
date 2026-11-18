@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 6ed9e38684c45f648d9f39110970690666acaf5bbff53c0dd156f102d39b3bf9
+Revision: 1315991de03f1f06ac6a71e104674d2a51e9584693d4e23eb233243d69298568
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -16,6 +16,15 @@ An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each do
 
 ## Overall general purpose recommendation
 GPT-6.1 Terra at medium effort. Reviewed 2026-11-14. For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task. Sol medium adds 5 points at $0.36, or 4.6 points per cost doubling, below the 5-point threshold. Work, Codex and API availability only. Use Sol low for consequential facts and Sol xhigh for coding. AA v5.0.1 API costs do not measure subscription savings. This is the maintained general-purpose pick, not a universal benchmark winner. A review is due after seven days. Source: https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium
+
+## When to use GPT-6.1 Terra
+Every number below is already sourced in this guide's task rows and news. API task costs do not measure subscription usage. Terra is available in Work, Codex and the API only, not in ChatGPT Chat.
+- **Scripted relays and ordinary branching tool workflows**: start with Terra low ($0.07, AutomationBench 56.2%). Terra medium scores 58% at $0.17 and adds 1.6 points for 2.43x the cost, which does not clear the upgrade rule. Use a higher effort only after a failed task check.
+- **General-purpose default**: Terra medium (AutomationBench 58% at $0.17). Sol medium adds 5 points at $0.36 (2.1x the cost), or 4.6 points per cost doubling, below the 5-point threshold.
+- **General agentic judgment on a budget**: Terra high ($0.26, index 42.4) is the cheaper choice next to Sol xhigh ($0.76, index 52).
+- **Do not pick Terra for facts, names, messages, money or records**: use Sol low ($0.16, AA-Omniscience 38) and verify consequential claims.
+- **Do not pick Terra for coding**: use Sol xhigh ($0.76, 54%).
+Source: https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium
 
 ## Claude (Anthropic) - for Claude Code and Claude apps
 - **Mechanical text work** (Fixed supplied-input classification, parsing and reformatting with code checks): Haiku 5.5 low ($0.04, 19). Upgrade: Use a higher effort only after a failed task check; no universal retry or subscription saving is established..
