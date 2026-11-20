@@ -1,12 +1,14 @@
 # Model and Effort Guidance for ChatGPT and Codex
 Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/guidance-openai.md
-Revision: 75c09ad00b93d62fd43c4eb4a581c9b8a858db8d3f1081cbb2220abba322d845
+Revision: 9dc219a68983eaaa09228dbcd0ed50d85a3a29625f0ebbf2a23c26cd305beb86
 
 ## How to use
 Use for ChatGPT, ChatGPT Edu and Codex. Recommend the listed pick first. Move to the upgrade only when the pick fails a check. Refresh installed instructions when Revision changes, even on the same date.
 
 ## Rule
-An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.
+Start with the lowest-cost available setting that reliably passes the task checks. Compare eligible settings on the same task benchmark and version. As a guide, an upgrade should add about 5 points per doubling of benchmark cost, or about 75 Elo on GDPval. On a close call, favor the cheaper, faster setting when both meet the task requirements. Escalate when failures or rework justify it.
+Filter to settings available on your plan and able to use the required tools. Set the minimum quality and reliability for the task, then compare score, cost and comparable time. Drop settings another eligible option matches or beats on every measured dimension and improves on at least one. Measure first-pass completion and time including retries on recurring work. API benchmark costs and times describe the test workload. Subscription usage and workflow duration need their own evidence.
+Underlying benchmark methodology: https://artificialanalysis.ai/methodology.
 
 ## Overall general purpose recommendation
 GPT-6.1 Terra at medium effort. For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task. Sol medium adds 5 points at $0.36, or 4.6 points per cost doubling, below the 5-point threshold. Work, Codex and API availability only. Use Sol low for consequential facts and Sol xhigh for coding. AA v5.0.1 API costs do not measure subscription savings.
