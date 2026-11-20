@@ -1,6 +1,6 @@
 # Model and Effort Guidance
 Updated: 2026-11-15. Source: https://robbagley-afk.github.io/model-value-map/
-Revision: 1315991de03f1f06ac6a71e104674d2a51e9584693d4e23eb233243d69298568
+Revision: 22a323a3cbbbcdc3a96996e795b73c9421944e691a60473403f952095b370c44
 
 ## How to use
 Use the section for the platform you run on. For each kind of task, recommend the listed pick first.
@@ -12,7 +12,10 @@ only after its maintainer builds, validates, commits and pushes the source repos
 separate note does not publish here.
 
 ## Rule
-An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.
+Start with the lowest-cost available setting that reliably passes the task checks. Compare eligible settings on the same task benchmark and version. As a guide, an upgrade should add about 5 points per doubling of benchmark cost, or about 75 Elo on GDPval. On a close call, favor the cheaper, faster setting when both meet the task requirements. Escalate when failures or rework justify it.
+Filter to settings available on your plan and able to use the required tools. Set the minimum quality and reliability for the task, then compare score, cost and comparable time. Drop settings another eligible option matches or beats on every measured dimension and improves on at least one. Measure first-pass completion and time including retries on recurring work. API benchmark costs and times describe the test workload. Subscription usage and workflow duration need their own evidence.
+Live comparison: https://paretonet.dev/. Explore model and effort tradeoffs there, then confirm exact task fit here.
+Underlying benchmark methodology: https://artificialanalysis.ai/methodology.
 
 ## Overall general purpose recommendation
 GPT-6.1 Terra at medium effort. Reviewed 2026-11-14. For ordinary branching tool workflows: AutomationBench 58% at $0.17 per task. Sol medium adds 5 points at $0.36, or 4.6 points per cost doubling, below the 5-point threshold. Work, Codex and API availability only. Use Sol low for consequential facts and Sol xhigh for coding. AA v5.0.1 API costs do not measure subscription savings. This is the maintained general-purpose pick, not a universal benchmark winner. A review is due after seven days. Source: https://artificialanalysis.ai/models/comparisons/gpt-6-1-terra-medium-vs-gpt-6-1-sol-medium

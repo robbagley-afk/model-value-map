@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-15",
- "revision": "1315991de03f1f06ac6a71e104674d2a51e9584693d4e23eb233243d69298568",
+ "revision": "22a323a3cbbbcdc3a96996e795b73c9421944e691a60473403f952095b370c44",
  "news": [
   {
    "id": "terra-release",
@@ -297,7 +297,12 @@
   }
  ],
  "source": "https://robbagley-afk.github.io/model-value-map/",
- "rule": "An upgrade pays when it adds at least 5 points (or 75 Elo on GDPval) for each doubling of cost per task. Below that, the cheaper setting is the sweet spot.",
+ "rule": "Start with the lowest-cost available setting that reliably passes the task checks. Compare eligible settings on the same task benchmark and version. As a guide, an upgrade should add about 5 points per doubling of benchmark cost, or about 75 Elo on GDPval. On a close call, favor the cheaper, faster setting when both meet the task requirements. Escalate when failures or rework justify it.",
+ "selection_policy": {
+  "steps": "Filter to settings available on your plan and able to use the required tools. Set the minimum quality and reliability for the task, then compare score, cost and comparable time. Drop settings another eligible option matches or beats on every measured dimension and improves on at least one. Measure first-pass completion and time including retries on recurring work. API benchmark costs and times describe the test workload. Subscription usage and workflow duration need their own evidence.",
+  "live_comparison": "https://paretonet.dev/",
+  "benchmark_methodology": "https://artificialanalysis.ai/methodology"
+ },
  "platforms": {
   "claude": [
    {
