@@ -29,12 +29,18 @@
       "recommended": "GPT-6 Luna low"
      },
      "callouts": [
-      "Rule exception: Supplied-input transforms have independent schema and content checks. Luna low costs $0.01 and scores 10 on the general index. Sol low scores 35 at $0.16, or 6.25 points per doubling on that general index. Raise effort when the actual transform fails a check."
+      "Rule exception: Supplied-input transforms have independent schema and content checks. Luna low costs $0.01 and scores 10 on the general index. Sol low scores 35 at $0.16, or 6.25 points per doubling on that general index. Raise effort when the actual transform fails a check.",
+      "New model not yet placed: GPT-6 Astra max ($6.24, 57.0) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 51.3) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.2 Astra max ($4.00, 62.138799) is tracked but not yet reviewed for this row."
      ]
     },
     "Google": {
      "pick": "Gemini 3.8 Flash low (index 22; cost per task unavailable), supplied-input deterministic steps only; no priced rank",
-     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established."
+     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
+     "callouts": [
+      "New model not yet placed: Gemini 4 Hydrogen xhigh ($3.16, 53.92) is tracked but not yet reviewed for this row."
+     ]
     },
     "Local": {
      "pick": "Gemma 4 26B-A4B ($0) for long context, vision, and reformatting. Qwen3-14B 6-bit ($0) on client laptops for strict JSON extraction and triage",
@@ -57,7 +63,7 @@
    "task": "Scripted relays and tool workflows",
    "examples": "Branching connector runs, fixed-step handoffs and queue imports",
    "bench": "ab",
-   "best": "GPT-6.1 Terra medium: AutomationBench 58% at $0.17. Sol medium adds5 points for 2.1x API task cost, below the upgrade rule. Work/Codex/API availability; facts require the facts row.",
+   "best": "GPT-6.2 Sol medium ($0.4061, 70.28% AutomationBench). Work/Codex/API availability, with paid plan and account access checked before use.",
    "avoid": "Do not infer subscription usage or real-workload success from API benchmark cost. Use the facts row when names, dates or money must be correct.",
    "avoid_settings": [],
    "vendors": {
@@ -70,26 +76,32 @@
       "budget": "Sonnet 5.5 high"
      },
      "callouts": [
-      "Cheaper elsewhere: Google Gemini 4 Hydrogen medium scores 72.01% vs 68.0% at $0.80 per task, 26% of the cost. API cost, not subscription usage."
+      "Cheaper elsewhere: OpenAI GPT-6.2 Sol medium scores 70.281397% vs 68.0% at $0.41 per task, 13% of the cost. API cost, not subscription usage."
      ]
     },
     "OpenAI": {
-     "pick": "GPT-6.1 Terra low ($0.07, 56.2%) Work/Codex/API only; not ChatGPT Chat.",
-     "upgrade": "Terra medium adds 1.6 points on AutomationBench for 2.43x the cost, which does not clear the upgrade rule. Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-     "budget": "GPT-6 Luna medium ($0.04, 40.5%)",
+     "pick": "GPT-6.2 Sol medium ($0.4061, 70.28% AutomationBench). Work/Codex/API availability, with paid plan and account access checked before use.",
+     "upgrade": "Upgrade only after a failed workload check. API task cost does not measure subscription usage.",
+     "budget": "GPT-6.2 Sol low ($0.18, 63.234114%)",
      "chart": {
-      "recommended": "GPT-6.1 Terra low",
-      "budget": "GPT-6 Luna medium"
-     }
+      "recommended": "GPT-6.2 Sol medium",
+      "budget": "GPT-6.2 Sol low"
+     },
+     "callouts": [
+      "New model not yet placed: GPT-6 Astra max ($6.24, 68.5%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 60.2%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.2 Astra max ($4.00, 77.248383%) is tracked but not yet reviewed for this row."
+     ]
     },
     "Google": {
-     "pick": "Gemini 4 Hydrogen medium ($0.80, 72.01%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-     "upgrade": "Argon high reaches 77.5% at an estimated $4.975 per API task through November 30, then $9.95 at unchanged token usage.",
-     "budget": "Gemini 4 Hydrogen low ($0.29, 60.51%)",
+     "pick": "Gemini 4 Neon low ($0.7452, 75.99% AutomationBench). Gemini API and paid Antigravity Pro/Ultra, verify the selected surface.",
+     "upgrade": "Medium adds 1.81 points for 2.56x API task cost. Use a higher effort only after a failed workload check.",
      "chart": {
-      "recommended": "Gemini 4 Hydrogen medium",
-      "budget": "Gemini 4 Hydrogen low"
-     }
+      "recommended": "Gemini 4 Neon low"
+     },
+     "callouts": [
+      "New model not yet placed: Gemini 4 Hydrogen xhigh ($3.16, 76.14%) is tracked but not yet reviewed for this row."
+     ]
     },
     "Local": {
      "pick": "Light use only. Tool calls 3/4 in-house, AutomationBench 2% (AA estimate). Validate every call",
@@ -104,7 +116,7 @@
       "budget": "Grok 4.7 low"
      },
      "callouts": [
-      "Cheaper elsewhere: Google Gemini 4 Hydrogen medium scores 72.01% vs 67.0% at $0.80 per task, 17% of the cost. API cost, not subscription usage."
+      "Cheaper elsewhere: OpenAI GPT-6.2 Sol medium scores 70.281397% vs 67.0% at $0.41 per task, 9% of the cost. API cost, not subscription usage."
      ]
     }
    }
@@ -134,7 +146,11 @@
      "chart": {
       "recommended": "GPT-6 Luna max",
       "budget": "GPT-6 Luna xhigh"
-     }
+     },
+     "callouts": [
+      "New model not yet placed: GPT-6 Astra max ($3.26, 1584) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 1476) is tracked but not yet reviewed for this row."
+     ]
     },
     "Google": {
      "pick": "Gemini 4 Argon high ($1.62, 1631  Elo) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
@@ -181,20 +197,23 @@
     "OpenAI": {
      "pick": "GPT-6.1 Sol low ($0.16, 38)",
      "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-     "budget": "GPT-6.1 Terra low ($0.07, 22.9)",
      "chart": {
-      "recommended": "GPT-6.1 Sol low",
-      "budget": "GPT-6.1 Terra low"
-     }
-    },
-    "Google": {
-     "pick": "Gemini 4 Hydrogen low ($0.29, 36.1) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-     "upgrade": "Verify consequential claims against primary sources.",
-     "chart": {
-      "recommended": "Gemini 4 Hydrogen low"
+      "recommended": "GPT-6.1 Sol low"
      },
      "callouts": [
-      "Cheaper elsewhere: OpenAI GPT-6.1 Sol low scores 38.0 vs 36.1 at $0.16 per task, 55% of the cost. API cost, not subscription usage."
+      "New model not yet placed: GPT-6 Astra high ($3.24, 45.0) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 29.6) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.2 Astra max ($4.00, 50) is tracked but not yet reviewed for this row."
+     ]
+    },
+    "Google": {
+     "pick": "Gemini 4 Neon low ($0.7452, AA-Omniscience 48.5). Gemini API and paid Antigravity Pro/Ultra, verify selected surface. Independently verify consequential claims.",
+     "upgrade": "Medium adds 2.6 AA-Omniscience points for 2.56x cost. Upgrade after a failed workload check, not as a routine default.",
+     "chart": {
+      "recommended": "Gemini 4 Neon low"
+     },
+     "callouts": [
+      "New model not yet placed: Gemini 4 Hydrogen xhigh ($3.16, 46.27) is tracked but not yet reviewed for this row."
      ]
     },
     "Local": {
@@ -264,7 +283,7 @@
    "task": "Agentic coding",
    "examples": "Multi-file changes, debugging and repository work",
    "bench": "tb",
-   "best": "GPT-6.1 Sol xhigh ($0.76, 54%); task-specific benchmark value, not a universal best model.",
+   "best": "GPT-6.2 Sol medium ($0.4061, 56.06% Terminal-Bench 4.0). Work/Codex/API availability, with paid plan and account access checked before use.",
    "avoid": "Do not infer subscription usage or real-workload success from API benchmark cost. Use the facts row when names, dates or money must be correct.",
    "avoid_settings": [],
    "vendors": {
@@ -277,26 +296,36 @@
       "budget": "Sonnet 5.5 high"
      },
      "callouts": [
-      "Smaller model beats larger: Haiku 5.5 max ($0.41, 32.8%) scores at least as well as Opus 5.5 low ($0.98, 31.3%)."
+      "Smaller model beats larger: Haiku 5.5 max ($0.41, 32.8%) scores at least as well as Opus 5.5 low ($0.98, 31.3%).",
+      "Cheaper elsewhere: OpenAI GPT-6.2 Sol high scores 58.585859% vs 56.6% at $0.56 per task, 16% of the cost. API cost, not subscription usage."
      ]
     },
     "OpenAI": {
-     "pick": "GPT-6.1 Sol xhigh ($0.76, 54%)",
-     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule.",
-     "budget": "GPT-6.1 Sol medium ($0.36, 48.0%)",
+     "pick": "GPT-6.2 Sol medium ($0.4061, 56.06% Terminal-Bench 4.0). Work/Codex/API availability, with paid plan and account access checked before use.",
+     "upgrade": "Upgrade only after a failed workload check. API task cost does not measure subscription usage.",
+     "exception": "Sol high gains 2.53 Terminal-Bench points over Sol medium for 1.39x task cost, about 5.35 points per doubling. This is within the 10% close-call band. Prefer medium: $0.406 versus $0.564 and 3.56 versus 5.16 minutes per same AA index task. Escalate after a failed coding check; task time is not a Terminal-Bench timing measurement.",
+     "budget": "GPT-6.2 Sol low ($0.18, 37.878788%)",
      "chart": {
-      "recommended": "GPT-6.1 Sol xhigh",
-      "budget": "GPT-6.1 Sol medium"
-     }
-    },
-    "Google": {
-     "pick": "Gemini 4 Hydrogen high ($1.87, 54.04%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-     "upgrade": "Upgrade only after a failed workload check.",
-     "chart": {
-      "recommended": "Gemini 4 Hydrogen high"
+      "recommended": "GPT-6.2 Sol medium",
+      "budget": "GPT-6.2 Sol low"
      },
      "callouts": [
-      "Cheaper elsewhere: OpenAI GPT-6.1 Terra max scores 55.6% vs 54.04% at $0.96 per task, 51% of the cost. API cost, not subscription usage."
+      "Rule exception: Sol high gains 2.53 Terminal-Bench points over Sol medium for 1.39x task cost, about 5.35 points per doubling. This is within the 10% close-call band. Prefer medium: $0.406 versus $0.564 and 3.56 versus 5.16 minutes per same AA index task. Escalate after a failed coding check; task time is not a Terminal-Bench timing measurement.",
+      "New model not yet placed: GPT-6 Astra xhigh ($3.66, 59.6%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 55.6%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.2 Astra xhigh ($2.52, 64.141414%) is tracked but not yet reviewed for this row."
+     ]
+    },
+    "Google": {
+     "pick": "Gemini 4 Neon high ($3.7428, 61.62% Terminal-Bench 4.0). Gemini API and paid Antigravity Pro/Ultra, verify the selected surface.",
+     "upgrade": "Xhigh adds 2.02 Terminal-Bench points for 1.72x API task cost, below the upgrade guide. Escalate only after a failed workload check.",
+     "budget": "Gemini 4 Neon medium ($1.90, 54.545455%)",
+     "chart": {
+      "recommended": "Gemini 4 Neon high",
+      "budget": "Gemini 4 Neon medium"
+     },
+     "callouts": [
+      "New model not yet placed: Gemini 4 Hydrogen high ($1.87, 54.04%) is tracked but not yet reviewed for this row."
      ]
     },
     "Local": {
@@ -322,7 +351,7 @@
    "task": "Small, clear coding fixes",
    "examples": "Clear-repro fixes and work to a spec, verified with relevant tests",
    "bench": "tb",
-   "best": "GPT-6.1 Sol xhigh ($0.76, 54%); task-specific benchmark value, not a universal best model.",
+   "best": "GPT-6.2 Sol medium ($0.4061, 56.06% Terminal-Bench 4.0). Work/Codex/API availability, with paid plan and account access checked before use.",
    "avoid": "Do not infer subscription usage or real-workload success from API benchmark cost. Use the facts row when names, dates or money must be correct.",
    "avoid_settings": [],
    "vendors": {
@@ -335,26 +364,36 @@
       "budget": "Sonnet 5.5 high"
      },
      "callouts": [
-      "Smaller model beats larger: Haiku 5.5 max ($0.41, 32.8%) scores at least as well as Opus 5.5 low ($0.98, 31.3%)."
+      "Smaller model beats larger: Haiku 5.5 max ($0.41, 32.8%) scores at least as well as Opus 5.5 low ($0.98, 31.3%).",
+      "Cheaper elsewhere: OpenAI GPT-6.2 Sol high scores 58.585859% vs 56.6% at $0.56 per task, 16% of the cost. API cost, not subscription usage."
      ]
     },
     "OpenAI": {
-     "pick": "GPT-6.1 Sol xhigh ($0.76, 54%)",
-     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established. Reviewed: GPT-6 Astra xhigh adds about 2 points per doubling of cost over Sol xhigh, below the 5-point rule.",
-     "budget": "GPT-6.1 Sol medium ($0.36, 48.0%)",
+     "pick": "GPT-6.2 Sol medium ($0.4061, 56.06% Terminal-Bench 4.0). Work/Codex/API availability, with paid plan and account access checked before use.",
+     "upgrade": "Upgrade only after a failed workload check. API task cost does not measure subscription usage.",
+     "exception": "Sol high gains 2.53 Terminal-Bench points over Sol medium for 1.39x task cost, about 5.35 points per doubling. This is within the 10% close-call band. Prefer medium: $0.406 versus $0.564 and 3.56 versus 5.16 minutes per same AA index task. Escalate after a failed coding check; task time is not a Terminal-Bench timing measurement.",
+     "budget": "GPT-6.2 Sol low ($0.18, 37.878788%)",
      "chart": {
-      "recommended": "GPT-6.1 Sol xhigh",
-      "budget": "GPT-6.1 Sol medium"
-     }
-    },
-    "Google": {
-     "pick": "Gemini 4 Hydrogen high ($1.87, 54.04%) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-     "upgrade": "Upgrade only after a failed workload check.",
-     "chart": {
-      "recommended": "Gemini 4 Hydrogen high"
+      "recommended": "GPT-6.2 Sol medium",
+      "budget": "GPT-6.2 Sol low"
      },
      "callouts": [
-      "Cheaper elsewhere: OpenAI GPT-6.1 Terra max scores 55.6% vs 54.04% at $0.96 per task, 51% of the cost. API cost, not subscription usage."
+      "Rule exception: Sol high gains 2.53 Terminal-Bench points over Sol medium for 1.39x task cost, about 5.35 points per doubling. This is within the 10% close-call band. Prefer medium: $0.406 versus $0.564 and 3.56 versus 5.16 minutes per same AA index task. Escalate after a failed coding check; task time is not a Terminal-Bench timing measurement.",
+      "New model not yet placed: GPT-6 Astra xhigh ($3.66, 59.6%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 55.6%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.2 Astra xhigh ($2.52, 64.141414%) is tracked but not yet reviewed for this row."
+     ]
+    },
+    "Google": {
+     "pick": "Gemini 4 Neon high ($3.7428, 61.62% Terminal-Bench 4.0). Gemini API and paid Antigravity Pro/Ultra, verify the selected surface.",
+     "upgrade": "Xhigh adds 2.02 Terminal-Bench points for 1.72x API task cost, below the upgrade guide. Escalate only after a failed workload check.",
+     "budget": "Gemini 4 Neon medium ($1.90, 54.545455%)",
+     "chart": {
+      "recommended": "Gemini 4 Neon high",
+      "budget": "Gemini 4 Neon medium"
+     },
+     "callouts": [
+      "New model not yet placed: Gemini 4 Hydrogen high ($1.87, 54.04%) is tracked but not yet reviewed for this row."
      ]
     },
     "Local": {
@@ -402,7 +441,11 @@
      "chart": {
       "recommended": "GPT-6.1 Sol low",
       "budget": "GPT-6 Luna max"
-     }
+     },
+     "callouts": [
+      "New model not yet placed: GPT-6 Astra xhigh ($2.31, 55%) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 46%) is tracked but not yet reviewed for this row."
+     ]
     },
     "Google": {
      "pick": "Gemini 4 Argon high ($1.62, 57%) Paid Standard API evidence; Antigravity access not verified by this review, so confirm the current product/plan selector. Current v5.0.1 API task estimate: $4.97 through November 30; $9.95/task from December 1 assuming unchanged tokens. Historical benchmark costs stay frozen separately.",
@@ -434,8 +477,8 @@
    "task": "General agentic judgment",
    "examples": "Branching tool-assisted requests; tool-free writing and facts use their specific rows",
    "bench": "index",
-   "best": "GPT-6.1 Sol xhigh for general agentic judgment at $0.76 (index 52). Terra high is the cheaper choice at $0.26 (index 42.4). Use Sol low for factual reliability. API cost is not a subscription savings measurement.",
-   "avoid": "Do not infer subscription usage or real-workload success from API benchmark cost. Use the facts row when names, dates or money must be correct.",
+   "best": "GPT-6.2 Sol medium ($0.4061, index 52.68). Work/Codex/API availability, with paid plan and account access checked before use.",
+   "avoid": "Do not infer subscription usage or real-workload success from API benchmark cost. Use the facts row when names, dates or money must be correct. GPT-6.2 Astra is reviewed as a premium escalation after failures. High adds 7.41 index points over Sol medium for 5.11x API task cost, about 3.15 points per doubling, below the guide. Max adds only 0.58 points above Astra xhigh for 1.59x cost. New models have no matched legacy GDPval or no-tools HLE evidence.",
    "avoid_settings": [],
    "vendors": {
     "Anthropic": {
@@ -451,26 +494,30 @@
      ]
     },
     "OpenAI": {
-     "pick": "GPT-6.1 Sol xhigh ($0.76, 52) Work/Codex/API only; not ChatGPT Chat.",
-     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-     "budget": "GPT-6.1 Sol low ($0.16, 35.0)",
-     "mid": "GPT-6.1 Sol medium ($0.36, 46.0)",
+     "pick": "GPT-6.2 Sol medium ($0.4061, index 52.68). Work/Codex/API availability, with paid plan and account access checked before use.",
+     "upgrade": "Upgrade only after a failed workload check. API task cost does not measure subscription usage.",
+     "budget": "GPT-6.2 Sol low ($0.18, 40.552509)",
      "chart": {
-      "recommended": "GPT-6.1 Sol xhigh",
-      "budget": "GPT-6.1 Sol low",
-      "mid": "GPT-6.1 Sol medium"
-     }
-    },
-    "Google": {
-     "pick": "Gemini 4 Hydrogen high ($1.87, 50.79) Gemini API and paid Antigravity Pro/Ultra. API task costs do not measure plan usage.",
-     "upgrade": "Use a higher effort only after a failed task check; no universal retry or subscription saving is established.",
-     "budget": "Gemini 4 Hydrogen medium ($0.80, 41.23)",
-     "chart": {
-      "recommended": "Gemini 4 Hydrogen high",
-      "budget": "Gemini 4 Hydrogen medium"
+      "recommended": "GPT-6.2 Sol medium",
+      "budget": "GPT-6.2 Sol low"
      },
      "callouts": [
-      "Cheaper elsewhere: OpenAI GPT-6.1 Sol xhigh scores 52.0 vs 50.79 at $0.76 per task, 41% of the cost. API cost, not subscription usage."
+      "New model not yet placed: GPT-6 Astra max ($6.24, 57.0) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.1 Terra max ($0.96, 51.3) is tracked but not yet reviewed for this row.",
+      "New model not yet placed: GPT-6.2 Astra max ($4.00, 62.138799) is tracked but not yet reviewed for this row."
+     ]
+    },
+    "Google": {
+     "pick": "Gemini 4 Neon medium ($1.9046, index 54.86). Gemini API and paid Antigravity Pro/Ultra, verify the selected surface.",
+     "upgrade": "High adds 4.76 index points for 1.97x cost, about 4.89 per doubling within the 10% close-call band. Prefer medium and its 8.40 versus 14.35 minutes per AA index task when both pass.",
+     "budget": "Gemini 4 Neon low ($0.75, 44.083151)",
+     "chart": {
+      "recommended": "Gemini 4 Neon medium",
+      "budget": "Gemini 4 Neon low"
+     },
+     "callouts": [
+      "New model not yet placed: Gemini 4 Hydrogen xhigh ($3.16, 53.92) is tracked but not yet reviewed for this row.",
+      "Cheaper elsewhere: OpenAI GPT-6.2 Sol high scores 54.889866 vs 54.862295 at $0.56 per task, 30% of the cost. API cost, not subscription usage."
      ]
     },
     "Local": {
@@ -490,8 +537,8 @@
    }
   }
  ],
- "updated": "2026-11-14",
- "review_note": "2026-11-07: Updated current AA cloud points to v5.0.1. Historical GDPval-AA, SciCode and no-tools HLE remain paired with v4.3.2 costs. Incomplete current points are withheld. Carbon has restricted rollout evidence only. Local evaluations remain frozen.",
+ "updated": "2026-11-21",
+ "review_note": "Reviewed November 21 with AA v5.0.1 and exact-effort primary source records. Legacy GDPval/SciCode/no-tools HLE remain frozen with legacy costs. API pricing and plan allowances stay separate. New-model availability remains surface and account dependent.",
  "terra_guidance": {
   "heading": "When to use GPT-6.1 Terra",
   "intro": "Every number below is already sourced in this guide's task rows and news. API task costs do not measure subscription usage. Terra is available in Work, Codex and the API only, not in ChatGPT Chat.",
